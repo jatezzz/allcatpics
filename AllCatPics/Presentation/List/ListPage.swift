@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Kingfisher
 
 class AppViewModel: ObservableObject {
     @Published var isShowingDetailView = false
@@ -25,13 +26,27 @@ struct ListPage: View {
     @StateObject var appViewModel = AppViewModel()
     @ObservedObject var viewModel: ListPageViewModel
     
+    
     var body: some View {
         NavigationView {
             List($viewModel.cats) { cat in
                 Button(action: {
                     NavigationController(appViewModel: appViewModel).navigateToDetail(catId: cat.id)
                 }){HStack{
-                    AsyncImageView(url: "https://cataas.com/cat/\(cat.id)")
+                    
+                    let processor = DownsamplingImageProcessor(size: CGSize(width: 100, height: 100))
+                                 |> RoundCornerImageProcessor(cornerRadius: 20)
+                    KFImage(URL(string: "https://cataas.com/cat/\(cat.id)")!)
+                        .placeholder { Image(systemName: "cat") }
+                        .setProcessor(processor)
+                        .loadDiskFileSynchronously()
+                        .cacheMemoryOnly()
+                        .fade(duration: 0.25)
+//                        .lowDataModeSource(.network(lowResolutionURL))
+                        .onProgress { receivedSize, totalSize in  }
+                        .onSuccess { result in  }
+                        .onFailure { error in }
+//                                        AsyncImageView(url: "https://cataas.com/cat/\(cat.id)")
                         .aspectRatio(contentMode: .fit)
                         .frame(width: 100, height: 100)
                 }
