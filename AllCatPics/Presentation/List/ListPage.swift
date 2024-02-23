@@ -16,8 +16,13 @@ struct ListPage: View {
                 NavigationLink(destination: DetailPage(viewModel: DetailPageViewModel(repository: viewModel.repository, catId: cat.id))) {
                     Text(cat.id)
                 }
+                .onAppear {
+                    if let last = $viewModel.cats.last, cat.id == last.id {
+                        viewModel.loadNextPage()
+                    }
+                }
             }
-            .onAppear(perform: viewModel.fetchItems)
+            .onAppear(perform: viewModel.loadNextPage)
         }
     }
 }

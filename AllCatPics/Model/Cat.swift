@@ -7,7 +7,7 @@
 
 struct Cat: Identifiable, Decodable {
     let tags: [String]
-    let createdAt: String
+    let createdAt: String?
     let updatedAt: String?
     let mimetype: String
     let size: Int

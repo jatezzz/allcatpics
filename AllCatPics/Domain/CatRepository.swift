@@ -16,11 +16,12 @@ class CatRepository {
         self.localStorage = localStorage
     }
     
-    func getList() async throws -> [Cat] {
-        try await api.fetchCatList()
+    func getList(limit: Int, skip: Int) async throws -> [Cat] {
+        try await api.fetchCatList(limit: limit, skip: skip)
     }
     
     func getDetail(id: String) async throws -> Cat {
+        // Implement detail fetching logic, including caching
         try await api.fetchCatDetail(id: id)
     }
 }
