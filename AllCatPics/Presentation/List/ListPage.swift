@@ -35,18 +35,17 @@ struct ListPage: View {
                 }){HStack{
                     
                     let processor = DownsamplingImageProcessor(size: CGSize(width: 100, height: 100))
-                                 |> RoundCornerImageProcessor(cornerRadius: 20)
+                                 |> RoundCornerImageProcessor(cornerRadius: 10)
                     KFImage(URL(string: "https://cataas.com/cat/\(cat.id)")!)
                         .placeholder { Image(systemName: "cat") }
                         .setProcessor(processor)
                         .loadDiskFileSynchronously()
                         .cacheMemoryOnly()
                         .fade(duration: 0.25)
-//                        .lowDataModeSource(.network(lowResolutionURL))
                         .onProgress { receivedSize, totalSize in  }
-                        .onSuccess { result in  }
-                        .onFailure { error in }
-//                                        AsyncImageView(url: "https://cataas.com/cat/\(cat.id)")
+                        .onFailure { error in
+                            print (error)
+                        }
                         .aspectRatio(contentMode: .fit)
                         .frame(width: 100, height: 100)
                 }

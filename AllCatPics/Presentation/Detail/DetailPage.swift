@@ -16,7 +16,7 @@ struct DetailPage: View {
         VStack {
             if let cat = viewModel.cat {
                 let processor = DownsamplingImageProcessor(size: CGSize(width: 200, height: 200))
-                             |> RoundCornerImageProcessor(cornerRadius: 20)
+                             |> RoundCornerImageProcessor(cornerRadius: 4)
                 KFImage(URL(string: "https://cataas.com/cat/\(cat.id)")!)
                     .placeholder { Image(systemName: "cat") }
                         .setProcessor(processor)
@@ -24,8 +24,9 @@ struct DetailPage: View {
                     .cacheMemoryOnly()
                     .fade(duration: 0.25)
                     .onProgress { receivedSize, totalSize in  }
-                    .onSuccess { result in  }
-                    .onFailure { error in }
+                    .onFailure { error in
+                        print(error)
+                    }
                     .aspectRatio(contentMode: .fit)
                     .frame(width: 200, height: 200)
                 Text(cat.id).font(.title)
