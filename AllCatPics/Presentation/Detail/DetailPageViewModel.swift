@@ -15,13 +15,16 @@ class DetailPageViewModel: ObservableObject {
     init(repository: CatRepository, catId: String) {
         self.repository = repository
         self.catId = catId
-        fetchItemDetail()
     }
     
     func fetchItemDetail() {
+        print("fetchItemDetail", catId)
         Task {
             do {
-                self.cat = try await repository.getDetail(id: catId)
+                let newCat = try await repository.getDetail(id: catId)
+                DispatchQueue.main.async {
+                    self.cat = newCat
+                }
             } catch {
                 print("Error fetching cat details: \(error)")
             }

@@ -18,6 +18,7 @@ struct DetailPage: View {
                 Text(cat.tags.map({$0}).joined(separator: "-")).font(.body)
             }
         }
+        .onAppear(perform: viewModel.fetchItemDetail)
     }
 }
 

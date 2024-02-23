@@ -13,10 +13,10 @@ class ListPageViewModel: ObservableObject {
     let repository: CatRepository
     
     private var currentPage = 0
-    private static let limit = 10
     
     init(repository: CatRepository) {
         self.repository = repository
+        loadNextPage()
     }
     
     func loadNextPage() {
@@ -25,7 +25,7 @@ class ListPageViewModel: ObservableObject {
         
         Task {
             do {
-                let newCats = try await repository.getList(limit: ListPageViewModel.limit, skip: currentPage * ListPageViewModel.limit)
+                let newCats = try await repository.getList(page: currentPage)
                 DispatchQueue.main.async {
                     self.cats.append(contentsOf: newCats)
                     self.currentPage += 1

@@ -22,6 +22,8 @@
 		69E1FD452B88E06F003FC8F9 /* DetailPageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E1FD442B88E06F003FC8F9 /* DetailPageViewModel.swift */; };
 		69E1FD472B88E089003FC8F9 /* ListPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E1FD462B88E089003FC8F9 /* ListPage.swift */; };
 		69E1FD492B88E0A6003FC8F9 /* DetailPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E1FD482B88E0A6003FC8F9 /* DetailPage.swift */; };
+		69E1FD4B2B88EC49003FC8F9 /* AsyncImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E1FD4A2B88EC49003FC8F9 /* AsyncImageLoader.swift */; };
+		69E1FD4D2B88EC5F003FC8F9 /* AsyncImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E1FD4C2B88EC5F003FC8F9 /* AsyncImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +63,8 @@
 		69E1FD442B88E06F003FC8F9 /* DetailPageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPageViewModel.swift; sourceTree = "<group>"; };
 		69E1FD462B88E089003FC8F9 /* ListPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPage.swift; sourceTree = "<group>"; };
 		69E1FD482B88E0A6003FC8F9 /* DetailPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPage.swift; sourceTree = "<group>"; };
+		69E1FD4A2B88EC49003FC8F9 /* AsyncImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncImageLoader.swift; sourceTree = "<group>"; };
+		69E1FD4C2B88EC5F003FC8F9 /* AsyncImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -179,6 +183,8 @@
 			children = (
 				69E1FD432B88E05F003FC8F9 /* Detail */,
 				69E1FD402B88E040003FC8F9 /* List */,
+				69E1FD4A2B88EC49003FC8F9 /* AsyncImageLoader.swift */,
+				69E1FD4C2B88EC5F003FC8F9 /* AsyncImageView.swift */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -332,6 +338,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				69E1FD472B88E089003FC8F9 /* ListPage.swift in Sources */,
+				69E1FD4B2B88EC49003FC8F9 /* AsyncImageLoader.swift in Sources */,
 				69E1FD452B88E06F003FC8F9 /* DetailPageViewModel.swift in Sources */,
 				69E1FD422B88E053003FC8F9 /* ListPageViewModel.swift in Sources */,
 				69E1FD492B88E0A6003FC8F9 /* DetailPage.swift in Sources */,
@@ -341,6 +348,7 @@
 				69E1FD382B88DFB5003FC8F9 /* CatAPI.swift in Sources */,
 				69E1FD3E2B88E01D003FC8F9 /* CatRepository.swift in Sources */,
 				69E1FD3B2B88DFFA003FC8F9 /* CatLocalStorage.swift in Sources */,
+				69E1FD4D2B88EC5F003FC8F9 /* AsyncImageView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

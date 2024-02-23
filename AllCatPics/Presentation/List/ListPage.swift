@@ -7,13 +7,34 @@
 
 import SwiftUI
 
+class AppViewModel: ObservableObject {
+    @Published var isShowingDetailView = false
+    @Published var selectedCatId: String?
+}
+
+struct NavigationController {
+    var appViewModel: AppViewModel
+    
+    func navigateToDetail(catId: String) {
+        appViewModel.selectedCatId = catId
+        appViewModel.isShowingDetailView = true
+    }
+}
+
 struct ListPage: View {
+    @StateObject var appViewModel = AppViewModel()
     @ObservedObject var viewModel: ListPageViewModel
     
     var body: some View {
         NavigationView {
             List($viewModel.cats) { cat in
-                NavigationLink(destination: DetailPage(viewModel: DetailPageViewModel(repository: viewModel.repository, catId: cat.id))) {
+                Button(action: {
+                    NavigationController(appViewModel: appViewModel).navigateToDetail(catId: cat.id)
+                }){HStack{
+                    AsyncImageView(url: "https://cataas.com/cat/\(cat.id)")
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: 100, height: 100)
+                }
                     Text(cat.id)
                 }
                 .onAppear {
@@ -22,7 +43,7 @@ struct ListPage: View {
                     }
                 }
             }
-            .onAppear(perform: viewModel.loadNextPage)
+            .background(NavigationLink("", destination: DetailPage(viewModel: DetailPageViewModel(repository: viewModel.repository, catId: appViewModel.selectedCatId ?? "")), isActive: $appViewModel.isShowingDetailView))
         }
     }
 }
