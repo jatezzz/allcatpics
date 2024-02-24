@@ -9,14 +9,17 @@ struct Cat: Identifiable, Decodable, Hashable {
     let tags: [String]
     let createdAt: String?
     let updatedAt: String?
-    let mimetype: String
-    let size: Int
+    let mimetype: String?
+    let size: Int?
     let id: String
     let editedAt: String?
     
     enum CodingKeys: String, CodingKey {
-        case tags, createdAt, updatedAt, mimetype, size
+        case tags, createdAt, updatedAt, mimetype, size, editedAt
         case id = "_id"
-        case editedAt
+    }
+    
+    var updatedDate : String? {
+        updatedAt ?? editedAt
     }
 }
