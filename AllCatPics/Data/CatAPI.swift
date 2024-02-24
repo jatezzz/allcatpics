@@ -8,50 +8,60 @@
 import Foundation
 
 protocol CatAPIProtocol {
-    func fetchCatList(limit: Int, skip: Int) async throws -> [Cat]
-    func fetchCatDetail(id: String) async throws -> Cat
+    func fetchCatList(limit: Int, skip: Int) async -> Result<[Cat], Error>
+    func fetchCatDetail(id: String) async -> Result<Cat, Error>
 }
 
+protocol URLSessionProtocol {
+    func data(from url: URL) async throws -> (Data, URLResponse)
+}
+
+extension URLSession: URLSessionProtocol {}
 import Foundation
 
 class CatAPI: CatAPIProtocol {
-    func fetchCatList(limit: Int = 10, skip: Int = 0) async throws -> [Cat] {
+    
+    private let session: URLSessionProtocol
+    
+    init(session: URLSessionProtocol = URLSession.shared) {
+        self.session = session
+    }
+    
+    func fetchCatList(limit: Int = 10, skip: Int = 0) async -> Result<[Cat], Error> {
         guard let url = URL(string: "https://cataas.com/api/cats?limit=\(limit)&skip=\(skip)") else {
-            fatalError("Invalid URL")
+            return .failure(URLError(.badURL))
         }
         
-        let (data, response) = try await URLSession.shared.data(from: url)
-        
-        guard let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200 else {
-            throw URLError(.badServerResponse)
-        }
-        
-        let decoder = JSONDecoder()
         do {
+            let (data, response) = try await session.data(from: url)
+            guard let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200 else {
+                return .failure(URLError(.badServerResponse))
+            }
+            
+            let decoder = JSONDecoder()
             let cats = try decoder.decode([Cat].self, from: data)
-            return cats
+            return .success(cats)
         } catch {
-            throw error
+            return .failure(error)
         }
     }
     
-    func fetchCatDetail(id: String) async throws -> Cat {
+    func fetchCatDetail(id: String) async -> Result<Cat, Error> {
         guard let url = URL(string: "https://cataas.com/cat/\(id)?json=true") else {
-            fatalError("Invalid URL")
+            return .failure(URLError(.badURL))
         }
         
-        let (data, response) = try await URLSession.shared.data(from: url)
-        
-        guard let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200 else {
-            throw URLError(.badServerResponse)
-        }
-        
-        let decoder = JSONDecoder()
         do {
+            let (data, response) = try await session.data(from: url)
+            guard let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200 else {
+                return .failure(URLError(.badServerResponse))
+            }
+            
+            let decoder = JSONDecoder()
             let cat = try decoder.decode(Cat.self, from: data)
-            return cat
+            return .success(cat)
         } catch {
-            throw error
+            return .failure(error)
         }
     }
 }

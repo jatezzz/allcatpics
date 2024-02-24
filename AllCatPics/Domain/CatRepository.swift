@@ -23,18 +23,28 @@ class CatRepository: CatRepositoryProtocol {
     }
     
     func getList(page: Int = 0) async throws -> [Cat] {
-        let cats = try await api.fetchCatList(limit: itemsPerPage, skip: page * itemsPerPage)
-        localStorage.saveCats(cats)
-        return cats
+        let result = await api.fetchCatList(limit: itemsPerPage, skip: page * itemsPerPage)
+        switch result {
+        case .success(let cats):
+            localStorage.saveCats(cats)
+            return cats
+        case .failure(let error):
+           throw error
+        }
     }
     
     func getDetail(id: String) async throws -> Cat {
         if let cachedCat = localStorage.getCatById(id) {
             return cachedCat
         } else {
-            let cat = try await api.fetchCatDetail(id: id)
-            localStorage.saveCat(cat)
-            return cat
+            let result = await api.fetchCatDetail(id: id)
+            switch result {
+            case .success(let cat):
+                localStorage.saveCat(cat)
+                return cat
+            case .failure(let error):
+               throw error
+            }
         }
     }
 }

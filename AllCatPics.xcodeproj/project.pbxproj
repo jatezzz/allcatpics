@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		6923791E2B898FF000167287 /* MockCatRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6923791D2B898FF000167287 /* MockCatRepository.swift */; };
 		692379202B89900F00167287 /* Cat+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6923791F2B89900F00167287 /* Cat+Extension.swift */; };
+		692379222B89976E00167287 /* CatAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 692379212B89976E00167287 /* CatAPITests.swift */; };
+		692379242B89978200167287 /* MockURLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 692379232B89978200167287 /* MockURLSession.swift */; };
 		695032852B89528A00A6CB56 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 695032842B89528A00A6CB56 /* Kingfisher */; };
 		69E1FD092B88DBB0003FC8F9 /* AllCatPicsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E1FD082B88DBB0003FC8F9 /* AllCatPicsApp.swift */; };
 		69E1FD0B2B88DBB0003FC8F9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E1FD0A2B88DBB0003FC8F9 /* ContentView.swift */; };
@@ -49,6 +51,8 @@
 /* Begin PBXFileReference section */
 		6923791D2B898FF000167287 /* MockCatRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCatRepository.swift; sourceTree = "<group>"; };
 		6923791F2B89900F00167287 /* Cat+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Cat+Extension.swift"; sourceTree = "<group>"; };
+		692379212B89976E00167287 /* CatAPITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatAPITests.swift; sourceTree = "<group>"; };
+		692379232B89978200167287 /* MockURLSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLSession.swift; sourceTree = "<group>"; };
 		69E1FD052B88DBB0003FC8F9 /* AllCatPics.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AllCatPics.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		69E1FD082B88DBB0003FC8F9 /* AllCatPicsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllCatPicsApp.swift; sourceTree = "<group>"; };
 		69E1FD0A2B88DBB0003FC8F9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -148,6 +152,8 @@
 				69E1FD1A2B88DBB3003FC8F9 /* CatRepositoryTest.swift */,
 				6923791D2B898FF000167287 /* MockCatRepository.swift */,
 				6923791F2B89900F00167287 /* Cat+Extension.swift */,
+				692379212B89976E00167287 /* CatAPITests.swift */,
+				692379232B89978200167287 /* MockURLSession.swift */,
 			);
 			path = AllCatPicsTests;
 			sourceTree = "<group>";
@@ -371,7 +377,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				6923791E2B898FF000167287 /* MockCatRepository.swift in Sources */,
+				692379222B89976E00167287 /* CatAPITests.swift in Sources */,
 				69E1FD1B2B88DBB3003FC8F9 /* CatRepositoryTest.swift in Sources */,
+				692379242B89978200167287 /* MockURLSession.swift in Sources */,
 				692379202B89900F00167287 /* Cat+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

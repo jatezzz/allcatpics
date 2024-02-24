@@ -30,19 +30,20 @@ class MockCatAPI: CatAPIProtocol {
     var catToReturn: Cat!
     var errorToThrow: Error?
 
-    func fetchCatList(limit: Int, skip: Int) async throws -> [Cat] {
+    func fetchCatList(limit: Int, skip: Int) async -> Result<[AllCatPics.Cat], Error> {
         if let error = errorToThrow {
-            throw error
+            return .failure(error)
         }
-        return catsToReturn
+        return .success( catsToReturn)
     }
-
-    func fetchCatDetail(id: String) async throws -> Cat {
+    
+    func fetchCatDetail(id: String) async -> Result<AllCatPics.Cat, Error> {
         if let error = errorToThrow {
-            throw error
+            return .failure(error)
         }
-        return catToReturn
+        return .success( catToReturn)
     }
+    
 }
 
 class MockCatLocalStorage: CatLocalStorageProtocol {
