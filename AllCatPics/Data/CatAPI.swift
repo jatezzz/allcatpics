@@ -17,7 +17,16 @@ protocol URLSessionProtocol {
 }
 
 extension URLSession: URLSessionProtocol {}
-import Foundation
+
+struct CatAPIEndpoints {
+    static let base = "https://cataas.com"
+    static func catList(limit: Int, skip: Int) -> String {
+        "\(base)/api/cats?limit=\(limit)&skip=\(skip)"
+    }
+    static func catDetail(id: String) -> String {
+        "\(base)/cat/\(id)?json=true"
+    }
+}
 
 class CatAPI: CatAPIProtocol {
     
@@ -28,26 +37,15 @@ class CatAPI: CatAPIProtocol {
     }
     
     func fetchCatList(limit: Int = 10, skip: Int = 0) async -> Result<[Cat], Error> {
-        guard let url = URL(string: "https://cataas.com/api/cats?limit=\(limit)&skip=\(skip)") else {
-            return .failure(URLError(.badURL))
-        }
-        
-        do {
-            let (data, response) = try await session.data(from: url)
-            guard let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200 else {
-                return .failure(URLError(.badServerResponse))
-            }
-            
-            let decoder = JSONDecoder()
-            let cats = try decoder.decode([Cat].self, from: data)
-            return .success(cats)
-        } catch {
-            return .failure(error)
-        }
+        await performRequest(to: CatAPIEndpoints.catList(limit: limit, skip: skip))
     }
     
     func fetchCatDetail(id: String) async -> Result<Cat, Error> {
-        guard let url = URL(string: "https://cataas.com/cat/\(id)?json=true") else {
+        await performRequest(to: CatAPIEndpoints.catDetail(id: id))
+    }
+    
+    private func performRequest<T: Decodable>(to urlString: String) async -> Result<T, Error> {
+        guard let url = URL(string: urlString) else {
             return .failure(URLError(.badURL))
         }
         
@@ -57,9 +55,8 @@ class CatAPI: CatAPIProtocol {
                 return .failure(URLError(.badServerResponse))
             }
             
-            let decoder = JSONDecoder()
-            let cat = try decoder.decode(Cat.self, from: data)
-            return .success(cat)
+            let decodedResponse = try JSONDecoder().decode(T.self, from: data)
+            return .success(decodedResponse)
         } catch {
             return .failure(error)
         }

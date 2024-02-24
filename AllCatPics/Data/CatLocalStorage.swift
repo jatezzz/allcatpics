@@ -14,7 +14,7 @@ protocol CatLocalStorageProtocol {
 }
 
 class CatLocalStorage: CatLocalStorageProtocol {
-    private var allCats: Set<Cat> = []
+    var allCats: Set<Cat> = []
 
     func saveCats(_ cats: [Cat]) {
         cats.forEach({allCats.insert($0)})
