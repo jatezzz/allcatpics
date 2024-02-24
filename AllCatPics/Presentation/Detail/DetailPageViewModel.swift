@@ -6,6 +6,8 @@
 //
 
 import Foundation
+import Kingfisher
+import UIKit
 
 class DetailPageViewModel: ObservableObject {
     @Published var cat: Cat?
@@ -13,6 +15,7 @@ class DetailPageViewModel: ObservableObject {
     @Published var error: Error?
     @Published var screenTitle: String = ""
     @Published var imageURL: String = ""
+    @Published var isSaving = false
 
     private let repository: CatRepositoryProtocol
     private let catId: String
@@ -45,5 +48,36 @@ class DetailPageViewModel: ObservableObject {
     
     func applyTextToImage(_ text: String) {
         self.imageURL = "https://cataas.com/cat/\(catId)/says/\(text)?fontSize=50&fontColor=white"
+    }
+    
+    func saveImageToGallery() {
+        guard let url = URL(string: imageURL), !isSaving else { return }
+        isSaving = true
+        KingfisherManager.shared.retrieveImage(with: url) { result in
+            switch result {
+            case .success(let value):
+                ImageSaver.shared.saveImage(value.image)
+                self.isSaving = false
+            case .failure(let error):
+                print(error) // Handle the error appropriately
+                self.isSaving = false
+            }
+        }
+    }
+}
+
+class ImageSaver: NSObject {
+    static let shared = ImageSaver()
+
+    func saveImage(_ image: UIImage) {
+        UIImageWriteToSavedPhotosAlbum(image, self, #selector(savedImage(_:error:context:)), nil)
+    }
+
+    @objc func savedImage(_ im: UIImage, error: Error?, context: UnsafeMutableRawPointer?) {
+        if let err = error {
+            print("Error saving image: \(err)")
+            return
+        }
+        print("Image saved successfully.")
     }
 }

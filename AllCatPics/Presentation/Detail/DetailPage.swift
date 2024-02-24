@@ -54,6 +54,13 @@ struct DetailPage: View {
                                     }
                                 }
                         .padding(.bottom)
+                        Button(action: {
+                            viewModel.saveImageToGallery()
+                        }) {
+                            Text("Save Image")
+                        }.disabled(viewModel.isSaving)
+                        .frame(maxWidth: .infinity)
+                        .padding()
                         
                         Text("Details")
                             .themed()
