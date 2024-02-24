@@ -9,10 +9,10 @@ import Foundation
 
 class DetailPageViewModel: ObservableObject {
     @Published var cat: Cat?
-    private let repository: CatRepository
+    private let repository: CatRepositoryProtocol
     private let catId: String
     
-    init(repository: CatRepository, catId: String) {
+    init(repository: CatRepositoryProtocol, catId: String) {
         self.repository = repository
         self.catId = catId
     }

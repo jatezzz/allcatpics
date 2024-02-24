@@ -7,7 +7,11 @@
 
 import Foundation
 
-class CatRepository {
+protocol CatRepositoryProtocol {
+    func getList(page: Int) async throws -> [Cat]
+    func getDetail(id: String) async throws -> Cat
+}
+class CatRepository: CatRepositoryProtocol {
     private let api: CatAPIProtocol
     private let localStorage: CatLocalStorageProtocol
     private let itemsPerPage = 10

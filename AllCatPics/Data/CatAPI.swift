@@ -27,7 +27,6 @@ class CatAPI: CatAPIProtocol {
         }
         
         let decoder = JSONDecoder()
-        // Assuming the API returns an array of Cats. Adjust based on actual response structure.
         do {
             let cats = try decoder.decode([Cat].self, from: data)
             return cats
@@ -37,7 +36,6 @@ class CatAPI: CatAPIProtocol {
     }
     
     func fetchCatDetail(id: String) async throws -> Cat {
-//        Cat(tags: ["tag1", "tag2"], createdAt: "today", updatedAt: "yesterday", mimetype: "jpg", size: 123, id: "abc", editedAt: nil)
         guard let url = URL(string: "https://cataas.com/cat/\(id)?json=true") else {
             fatalError("Invalid URL")
         }
@@ -49,7 +47,6 @@ class CatAPI: CatAPIProtocol {
         }
         
         let decoder = JSONDecoder()
-        // Assuming the API returns an array of Cats. Adjust based on actual response structure.
         do {
             let cat = try decoder.decode(Cat.self, from: data)
             return cat
