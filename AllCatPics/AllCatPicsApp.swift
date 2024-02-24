@@ -11,7 +11,7 @@ import SwiftUI
 struct AllCatPicsApp: App {
     var body: some Scene {
         WindowGroup {
-            ListPage(viewModel: ListPageViewModel(repository: CatRepository(api: CatAPI(), localStorage: CatLocalStorage()), executeInitialFetch: true))
+            ListPage(viewModel: ListPageViewModel(repository: CatRepository(api: CatAPI(), localStorage: CatLocalStorage())))
         }
     }
 }

@@ -7,30 +7,18 @@
 
 import Foundation
 
+@MainActor
 class ListPageViewModel: ObservableObject {
     @Published var cats: [Cat] = []
     @Published var isLoading: Bool = false
+    @Published var error: Error?
     let repository: CatRepositoryProtocol
     
-    var currentPage : Int
+    private var currentPage = 0
     
-    init(repository: CatRepositoryProtocol, executeInitialFetch: Bool = false) {
+    init(repository: CatRepositoryProtocol) {
         self.repository = repository
-        self.currentPage = 0
-        if executeInitialFetch {
-            loadNextPage()
-        }
-    }
-    
-    func fetchInfo() async -> ([Cat]?, Error?) {
-        do {
-            let newCats = try await repository.getList(page: currentPage)
-            self.currentPage += 1
-            return (newCats, nil)
-        } catch {
-            print("An error occurred: \(error)")
-            return (nil, error)
-        }
+        loadNextPage()
     }
     
     func loadNextPage() {
@@ -38,11 +26,13 @@ class ListPageViewModel: ObservableObject {
         isLoading = true
         
         Task {
-            let (newCats, error) = await fetchInfo()
-            DispatchQueue.main.async {
-                if error == nil, let newCats {
-                    self.cats.append(contentsOf: newCats)
-                }
+            do {
+                let newCats = try await repository.getList(page: currentPage)
+                self.cats.append(contentsOf: newCats)
+                self.isLoading = false
+                self.currentPage += 1
+            } catch {
+                self.error = error
                 self.isLoading = false
             }
         }
