@@ -22,16 +22,14 @@ struct NavigationController {
     }
 }
 
- struct ListPage: View {
+struct ListPage: View {
     @StateObject var appViewModel = AppViewModel()
     @ObservedObject var viewModel: ListPageViewModel
     @State var searchText = ""
     
     // Columns definition for the grid
-     var columns: [GridItem] = Array(repeating: .init(.flexible()), count: 2)
-     
-         let processor = DownsamplingImageProcessor(size: CGSize(width: 100, height: 100))
-                      |> RoundCornerImageProcessor(cornerRadius: 10)
+    var columns: [GridItem] = Array(repeating: .init(.flexible()), count: 2)
+    
     var body: some View {
         NavigationView {
             ScrollView {
@@ -42,28 +40,12 @@ struct NavigationController {
                     .cornerRadius(10)
                     .padding(.horizontal)
                     .onSubmit {
-//                        viewModel.searchCats(by: searchText)
+                        //                        viewModel.searchCats(by: searchText)
                     }
                 
                 LazyVGrid(columns: columns, spacing: 20) {
                     ForEach(viewModel.cats, id: \.id) { cat in
-                        VStack {
-                            KFImage(URL(string: "https://cataas.com/cat/\(cat.id)")!)
-                                .placeholder { Image(systemName: "cat") }
-                                .setProcessor(processor)
-                                .loadDiskFileSynchronously()
-                                .cacheMemoryOnly()
-                                .fade(duration: 0.25)
-                                .onProgress { receivedSize, totalSize in  }
-                                .onFailure { error in
-                                    print (error)
-                                }
-                                .aspectRatio(contentMode: .fit)
-                                .frame(width: 100, height: 100)
-                            
-                            Text(cat.id)
-                                .font(.caption)
-                        }
+                        Card(cat: cat)
                         .onTapGesture {
                             NavigationController(appViewModel: appViewModel).navigateToDetail(catId: cat.id)
                         }
@@ -84,6 +66,35 @@ struct NavigationController {
             }
             .background(NavigationLink("", destination: DetailPage(viewModel: DetailPageViewModel(repository: viewModel.repository, catId: appViewModel.selectedCatId ?? "")), isActive: $appViewModel.isShowingDetailView))
             .navigationTitle("Cats")
+        }
+    }
+}
+
+struct Card: View {
+    let cat: Cat
+    
+    static let cardHeight: CGFloat = 300
+    
+    let processor = DownsamplingImageProcessor(size: CGSize(width: Card.cardHeight, height: Card.cardHeight))
+    |> RoundCornerImageProcessor(cornerRadius: 10)
+    var body: some View {
+        VStack {
+            KFImage(URL(string: "https://cataas.com/cat/\(cat.id)")!)
+                .placeholder { Image(systemName: "cat") }
+                .setProcessor(processor)
+                .loadDiskFileSynchronously()
+                .cacheMemoryOnly()
+                .fade(duration: 0.25)
+                .onProgress { receivedSize, totalSize in  }
+                .onFailure { error in
+                    print (error)
+                }
+                .aspectRatio(contentMode: .fit)
+                .frame(height: Card.cardHeight)
+                .frame(maxWidth: .infinity)
+            
+            Text(cat.id)
+                .font(.caption)
         }
     }
 }
