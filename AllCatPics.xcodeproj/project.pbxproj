@@ -20,6 +20,8 @@
 		692379332B89ACCD00167287 /* NameGeneratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 692379322B89ACCD00167287 /* NameGeneratorTests.swift */; };
 		692379352B89B9DB00167287 /* TagsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 692379342B89B9DB00167287 /* TagsView.swift */; };
 		695032852B89528A00A6CB56 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 695032842B89528A00A6CB56 /* Kingfisher */; };
+		69DB400E2B8A44370010E9AB /* ListPageUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69DB400D2B8A44370010E9AB /* ListPageUITests.swift */; };
+		69DB40102B8A47720010E9AB /* ListPageScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69DB400F2B8A47720010E9AB /* ListPageScreen.swift */; };
 		69E1FD092B88DBB0003FC8F9 /* AllCatPicsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E1FD082B88DBB0003FC8F9 /* AllCatPicsApp.swift */; };
 		69E1FD0B2B88DBB0003FC8F9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E1FD0A2B88DBB0003FC8F9 /* ContentView.swift */; };
 		69E1FD0D2B88DBB2003FC8F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 69E1FD0C2B88DBB2003FC8F9 /* Assets.xcassets */; };
@@ -67,6 +69,8 @@
 		692379302B89ACA100167287 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		692379322B89ACCD00167287 /* NameGeneratorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameGeneratorTests.swift; sourceTree = "<group>"; };
 		692379342B89B9DB00167287 /* TagsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagsView.swift; sourceTree = "<group>"; };
+		69DB400D2B8A44370010E9AB /* ListPageUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPageUITests.swift; sourceTree = "<group>"; };
+		69DB400F2B8A47720010E9AB /* ListPageScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPageScreen.swift; sourceTree = "<group>"; };
 		69E1FD052B88DBB0003FC8F9 /* AllCatPics.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AllCatPics.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		69E1FD082B88DBB0003FC8F9 /* AllCatPicsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllCatPicsApp.swift; sourceTree = "<group>"; };
 		69E1FD0A2B88DBB0003FC8F9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -187,6 +191,8 @@
 			children = (
 				69E1FD242B88DBB3003FC8F9 /* AllCatPicsUITests.swift */,
 				69E1FD262B88DBB3003FC8F9 /* AllCatPicsUITestsLaunchTests.swift */,
+				69DB400D2B8A44370010E9AB /* ListPageUITests.swift */,
+				69DB400F2B8A47720010E9AB /* ListPageScreen.swift */,
 			);
 			path = AllCatPicsUITests;
 			sourceTree = "<group>";
@@ -420,6 +426,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				69DB40102B8A47720010E9AB /* ListPageScreen.swift in Sources */,
+				69DB400E2B8A44370010E9AB /* ListPageUITests.swift in Sources */,
 				69E1FD272B88DBB3003FC8F9 /* AllCatPicsUITestsLaunchTests.swift in Sources */,
 				69E1FD252B88DBB3003FC8F9 /* AllCatPicsUITests.swift in Sources */,
 			);
@@ -568,7 +576,6 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = AllCatPics/Info.plist;
 				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "This app requires access to save photos.";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
@@ -609,7 +616,6 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = AllCatPics/Info.plist;
 				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "This app requires access to save photos.";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;

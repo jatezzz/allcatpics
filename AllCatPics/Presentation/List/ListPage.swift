@@ -36,6 +36,7 @@ struct ListPage: View {
                 LazyVGrid(columns: columns, spacing: 20) {
                     ForEach(viewModel.cats, id: \.id) { cat in
                         Card(cat: cat)
+                            .accessibility(identifier: "catCard_\(cat.id)")
                         .onTapGesture {
                             NavigationController(appViewModel: appViewModel).navigateToDetail(catId: cat.id)
                         }
@@ -51,6 +52,7 @@ struct ListPage: View {
                 // Loading More Spinner
                 if viewModel.isLoading {
                     ProgressView()
+                        .accessibility(identifier: "loadingIndicator")
                         .padding()
                 }
             }

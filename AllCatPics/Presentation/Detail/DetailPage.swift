@@ -16,6 +16,7 @@ struct DetailPage: View {
         Group {
             if viewModel.isLoading {
                 ProgressView()
+                    .accessibility(identifier: "loadingIndicator")
             } else if let error = viewModel.error {
                 Text("Error: \(error.localizedDescription)")
             } else if let cat = viewModel.cat {
@@ -41,6 +42,7 @@ struct DetailPage: View {
                         Text("Make it yours")
                             .themed()
                             .accessibilityLabel("Make it yours")
+                            .accessibility(identifier: "searchTextField")
                         HStack {
                                     TextField("Add text to image", text: $userInputText)
                                         .textFieldStyle(RoundedBorderTextFieldStyle())
