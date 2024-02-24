@@ -41,14 +41,18 @@ struct DetailPage: View {
                         Text("Make it yours")
                             .themed()
                             .accessibilityLabel("Make it yours")
-                        HStack{
-                            TextField("Add text to image", text: $userInputText)
-                                .textFieldStyle(RoundedBorderTextFieldStyle())
+                        HStack {
+                                    TextField("Add text to image", text: $userInputText)
+                                        .textFieldStyle(RoundedBorderTextFieldStyle())
+                                        .submitLabel(.done) // Optional: Sets the return key to a "Done" label
+                                        .onSubmit {
+                                            applyTextAndDismissKeyboard()
+                                        }
 
-                            Button("Apply") {
-                                viewModel.applyTextToImage(userInputText)
-                            }
-                        }
+                                    Button("Apply") {
+                                        applyTextAndDismissKeyboard()
+                                    }
+                                }
                         .padding(.bottom)
                         
                         Text("Details")
@@ -99,8 +103,21 @@ struct DetailPage: View {
         .environment(\.theme, Theme.defaultTheme) // Apply the theme
         .onAppear(perform: viewModel.fetchItemDetail)
     }
+    
+    private func applyTextAndDismissKeyboard() {
+          viewModel.applyTextToImage(userInputText)
+          dismissKeyboard()
+      }
 }
 
 #Preview {
     DetailPage(viewModel: DetailPageViewModel(repository: CatRepository(api: CatAPI(), localStorage: CatLocalStorage()), catId: "abc"))
 }
+
+#if canImport(UIKit)
+extension View {
+    func dismissKeyboard() {
+        UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
+    }
+}
+#endif
