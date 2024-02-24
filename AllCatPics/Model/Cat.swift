@@ -5,7 +5,7 @@
 //  Created by John Trujillo on 23/2/24.
 //
 
-struct Cat: Identifiable, Decodable {
+struct Cat: Identifiable, Decodable, Hashable {
     let tags: [String]
     let createdAt: String?
     let updatedAt: String?

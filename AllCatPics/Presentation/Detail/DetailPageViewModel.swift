@@ -18,7 +18,6 @@ class DetailPageViewModel: ObservableObject {
     }
     
     func fetchItemDetail() {
-        print("fetchItemDetail", catId)
         Task {
             do {
                 let newCat = try await repository.getDetail(id: catId)

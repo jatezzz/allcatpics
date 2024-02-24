@@ -8,32 +8,23 @@
 import Foundation
 
 protocol CatLocalStorageProtocol {
-    func saveCats(_ cats: [Cat], forPage page: Int)
+    func saveCats(_ cats: [Cat])
     func saveCat(_ cat: Cat)
-    func getCats(forPage page: Int) -> [Cat]?
     func getCatById(_ id: String) -> Cat?
 }
+
 class CatLocalStorage: CatLocalStorageProtocol {
-    private var catsByPage: [Int: [Cat]] = [:]
-    private var allCats: [Cat] = []
+    private var allCats: Set<Cat> = []
 
-    func saveCats(_ cats: [Cat], forPage page: Int) {
-        catsByPage[page] = cats
-    }
-    func saveCat(_ cat: Cat) {
-        allCats.append(cat)
-    }
-
-    func getCats(forPage page: Int) -> [Cat]? {
-        return catsByPage[page]
+    func saveCats(_ cats: [Cat]) {
+        cats.forEach({allCats.insert($0)})
     }
     
+    func saveCat(_ cat: Cat) {
+        allCats.insert(cat)
+    }
+
     func getCatById(_ id: String) -> Cat? {
-        for (_, cats) in catsByPage {
-            if let cat = cats.first(where: { $0.id == id }) {
-                return cat
-            }
-        }
         return allCats.first(where: { $0.id == id })
     }
 }

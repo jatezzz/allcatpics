@@ -26,9 +26,9 @@ class ListPageViewModel: ObservableObject {
         Task {
             do {
                 let newCats = try await repository.getList(page: currentPage)
+                self.currentPage += 1
                 DispatchQueue.main.async {
                     self.cats.append(contentsOf: newCats)
-                    self.currentPage += 1
                     self.isLoading = false
                 }
             } catch {
@@ -38,5 +38,10 @@ class ListPageViewModel: ObservableObject {
                 }
             }
         }
+    }
+    
+    func shouldLoadMoreData(currentItem: Cat)-> Bool {
+        guard let last: Cat = cats.last else { return false }
+        return currentItem.id == last.id
     }
 }
