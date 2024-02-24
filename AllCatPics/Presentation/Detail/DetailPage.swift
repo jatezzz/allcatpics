@@ -38,6 +38,10 @@ struct DetailPage: View {
                             .frame(maxWidth: .infinity)
                             .accessibilityLabel("Cat image")
                         
+                        Text("Name: \(cat.displayName ?? cat.id.generateName())")
+                            .themed()
+                            .accessibilityLabel("Name \(cat.displayName ?? cat.id.generateName())")
+                        
                         Text("Id: \(cat.id)")
                             .themed()
                             .accessibilityLabel("Id \(cat.id)")

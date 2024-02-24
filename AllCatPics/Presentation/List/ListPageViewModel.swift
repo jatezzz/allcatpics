@@ -27,7 +27,15 @@ class ListPageViewModel: ObservableObject {
         
         Task {
             do {
-                let newCats = try await repository.getList(page: currentPage)
+                var newCats = try await repository.getList(page: currentPage)
+                
+                // Apply name generation to each cat
+                newCats = newCats.map { cat in
+                    var modifiableCat = cat
+                    modifiableCat.displayName = cat.id.generateName()
+                    return modifiableCat
+                }
+                
                 self.cats.append(contentsOf: newCats)
                 self.isLoading = false
                 self.currentPage += 1

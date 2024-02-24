@@ -14,6 +14,8 @@ struct Cat: Identifiable, Decodable, Hashable {
     let id: String
     let editedAt: String?
     
+    var displayName: String?
+    
     enum CodingKeys: String, CodingKey {
         case tags, createdAt, updatedAt, mimetype, size, editedAt
         case id = "_id"
