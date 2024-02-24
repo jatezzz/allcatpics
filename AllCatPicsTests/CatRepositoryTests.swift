@@ -1,5 +1,5 @@
 //
-//  CatRepositoryTest.swift
+//  CatRepositoryTests.swift
 //  AllCatPicsTests
 //
 //  Created by John Trujillo on 23/2/24.
@@ -8,7 +8,7 @@
 import XCTest
 @testable import AllCatPics
 
-final class CatRepositoryTest: XCTestCase {
+final class CatRepositoryTests: XCTestCase {
 
     func testLoadNextPage_WhenSuccess_AppendsNewCats() async throws {
         let mockCatAPI = MockCatAPI()
