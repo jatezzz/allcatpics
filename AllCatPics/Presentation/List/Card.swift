@@ -27,7 +27,7 @@ struct Card: View {
                     .cornerRadius(10)
 
                 // Overlay the ID with a semi-transparent background
-                Text(cat.displayName ?? cat.id)
+                Text(cat.displayName)
                     .bold()
                     .foregroundColor(.white)
                     .padding(5)

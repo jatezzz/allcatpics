@@ -25,7 +25,13 @@ class CatRepository: CatRepositoryProtocol {
     func getList(page: Int = 0) async throws -> [Cat] {
         let result = await api.fetchCatList(limit: itemsPerPage, skip: page * itemsPerPage)
         switch result {
-        case .success(let cats):
+        case .success(var cats):
+            // Apply name generation to each cat
+            let cats = cats.map { cat in
+                var modifiableCat = cat
+                modifiableCat.displayName = cat.id.generateName()
+                return modifiableCat
+            }
             localStorage.saveCats(cats)
             return cats
         case .failure(let error):
@@ -39,7 +45,8 @@ class CatRepository: CatRepositoryProtocol {
         } else {
             let result = await api.fetchCatDetail(id: id)
             switch result {
-            case .success(let cat):
+            case .success(var cat):
+                cat.displayName = cat.id.generateName()
                 localStorage.saveCat(cat)
                 return cat
             case .failure(let error):

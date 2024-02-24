@@ -18,31 +18,37 @@ extension String {
         var consonantQueue: [Character] = []
         var vowelQueue: [Character] = []
         
+        // Split characters into consonants and vowels
         for char in self {
             if consonants.contains(char) {
                 consonantQueue.append(char)
             } else if vowels.contains(char) {
                 vowelQueue.append(char)
             }
+        }
+        
+        // Try forming up to 3 syllables
+        while syllableCount < 3 && (!consonantQueue.isEmpty || !vowelQueue.isEmpty) {
+            var syllable = ""
             
-            if !consonantQueue.isEmpty && !vowelQueue.isEmpty {
-                result.append(consonantQueue.removeFirst())
-                result.append(vowelQueue.removeFirst())
+            // Add consonant if available
+            if !consonantQueue.isEmpty {
+                syllable += String(consonantQueue.removeFirst())
+            }
+            
+            // Add vowel if available
+            if !vowelQueue.isEmpty {
+                syllable += String(vowelQueue.removeFirst())
+                syllableCount += 1 // A valid syllable is only counted when a vowel is added
+            } else if !syllable.isEmpty {
+                // If we have a consonant but no vowel, still count it as a syllable for the purpose of this task
                 syllableCount += 1
             }
             
-            if syllableCount == 3 {
-                break
-            }
+            result += syllable
         }
         
-        // If less than 3 syllables and any consonants are left, add them
-        while syllableCount < 3 && !consonantQueue.isEmpty {
-            result.append(consonantQueue.removeFirst())
-            syllableCount += 1
-        }
-        
-        return result
+        return result.capitalized
     }
-
+    
 }
