@@ -33,16 +33,6 @@ struct ListPage: View {
     var body: some View {
         NavigationView {
             ScrollView {
-                // Search Bar
-                TextField("Search Cats", text: $searchText)
-                    .padding(7)
-                    .background(Color(.systemGray6))
-                    .cornerRadius(10)
-                    .padding(.horizontal)
-                    .onSubmit {
-                        //                        viewModel.searchCats(by: searchText)
-                    }
-                
                 LazyVGrid(columns: columns, spacing: 20) {
                     ForEach(viewModel.cats, id: \.id) { cat in
                         Card(cat: cat)

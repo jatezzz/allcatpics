@@ -54,9 +54,10 @@ struct DetailPage: View {
                         Text("Details")
                             .themed()
                             .accessibilityLabel("Details")
-                        Text("Tags: \(cat.tags.joined(separator: ", "))")
-                            .themed()
-                            .accessibilityLabel("Tags: \(cat.tags.joined(separator: ", "))")
+                        if let cat = viewModel.cat, !cat.tags.isEmpty {
+                            TagsView(tags: cat.tags)
+                                .themed()
+                        }
                         
                         
                         Text("Id: \(cat.id)")
