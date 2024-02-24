@@ -11,6 +11,8 @@ class DetailPageViewModel: ObservableObject {
     @Published var cat: Cat?
     @Published var isLoading = false
     @Published var error: Error?
+    @Published var screenTitle: String = ""
+    @Published var imageURL: String = ""
 
     private let repository: CatRepositoryProtocol
     private let catId: String
@@ -18,6 +20,8 @@ class DetailPageViewModel: ObservableObject {
     init(repository: CatRepositoryProtocol, catId: String) {
         self.repository = repository
         self.catId = catId
+        self.screenTitle = catId.generateName()
+        self.imageURL = "https://cataas.com/cat/\(catId)"
     }
 
     func fetchItemDetail() {
@@ -37,5 +41,9 @@ class DetailPageViewModel: ObservableObject {
                 }
             }
         }
+    }
+    
+    func applyTextToImage(_ text: String) {
+        self.imageURL = "https://cataas.com/cat/\(catId)/says/\(text)?fontSize=50&fontColor=white"
     }
 }

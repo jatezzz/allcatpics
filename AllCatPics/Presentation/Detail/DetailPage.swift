@@ -8,9 +8,9 @@
 import SwiftUI
 import Kingfisher
 
-
 struct DetailPage: View {
     @ObservedObject var viewModel: DetailPageViewModel
+    @State private var userInputText: String = ""
     
     var body: some View {
         Group {
@@ -23,7 +23,7 @@ struct DetailPage: View {
                     VStack(alignment: .leading, spacing: 10) {
                         let processor = DownsamplingImageProcessor(size: CGSize(width: 400, height: 400))
                         |> RoundCornerImageProcessor(cornerRadius: 4)
-                        KFImage(URL(string: "https://cataas.com/cat/\(cat.id)")!)
+                        KFImage(URL(string: viewModel.imageURL)!)
                             .placeholder { Image(systemName: "cat") }
                             .setProcessor(processor)
                             .loadDiskFileSynchronously()
@@ -38,17 +38,30 @@ struct DetailPage: View {
                             .frame(maxWidth: .infinity)
                             .accessibilityLabel("Cat image")
                         
-                        Text("Name: \(cat.displayName)")
+                        Text("Make it yours")
                             .themed()
-                            .accessibilityLabel("Name \(cat.displayName)")
+                            .accessibilityLabel("Make it yours")
+                        HStack{
+                            TextField("Add text to image", text: $userInputText)
+                                .textFieldStyle(RoundedBorderTextFieldStyle())
+
+                            Button("Apply") {
+                                viewModel.applyTextToImage(userInputText)
+                            }
+                        }
+                        .padding(.bottom)
+                        
+                        Text("Details")
+                            .themed()
+                            .accessibilityLabel("Details")
+                        Text("Tags: \(cat.tags.joined(separator: ", "))")
+                            .themed()
+                            .accessibilityLabel("Tags: \(cat.tags.joined(separator: ", "))")
+                        
                         
                         Text("Id: \(cat.id)")
                             .themed()
                             .accessibilityLabel("Id \(cat.id)")
-                        
-                        Text("Tags: \(cat.tags.joined(separator: ", "))")
-                            .themed()
-                            .accessibilityLabel("Tags: \(cat.tags.joined(separator: ", "))")
                         
                         if let createdAt = cat.createdAt {
                             Text("Created at: \(createdAt)")
@@ -61,7 +74,6 @@ struct DetailPage: View {
                                 .themed()
                                 .accessibilityLabel("Last updated at \(updatedAt)")
                         }
-                        
                         if let size = cat.size {
                             Text("Size: \(size)")
                                 .themed()
@@ -73,6 +85,7 @@ struct DetailPage: View {
                                 .themed()
                                 .accessibilityLabel("MimeType \(mimetype)")
                         }
+                        
                     }
                     .padding()
                 }
@@ -81,7 +94,7 @@ struct DetailPage: View {
             }
         }
         .onAppear(perform: viewModel.fetchItemDetail)
-        .navigationTitle("Cat Details")
+        .navigationTitle(viewModel.screenTitle)
         .environment(\.theme, Theme.defaultTheme) // Apply the theme
         .onAppear(perform: viewModel.fetchItemDetail)
     }
