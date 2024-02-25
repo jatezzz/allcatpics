@@ -19,11 +19,16 @@ struct DetailPage: View {
             } else if let error = viewModel.error {
                 Text("Error: \(error.localizedDescription)")
             } else if let cat = viewModel.cat {
-                CatDetailContent(cat: cat, imageURL: viewModel.imageURL, isSaving: viewModel.isSaving, handler: { userInputText in
-                    viewModel.applyTextToImage(userInputText)
-                }, saveImageToGallery: {
-                    viewModel.saveImageToGallery()
-                })
+                
+                ScrollView {
+                    CatDetailContent(cat: cat, imageURL: viewModel.imageURL, isSaving: viewModel.isSaving, handler: { userInputText in
+                        viewModel.applyTextToImage(userInputText)
+                    }, saveImageToGallery: {
+                        viewModel.saveImageToGallery()
+                    })
+                    
+                    .padding()
+                }
             } else {
                 Text("No details available.")
             }

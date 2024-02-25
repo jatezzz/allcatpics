@@ -17,24 +17,9 @@ struct CatDetailContent: View {
     
     @State private var userInputText: String = ""
     var body: some View{
-        ScrollView {
             VStack(alignment: .leading, spacing: 10) {
-                let processor = DownsamplingImageProcessor(size: CGSize(width: 400, height: 400))
-                |> RoundCornerImageProcessor(cornerRadius: 4)
-                KFImage(URL(string: imageURL)!)
-                    .placeholder { Image(systemName: "cat") }
-                    .setProcessor(processor)
-                    .loadDiskFileSynchronously()
-                    .cacheMemoryOnly()
-                    .fade(duration: 0.25)
-                    .onProgress { receivedSize, totalSize in  }
-                    .onFailure { error in
-                        print(error)
-                    }
-                    .aspectRatio(contentMode: .fit)
-                    .frame(height: 400)
+                KingfisherImageView(url: imageURL, width: nil, height: 400, cornerRadius: 4)
                     .frame(maxWidth: .infinity)
-                    .accessibilityLabel("Cat image")
                 
                 Text("Make it yours")
                     .themedStyle(Theme.TextStyle(font: .largeTitle, color: .blue))
@@ -98,8 +83,10 @@ struct CatDetailContent: View {
                 }
                 
             }
-            .padding()
-        }
+            .onAppear {
+                
+                    print(UIScreen.main.bounds.width - 30)
+            }
     }
     
     private func applyTextAndDismissKeyboard() {

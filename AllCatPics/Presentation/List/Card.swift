@@ -18,13 +18,7 @@ struct Card: View {
         
         VStack {
             ZStack(alignment: .bottomLeading) {
-                KFImage(URL(string: "https://cataas.com/cat/\(cat.id)")!)
-                    .placeholder { Image(systemName: "cat") }
-                    .resizable()
-                    .aspectRatio(contentMode: .fill)
-                    .frame(width: screenWidth, height: screenWidth) // Force image to be a square with width half of the screen
-                    .clipped()
-                    .cornerRadius(10)
+                KingfisherImageView(url: "https://cataas.com/cat/\(cat.id)", width: screenWidth, height: screenWidth, cornerRadius: 10, contentMode: .fill)
 
                 // Overlay the ID with a semi-transparent background
                 Text(cat.displayName)
@@ -41,4 +35,8 @@ struct Card: View {
         }
         .frame(width: screenWidth) // Ensure the VStack respects the max width
     }
+}
+
+#Preview {
+    Card(cat: Cat(tags: ["tag1"], createdAt: nil, updatedAt: nil, mimetype: nil, size: nil, id: "Hola", editedAt: nil))
 }
