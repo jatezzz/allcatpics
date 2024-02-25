@@ -8,20 +8,6 @@
 import SwiftUI
 import Kingfisher
 
-class AppViewModel: ObservableObject {
-    @Published var isShowingDetailView = false
-    @Published var selectedCatId: String?
-}
-
-struct NavigationController {
-    var appViewModel: AppViewModel
-    
-    func navigateToDetail(catId: String) {
-        appViewModel.selectedCatId = catId
-        appViewModel.isShowingDetailView = true
-    }
-}
-
 struct ListPage: View {
     @StateObject var appViewModel = AppViewModel()
     @ObservedObject var viewModel: ListPageViewModel
@@ -69,13 +55,4 @@ struct ListPage: View {
 
 #Preview {
     ListPage(viewModel: ListPageViewModel(repository: CatRepository(api: CatAPI(), localStorage: CatLocalStorage())))
-}
-extension Binding {
-    func isNotNil<T>() -> Binding<Bool> where Value == T? {
-        .init(get: {
-            wrappedValue != nil
-        }, set: { _ in
-            wrappedValue = nil
-        })
-    }
 }
