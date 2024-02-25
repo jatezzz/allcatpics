@@ -22,6 +22,11 @@
 		695032852B89528A00A6CB56 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 695032842B89528A00A6CB56 /* Kingfisher */; };
 		69DB400E2B8A44370010E9AB /* ListPageUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69DB400D2B8A44370010E9AB /* ListPageUITests.swift */; };
 		69DB40102B8A47720010E9AB /* ListPageScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69DB400F2B8A47720010E9AB /* ListPageScreen.swift */; };
+		69DB401A2B8A80750010E9AB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69DB40192B8A80750010E9AB /* AppDelegate.swift */; };
+		69DB401D2B8A9C3E0010E9AB /* SBTUITestTunnelClient in Frameworks */ = {isa = PBXBuildFile; productRef = 69DB401C2B8A9C3E0010E9AB /* SBTUITestTunnelClient */; };
+		69DB401F2B8A9C3E0010E9AB /* SBTUITestTunnelServer in Frameworks */ = {isa = PBXBuildFile; productRef = 69DB401E2B8A9C3E0010E9AB /* SBTUITestTunnelServer */; };
+		69DB40222B8AE41F0010E9AB /* list.json in Resources */ = {isa = PBXBuildFile; fileRef = 69DB40212B8AE41F0010E9AB /* list.json */; };
+		69DB40242B8AE4B50010E9AB /* detail.json in Resources */ = {isa = PBXBuildFile; fileRef = 69DB40232B8AE4B50010E9AB /* detail.json */; };
 		69E1FD092B88DBB0003FC8F9 /* AllCatPicsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E1FD082B88DBB0003FC8F9 /* AllCatPicsApp.swift */; };
 		69E1FD0B2B88DBB0003FC8F9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E1FD0A2B88DBB0003FC8F9 /* ContentView.swift */; };
 		69E1FD0D2B88DBB2003FC8F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 69E1FD0C2B88DBB2003FC8F9 /* Assets.xcassets */; };
@@ -71,6 +76,10 @@
 		692379342B89B9DB00167287 /* TagsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagsView.swift; sourceTree = "<group>"; };
 		69DB400D2B8A44370010E9AB /* ListPageUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPageUITests.swift; sourceTree = "<group>"; };
 		69DB400F2B8A47720010E9AB /* ListPageScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPageScreen.swift; sourceTree = "<group>"; };
+		69DB40192B8A80750010E9AB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		69DB40202B8AA4DB0010E9AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		69DB40212B8AE41F0010E9AB /* list.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = list.json; sourceTree = "<group>"; };
+		69DB40232B8AE4B50010E9AB /* detail.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = detail.json; sourceTree = "<group>"; };
 		69E1FD052B88DBB0003FC8F9 /* AllCatPics.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AllCatPics.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		69E1FD082B88DBB0003FC8F9 /* AllCatPicsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllCatPicsApp.swift; sourceTree = "<group>"; };
 		69E1FD0A2B88DBB0003FC8F9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -98,6 +107,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				695032852B89528A00A6CB56 /* Kingfisher in Frameworks */,
+				69DB401F2B8A9C3E0010E9AB /* SBTUITestTunnelServer in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,6 +122,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				69DB401D2B8A9C3E0010E9AB /* SBTUITestTunnelClient in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -158,6 +169,7 @@
 				69E1FD362B88DFA5003FC8F9 /* Data */,
 				69E1FD352B88DF78003FC8F9 /* Model */,
 				69E1FD082B88DBB0003FC8F9 /* AllCatPicsApp.swift */,
+				69DB40192B8A80750010E9AB /* AppDelegate.swift */,
 				69E1FD0A2B88DBB0003FC8F9 /* ContentView.swift */,
 				69E1FD0C2B88DBB2003FC8F9 /* Assets.xcassets */,
 				69E1FD0E2B88DBB2003FC8F9 /* AllCatPics.entitlements */,
@@ -189,10 +201,13 @@
 		69E1FD232B88DBB3003FC8F9 /* AllCatPicsUITests */ = {
 			isa = PBXGroup;
 			children = (
+				69DB40202B8AA4DB0010E9AB /* Info.plist */,
 				69E1FD242B88DBB3003FC8F9 /* AllCatPicsUITests.swift */,
 				69E1FD262B88DBB3003FC8F9 /* AllCatPicsUITestsLaunchTests.swift */,
 				69DB400D2B8A44370010E9AB /* ListPageUITests.swift */,
 				69DB400F2B8A47720010E9AB /* ListPageScreen.swift */,
+				69DB40212B8AE41F0010E9AB /* list.json */,
+				69DB40232B8AE4B50010E9AB /* detail.json */,
 			);
 			path = AllCatPicsUITests;
 			sourceTree = "<group>";
@@ -271,6 +286,7 @@
 			name = AllCatPics;
 			packageProductDependencies = (
 				695032842B89528A00A6CB56 /* Kingfisher */,
+				69DB401E2B8A9C3E0010E9AB /* SBTUITestTunnelServer */,
 			);
 			productName = AllCatPics;
 			productReference = 69E1FD052B88DBB0003FC8F9 /* AllCatPics.app */;
@@ -308,6 +324,9 @@
 				69E1FD222B88DBB3003FC8F9 /* PBXTargetDependency */,
 			);
 			name = AllCatPicsUITests;
+			packageProductDependencies = (
+				69DB401C2B8A9C3E0010E9AB /* SBTUITestTunnelClient */,
+			);
 			productName = AllCatPicsUITests;
 			productReference = 69E1FD202B88DBB3003FC8F9 /* AllCatPicsUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
@@ -346,6 +365,7 @@
 			mainGroup = 69E1FCFC2B88DBB0003FC8F9;
 			packageReferences = (
 				695032832B89528A00A6CB56 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				69DB401B2B8A9C3E0010E9AB /* XCRemoteSwiftPackageReference "SBTUITestTunnel" */,
 			);
 			productRefGroup = 69E1FD062B88DBB0003FC8F9 /* Products */;
 			projectDirPath = "";
@@ -379,6 +399,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				69DB40242B8AE4B50010E9AB /* detail.json in Resources */,
+				69DB40222B8AE41F0010E9AB /* list.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -392,6 +414,7 @@
 				69E1FD472B88E089003FC8F9 /* ListPage.swift in Sources */,
 				69E1FD452B88E06F003FC8F9 /* DetailPageViewModel.swift in Sources */,
 				69E1FD422B88E053003FC8F9 /* ListPageViewModel.swift in Sources */,
+				69DB401A2B8A80750010E9AB /* AppDelegate.swift in Sources */,
 				69E1FD492B88E0A6003FC8F9 /* DetailPage.swift in Sources */,
 				6923792D2B89A1DF00167287 /* Theme.swift in Sources */,
 				69E1FD0B2B88DBB0003FC8F9 /* ContentView.swift in Sources */,
@@ -592,6 +615,7 @@
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 14.2;
 				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jatezzz.ios.AllCatPics;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
@@ -632,6 +656,7 @@
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 14.2;
 				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jatezzz.ios.AllCatPics;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
@@ -697,9 +722,11 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = RWZ986VC89;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AllCatPicsUITests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
 				MACOSX_DEPLOYMENT_TARGET = 14.2;
 				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jatezzz.ios.AllCatPicsUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
@@ -719,9 +746,11 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = RWZ986VC89;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AllCatPicsUITests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
 				MACOSX_DEPLOYMENT_TARGET = 14.2;
 				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jatezzz.ios.AllCatPicsUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
@@ -783,6 +812,14 @@
 				minimumVersion = 7.11.0;
 			};
 		};
+		69DB401B2B8A9C3E0010E9AB /* XCRemoteSwiftPackageReference "SBTUITestTunnel" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Subito-it/SBTUITestTunnel";
+			requirement = {
+				kind = revision;
+				revision = 906baf0943b5f76e6ee0125844efd80e5a2d1b1d;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -790,6 +827,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 695032832B89528A00A6CB56 /* XCRemoteSwiftPackageReference "Kingfisher" */;
 			productName = Kingfisher;
+		};
+		69DB401C2B8A9C3E0010E9AB /* SBTUITestTunnelClient */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 69DB401B2B8A9C3E0010E9AB /* XCRemoteSwiftPackageReference "SBTUITestTunnel" */;
+			productName = SBTUITestTunnelClient;
+		};
+		69DB401E2B8A9C3E0010E9AB /* SBTUITestTunnelServer */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 69DB401B2B8A9C3E0010E9AB /* XCRemoteSwiftPackageReference "SBTUITestTunnel" */;
+			productName = SBTUITestTunnelServer;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

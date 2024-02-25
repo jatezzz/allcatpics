@@ -1,0 +1,28 @@
+[
+  {
+    "_id": "MUdTa8xitzMo2BwI",
+    "mimetype": "image/jpeg",
+    "size": 40540,
+    "tags": [
+      "tag1",
+      "tag2"
+    ]
+  },
+  {
+    "_id": "fsKA1LPSe02EhFVj",
+    "mimetype": "image/jpeg",
+    "size": 6513,
+    "tags": [
+      "orange"
+    ]
+  },
+  {
+    "_id": "fewECg3UpBnPjxNr",
+    "mimetype": "image/jpeg",
+    "size": 42136,
+    "tags": [
+      "highway_hoop",
+      "upii"
+    ]
+  }
+]

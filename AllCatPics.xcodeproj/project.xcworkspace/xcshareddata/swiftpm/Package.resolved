@@ -8,6 +8,14 @@
         "revision" : "5b92f029fab2cce44386d28588098b5be0824ef5",
         "version" : "7.11.0"
       }
+    },
+    {
+      "identity" : "sbtuitesttunnel",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Subito-it/SBTUITestTunnel",
+      "state" : {
+        "revision" : "906baf0943b5f76e6ee0125844efd80e5a2d1b1d"
+      }
     }
   ],
   "version" : 2
