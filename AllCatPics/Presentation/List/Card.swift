@@ -37,7 +37,7 @@ struct Card: View {
                     .frame(maxWidth: .infinity)
             }
             .frame(width: screenWidth, height: screenWidth) // Apply the same frame to ZStack
-            .themed() // Apply theming if needed, such as for corner radius or shadow
+            .themedStyle(Theme.TextStyle(font: .caption2, color: .red)) // Apply theming if needed, such as for corner radius or shadow
         }
         .frame(width: screenWidth) // Ensure the VStack respects the max width
     }

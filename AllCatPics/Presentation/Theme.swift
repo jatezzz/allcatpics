@@ -10,10 +10,24 @@ import SwiftUI
 
 struct Theme {
     var accentColor: Color
-    var textColor: Color
-    var fontSize: Font
-    
-    static let defaultTheme = Theme(accentColor: .blue, textColor: .primary, fontSize: .body)
+       var primaryTextColor: Color
+       var secondaryTextColor: Color // Add a secondary text color for variety
+
+       struct TextStyle {
+           var font: Font
+           var color: Color
+       }
+       
+       var bodyStyle: TextStyle
+       var captionStyle: TextStyle
+       
+       static let defaultTheme = Theme(
+           accentColor: .blue,
+           primaryTextColor: .primary,
+           secondaryTextColor: .secondary,
+           bodyStyle: TextStyle(font: .body, color: .primary),
+           captionStyle: TextStyle(font: .caption, color: .secondary)
+       )
 }
 
 // Define a custom environment key for the theme
@@ -28,19 +42,30 @@ extension EnvironmentValues {
     }
 }
 
-// A custom view modifier to apply the theme
-struct ThemedModifier: ViewModifier {
-    @Environment(\.theme) var theme: Theme
+//// A custom view modifier to apply the theme
+//struct ThemedModifier: ViewModifier {
+//    @Environment(\.theme) var theme: Theme
+//    
+//    func body(content: Content) -> some View {
+//        content
+//            .foregroundColor(theme.textColor)
+//            .font(theme.fontSize)
+//    }
+//}
+
+struct ThemedStyleModifier: ViewModifier {
+    var style: Theme.TextStyle
     
     func body(content: Content) -> some View {
         content
-            .foregroundColor(theme.textColor)
-            .font(theme.fontSize)
+            .foregroundColor(style.color)
+            .font(style.font)
     }
 }
 
+
 extension View {
-    func themed() -> some View {
-        self.modifier(ThemedModifier())
+    func themedStyle(_ style: Theme.TextStyle ) -> some View {
+        self.modifier(ThemedStyleModifier(style: style))
     }
 }

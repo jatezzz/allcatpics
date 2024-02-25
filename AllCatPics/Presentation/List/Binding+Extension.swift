@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 extension Binding {
     func isNotNil<T>() -> Binding<Bool> where Value == T? {
