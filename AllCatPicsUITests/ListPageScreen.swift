@@ -23,4 +23,8 @@ class ListPageScreen {
     func selectCat(withID catID: String) {
         app.staticTexts["catCard_\(catID)"].tap()
     }
+    
+    func verifyErrorAlert()->Bool {
+        app.alerts["Oops! Something went wrong..."].exists
+    }
 }

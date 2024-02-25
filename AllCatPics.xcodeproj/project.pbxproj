@@ -20,6 +20,7 @@
 		692379332B89ACCD00167287 /* NameGeneratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 692379322B89ACCD00167287 /* NameGeneratorTests.swift */; };
 		692379352B89B9DB00167287 /* TagsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 692379342B89B9DB00167287 /* TagsView.swift */; };
 		695032852B89528A00A6CB56 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 695032842B89528A00A6CB56 /* Kingfisher */; };
+		69D777CE2B8AF8C500E8E7DA /* ImageSaver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69D777CD2B8AF8C500E8E7DA /* ImageSaver.swift */; };
 		69DB400E2B8A44370010E9AB /* ListPageUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69DB400D2B8A44370010E9AB /* ListPageUITests.swift */; };
 		69DB40102B8A47720010E9AB /* ListPageScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69DB400F2B8A47720010E9AB /* ListPageScreen.swift */; };
 		69DB401D2B8A9C3E0010E9AB /* SBTUITestTunnelClient in Frameworks */ = {isa = PBXBuildFile; productRef = 69DB401C2B8A9C3E0010E9AB /* SBTUITestTunnelClient */; };
@@ -72,9 +73,9 @@
 		692379302B89ACA100167287 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		692379322B89ACCD00167287 /* NameGeneratorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameGeneratorTests.swift; sourceTree = "<group>"; };
 		692379342B89B9DB00167287 /* TagsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagsView.swift; sourceTree = "<group>"; };
+		69D777CD2B8AF8C500E8E7DA /* ImageSaver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSaver.swift; sourceTree = "<group>"; };
 		69DB400D2B8A44370010E9AB /* ListPageUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPageUITests.swift; sourceTree = "<group>"; };
 		69DB400F2B8A47720010E9AB /* ListPageScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPageScreen.swift; sourceTree = "<group>"; };
-		69DB40202B8AA4DB0010E9AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		69DB40212B8AE41F0010E9AB /* list.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = list.json; sourceTree = "<group>"; };
 		69E1FD052B88DBB0003FC8F9 /* AllCatPics.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AllCatPics.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		69E1FD082B88DBB0003FC8F9 /* AllCatPicsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllCatPicsApp.swift; sourceTree = "<group>"; };
@@ -196,7 +197,6 @@
 		69E1FD232B88DBB3003FC8F9 /* AllCatPicsUITests */ = {
 			isa = PBXGroup;
 			children = (
-				69DB40202B8AA4DB0010E9AB /* Info.plist */,
 				69E1FD242B88DBB3003FC8F9 /* AllCatPicsUITests.swift */,
 				69E1FD262B88DBB3003FC8F9 /* AllCatPicsUITestsLaunchTests.swift */,
 				69DB400D2B8A44370010E9AB /* ListPageUITests.swift */,
@@ -258,6 +258,7 @@
 				69E1FD442B88E06F003FC8F9 /* DetailPageViewModel.swift */,
 				69E1FD482B88E0A6003FC8F9 /* DetailPage.swift */,
 				692379342B89B9DB00167287 /* TagsView.swift */,
+				69D777CD2B8AF8C500E8E7DA /* ImageSaver.swift */,
 			);
 			path = Detail;
 			sourceTree = "<group>";
@@ -411,6 +412,7 @@
 				6923792D2B89A1DF00167287 /* Theme.swift in Sources */,
 				69E1FD0B2B88DBB0003FC8F9 /* ContentView.swift in Sources */,
 				692379312B89ACA100167287 /* String+Extension.swift in Sources */,
+				69D777CE2B8AF8C500E8E7DA /* ImageSaver.swift in Sources */,
 				69E1FD092B88DBB0003FC8F9 /* AllCatPicsApp.swift in Sources */,
 				6923792F2B89AC6900167287 /* Card.swift in Sources */,
 				692379352B89B9DB00167287 /* TagsView.swift in Sources */,
@@ -714,7 +716,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = RWZ986VC89;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = AllCatPicsUITests/Info.plist;
+				INFOPLIST_FILE = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
 				MACOSX_DEPLOYMENT_TARGET = 14.2;
 				MARKETING_VERSION = 1.0;
@@ -738,7 +740,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = RWZ986VC89;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = AllCatPicsUITests/Info.plist;
+				INFOPLIST_FILE = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
 				MACOSX_DEPLOYMENT_TARGET = 14.2;
 				MARKETING_VERSION = 1.0;

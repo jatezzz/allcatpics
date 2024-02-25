@@ -25,9 +25,7 @@ struct NavigationController {
 struct ListPage: View {
     @StateObject var appViewModel = AppViewModel()
     @ObservedObject var viewModel: ListPageViewModel
-    @State var searchText = ""
     
-    // Columns definition for the grid
     var columns: [GridItem] = Array(repeating: .init(.flexible()), count: 2)
     
     var body: some View {
@@ -48,8 +46,6 @@ struct ListPage: View {
                     }
                 }
                 .padding(.horizontal)
-                
-                // Loading More Spinner
                 if viewModel.isLoading {
                     ProgressView()
                         .accessibility(identifier: "loadingIndicator")
@@ -58,10 +54,28 @@ struct ListPage: View {
             }
             .background(NavigationLink("", destination: DetailPage(viewModel: DetailPageViewModel(repository: viewModel.repository, catId: appViewModel.selectedCatId ?? "")), isActive: $appViewModel.isShowingDetailView))
             .navigationTitle("Cats")
+            .alert(
+                "Oops! Something went wrong...",
+                isPresented: $viewModel.error.isNotNil(),
+                presenting: viewModel.error,
+                actions: { _ in },
+                message: { error in
+                    Text("There's been an error")
+                }
+            )
         }
     }
 }
 
 #Preview {
     ListPage(viewModel: ListPageViewModel(repository: CatRepository(api: CatAPI(), localStorage: CatLocalStorage())))
+}
+extension Binding {
+    func isNotNil<T>() -> Binding<Bool> where Value == T? {
+        .init(get: {
+            wrappedValue != nil
+        }, set: { _ in
+            wrappedValue = nil
+        })
+    }
 }

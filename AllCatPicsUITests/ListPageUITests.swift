@@ -9,16 +9,7 @@ import XCTest
 import SBTUITestTunnelClient
 
 class ListPageTests: XCTestCase {
-    //    let app = XCUIApplication()
-    
-    //    override func setUp() {
-    //        super.setUp()
-    //        // Swift
-    //        app.launchTunnel()
-    //        continueAfterFailure = false
-    //    }
-    
-    
+
     override func setUp() {
         super.setUp()
         continueAfterFailure = false
@@ -41,7 +32,6 @@ class ListPageTests: XCTestCase {
         }
         let listPage = ListPageScreen(app: app)
         XCTAssertTrue(listPage.isDisplaying, "List Page is not displayed")
-        let catID = "fewECg3UpBnPjxNr" // Use a known cat ID
-        listPage.selectCat(withID: catID)
+        XCTAssertTrue(listPage.verifyErrorAlert())
     }
 }

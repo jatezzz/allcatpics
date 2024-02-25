@@ -109,8 +109,16 @@ struct DetailPage: View {
         }
         .onAppear(perform: viewModel.fetchItemDetail)
         .navigationTitle(viewModel.screenTitle)
-        .environment(\.theme, Theme.defaultTheme) // Apply the theme
-        .onAppear(perform: viewModel.fetchItemDetail)
+        .environment(\.theme, Theme.defaultTheme)
+        .alert(
+            "Oops! Something went wrong...",
+            isPresented: $viewModel.error.isNotNil(),
+            presenting: viewModel.error,
+            actions: { _ in },
+            message: { error in
+                Text("There's been an error")
+            }
+        )
     }
     
     private func applyTextAndDismissKeyboard() {

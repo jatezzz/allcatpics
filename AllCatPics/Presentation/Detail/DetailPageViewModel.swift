@@ -19,12 +19,18 @@ class DetailPageViewModel: ObservableObject {
 
     private let repository: CatRepositoryProtocol
     private let catId: String
+    private var imageSaver : ImageSaver?
 
     init(repository: CatRepositoryProtocol, catId: String) {
         self.repository = repository
         self.catId = catId
         self.screenTitle = catId.generateName()
         self.imageURL = "https://cataas.com/cat/\(catId)"
+        self.imageSaver = ImageSaver { error in
+            self.error = error
+            self.isSaving = false
+            self.isLoading = false
+        }
     }
 
     func fetchItemDetail() {
@@ -52,32 +58,21 @@ class DetailPageViewModel: ObservableObject {
     
     func saveImageToGallery() {
         guard let url = URL(string: imageURL), !isSaving else { return }
+        isLoading = true
         isSaving = true
-        KingfisherManager.shared.retrieveImage(with: url) { result in
+        error = nil
+        KingfisherManager.shared.retrieveImage(with: url) { [weak self] result in
+            guard let self else { return }
             switch result {
             case .success(let value):
-                ImageSaver.shared.saveImage(value.image)
+                self.imageSaver?.saveImage(value.image)
                 self.isSaving = false
+                self.isLoading = false
             case .failure(let error):
-                print(error) // Handle the error appropriately
+                self.error = error
                 self.isSaving = false
+                self.isLoading = false
             }
         }
-    }
-}
-
-class ImageSaver: NSObject {
-    static let shared = ImageSaver()
-
-    func saveImage(_ image: UIImage) {
-        UIImageWriteToSavedPhotosAlbum(image, self, #selector(savedImage(_:error:context:)), nil)
-    }
-
-    @objc func savedImage(_ im: UIImage, error: Error?, context: UnsafeMutableRawPointer?) {
-        if let err = error {
-            print("Error saving image: \(err)")
-            return
-        }
-        print("Image saved successfully.")
     }
 }
