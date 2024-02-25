@@ -148,6 +148,16 @@
 			path = Mocks;
 			sourceTree = "<group>";
 		};
+		69D777D92B8BCD9900E8E7DA /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				69D777D72B8BCD3A00E8E7DA /* View+Extension.swift */,
+				69D777D32B8AFC1600E8E7DA /* Binding+Extension.swift */,
+				692379302B89ACA100167287 /* String+Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		69E1FCFC2B88DBB0003FC8F9 = {
 			isa = PBXGroup;
 			children = (
@@ -229,7 +239,6 @@
 			children = (
 				69E1FD372B88DFB5003FC8F9 /* CatAPI.swift */,
 				69E1FD3A2B88DFFA003FC8F9 /* CatLocalStorage.swift */,
-				692379302B89ACA100167287 /* String+Extension.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -245,6 +254,7 @@
 		69E1FD3F2B88E038003FC8F9 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				69D777D92B8BCD9900E8E7DA /* Extension */,
 				69E1FD432B88E05F003FC8F9 /* Detail */,
 				69E1FD402B88E040003FC8F9 /* List */,
 				6923792C2B89A1DF00167287 /* Theme.swift */,
@@ -260,7 +270,6 @@
 				6923792E2B89AC6900167287 /* Card.swift */,
 				69D777CF2B8AFBEC00E8E7DA /* NavigationController.swift */,
 				69D777D12B8AFC0000E8E7DA /* AppViewModel.swift */,
-				69D777D32B8AFC1600E8E7DA /* Binding+Extension.swift */,
 			);
 			path = List;
 			sourceTree = "<group>";
@@ -273,7 +282,6 @@
 				692379342B89B9DB00167287 /* TagsView.swift */,
 				69D777CD2B8AF8C500E8E7DA /* ImageSaver.swift */,
 				69D777D52B8BCB9300E8E7DA /* CatDetailContent.swift */,
-				69D777D72B8BCD3A00E8E7DA /* View+Extension.swift */,
 			);
 			path = Detail;
 			sourceTree = "<group>";
