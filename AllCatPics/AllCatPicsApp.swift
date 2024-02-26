@@ -11,26 +11,6 @@ import SwiftUI
 import SBTUITestTunnelServer
 #endif
 
-protocol DIContainerProtocol {
-    func resolve() -> CatRepositoryProtocol
-    func resolveListPageViewModel() -> ListPageViewModel
-    func resolveDetailPageViewModel(catId: String) -> DetailPageViewModel
-}
-
-class DIContainer: DIContainerProtocol {
-    static let shared = DIContainer()
-    func resolve() -> CatRepositoryProtocol {
-        return CatRepository(api: CatAPI(), localStorage: CatLocalStorage())
-    }
-    
-    @MainActor func resolveListPageViewModel() -> ListPageViewModel {
-        return ListPageViewModel(repository: resolve())
-    }
-    func resolveDetailPageViewModel(catId: String) -> DetailPageViewModel {
-        return DetailPageViewModel(repository: resolve(), catId: catId)
-    }
-}
-
 @main
 struct AllCatPicsApp: App {
     

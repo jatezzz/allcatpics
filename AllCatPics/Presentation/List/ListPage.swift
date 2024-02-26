@@ -17,10 +17,13 @@ struct ListPage: View {
             ScrollView {
                 LazyVGrid(columns: columns, spacing: 20) {
                     ForEach(viewModel.cats, id: \.id) { cat in
-                        NavigationLink(destination: LazyView(DetailPage(viewModel: DIContainer.shared.resolveDetailPageViewModel(catId: cat.id)))) {
+                        NavigationLink(destination: LazyView(DetailPage(catId: cat.id))) {
                             Card(cat: cat)
                                 .accessibility(identifier: "catCard_\(cat.id)")
                         }
+                        .accessibilityLabel("Cat named \(cat.displayName)")
+                        .accessibilityHint("Taps to view more details about this cat.")
+                        .accessibility(addTraits: .isButton)
                         .onAppear {
                             if viewModel.shouldLoadMoreData(currentItem: cat) {
                                 viewModel.loadNextPage()
@@ -36,15 +39,7 @@ struct ListPage: View {
                 }
             }
             .navigationTitle("Cats")
-            .alert(
-                "Oops! Something went wrong...",
-                isPresented: $viewModel.error.isNotNil(),
-                presenting: viewModel.error,
-                actions: { _ in },
-                message: { error in
-                    Text("There's been an error")
-                }
-            )
+            .customAlert(item: $viewModel.alertItem)
         }
     }
 }

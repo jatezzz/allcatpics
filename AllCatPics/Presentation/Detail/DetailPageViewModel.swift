@@ -12,21 +12,23 @@ import UIKit
 class DetailPageViewModel: ObservableObject {
     @Published var cat: Cat?
     @Published var isLoading = false
-    @Published var error: Error?
+    @Published var error: Error? {
+        didSet{
+            self.alertItem = (error != nil) ? AlertItem() : nil
+        }
+    }
     @Published var screenTitle: String = ""
     @Published var imageURL: String = ""
     @Published var isSaving = false
+    @Published var alertItem: AlertItem?
 
     private let repository: CatRepositoryProtocol
-    private let catId: String
+    private var catId: String?
     private var imageSaver : ImageSaver?
 
-    init(repository: CatRepositoryProtocol, catId: String) {
-        print("ViewModel Init")
+    init(repository: CatRepositoryProtocol) {
         self.repository = repository
-        self.catId = catId
-        self.screenTitle = catId.generateName()
-        self.imageURL = "https://cataas.com/cat/\(catId)"
+        
         self.imageSaver = ImageSaver { error in
             self.error = error
             self.isSaving = false
@@ -34,7 +36,10 @@ class DetailPageViewModel: ObservableObject {
         }
     }
 
-    func fetchItemDetail() {
+    func fetchItemDetail(for catId: String) {
+        self.catId = catId
+        self.imageURL = "https://cataas.com/cat/\(catId)"
+        self.screenTitle = catId.generateName()
         isLoading = true
         error = nil // Reset error state
         Task {
@@ -54,6 +59,11 @@ class DetailPageViewModel: ObservableObject {
     }
     
     func applyTextToImage(_ text: String) {
+        guard !text.isEmpty else {
+            alertItem = AlertItem(title: "Wrong text", message: "Plese insert a valid text")
+            return
+        }
+        alertItem = nil
         self.imageURL = "https://cataas.com/cat/\(catId)/says/\(text)?fontSize=50&fontColor=white"
     }
     

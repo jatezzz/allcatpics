@@ -11,7 +11,12 @@ import Foundation
 class ListPageViewModel: ObservableObject {
     @Published var cats: [Cat] = []
     @Published var isLoading: Bool = false
-    @Published var error: Error?
+    @Published var error: Error? {
+        didSet{
+            self.alertItem = (error != nil) ? AlertItem() : nil
+        }
+    }
+    @Published var alertItem: AlertItem?
     let repository: CatRepositoryProtocol
     
     private var currentPage = 0

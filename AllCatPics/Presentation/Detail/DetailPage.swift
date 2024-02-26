@@ -6,10 +6,10 @@
 //
 
 import SwiftUI
-import Kingfisher
 
 struct DetailPage: View {
-    @ObservedObject var viewModel: DetailPageViewModel
+    @StateObject var viewModel: DetailPageViewModel = DIContainer.shared.resolveDetailPageViewModel()
+    let catId: String
     
     var body: some View {
         Group {
@@ -19,7 +19,6 @@ struct DetailPage: View {
             } else if let error = viewModel.error {
                 Text("Error: \(error.localizedDescription)")
             } else if let cat = viewModel.cat {
-                
                 ScrollView {
                     CatDetailContent(cat: cat, imageURL: viewModel.imageURL, isSaving: viewModel.isSaving, handler: { userInputText in
                         viewModel.applyTextToImage(userInputText)
@@ -33,22 +32,29 @@ struct DetailPage: View {
                 Text("No details available.")
             }
         }
-        .onAppear(perform: viewModel.fetchItemDetail)
+        .onAppear{viewModel.fetchItemDetail(for: catId)}
         .navigationTitle(viewModel.screenTitle)
         .environment(\.theme, Theme.defaultTheme)
-        .alert(
-            "Oops! Something went wrong...",
-            isPresented: $viewModel.error.isNotNil(),
-            presenting: viewModel.error,
-            actions: { _ in },
-            message: { error in
-                Text("There's been an error")
-            }
-        )
+        .customAlert(item: $viewModel.alertItem)
     }
-    
 }
 
 #Preview {
-    DetailPage(viewModel: DetailPageViewModel(repository: CatRepository(api: CatAPI(), localStorage: CatLocalStorage()), catId: "abc"))
+    DetailPage(catId: "abc")
+}
+
+
+struct AlertItem: Identifiable {
+    let id = UUID()
+    var title: String = "Oops! Something went wrong..."
+    var message: String  = "There's been an error"
+    let dismissButtonText: String = "OK"
+}
+
+extension View {
+    func customAlert(item: Binding<AlertItem?>) -> some View {
+        self.alert(item: item) { alertItem in
+            Alert(title: Text(alertItem.title), message: Text(alertItem.message), dismissButton: .default(Text(alertItem.dismissButtonText)))
+        }
+    }
 }
