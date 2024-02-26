@@ -12,16 +12,23 @@ class MockCatRepository: CatRepositoryProtocol {
     var catsToReturn: [Cat] = []
     var catToReturn: Cat!
     var errorToThrow: Error?
-    
-    func getList(page: Int) async throws -> [Cat] {
-        if let error = errorToThrow {
-            throw error
-        }
-        return catsToReturn
-    }
+    var didAttemptToFetchCats = false
     func getDetail(id: String) async throws -> AllCatPics.Cat {
-        catToReturn
+        didAttemptToFetchCats = true
+                    if let error = errorToThrow {
+                        throw error
+                    }
+        return catToReturn
     }
+      
+      func getList(page: Int) async throws -> [Cat] {
+           try await Task.sleep(nanoseconds: 100_000_000) // 100ms
+          
+                      if let error = errorToThrow {
+                          throw error
+                      }
+          return catsToReturn
+      }
     
 }
 
