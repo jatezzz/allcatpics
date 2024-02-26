@@ -10,17 +10,14 @@ import Kingfisher
 
 struct Card: View {
     let cat: Cat
-    @Environment(\.theme) var theme: Theme // Assuming you've set up theming as described earlier
+    @Environment(\.theme) var theme: Theme
 
     var body: some View {
-        // Calculate half the screen's width minus padding
         let screenWidth = UIScreen.main.bounds.width / 2 - 30
         
         VStack {
             ZStack(alignment: .bottomLeading) {
-                KingfisherImageView(url: "https://cataas.com/cat/\(cat.id)", width: screenWidth, height: screenWidth, cornerRadius: 10, contentMode: .fill)
-
-                // Overlay the ID with a semi-transparent background
+                KingfisherImageView(url: CatAPIEndpoints.catImageURL(id: cat.id), width: screenWidth, height: screenWidth, cornerRadius: 10, contentMode: .fill)
                 Text(cat.displayName)
                     .bold()
                     .foregroundColor(.white)
@@ -30,10 +27,10 @@ struct Card: View {
                     .padding([.leading, .bottom], 8)
                     .frame(maxWidth: .infinity)
             }
-            .frame(width: screenWidth, height: screenWidth) // Apply the same frame to ZStack
-            .themedStyle(Theme.TextStyle(font: .caption2, color: .red)) // Apply theming if needed, such as for corner radius or shadow
+            .frame(width: screenWidth, height: screenWidth)
+            .themedStyle(Theme.TextStyle(font: .headline, color: .black))
         }
-        .frame(width: screenWidth) // Ensure the VStack respects the max width
+        .frame(width: screenWidth)
     }
 }
 
