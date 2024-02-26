@@ -16,7 +16,10 @@ struct AllCatPicsApp: App {
     
     init() {
 #if DEBUG
-        SBTUITestTunnelServer.takeOff()
+        let uiTesting = ProcessInfo.processInfo.arguments.contains("Testing")
+        if uiTesting {
+            SBTUITestTunnelServer.takeOff()
+        }
 #endif
     }
     var body: some Scene {
