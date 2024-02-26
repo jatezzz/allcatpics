@@ -17,76 +17,83 @@ struct CatDetailContent: View {
     
     @State private var userInputText: String = ""
     var body: some View{
-            VStack(alignment: .leading, spacing: 10) {
+        VStack(alignment: .leading, spacing: 10) {
+            ZStack(alignment: .bottomTrailing){
                 KingfisherImageView(url: imageURL, width: nil, height: 400, cornerRadius: 4)
                     .frame(maxWidth: .infinity)
-                
-                Text("Make it yours")
-                    .themedStyle(Theme.TextStyle(font: .largeTitle, color: .blue))
-                    .accessibilityLabel("Make it yours")
-                    .accessibility(identifier: "searchTextField")
-                HStack {
-                    TextField("Add text to image", text: $userInputText)
-                        .textFieldStyle(RoundedBorderTextFieldStyle())
-                        .submitLabel(.done) // Optional: Sets the return key to a "Done" label
-                        .onSubmit {
-                            applyTextAndDismissKeyboard()
-                        }
-                    
-                    Button("Apply") {
-                        applyTextAndDismissKeyboard()
-                    }
-                }
-                .padding(.bottom)
                 Button(action: {
                     saveImageToGallery()
                 }) {
-                    Text("Save Image")
+                    Image(systemName: "arrow.down.to.line.circle.fill")
+                        .resizable()
+                        .background(Color.white.opacity(0.9))
+                        .tint(Color.black.opacity(0.9))
+                        .frame(width: 50, height: 50)
                 }.disabled(isSaving)
-                    .frame(maxWidth: .infinity)
-                    .padding()
-                
-                Text("Details")
-                    .themedStyle(Theme.TextStyle(font: .subheadline, color: .gray))
-                    .accessibilityLabel("Details")
-                if !cat.tags.isEmpty {
-                    TagsView(tags: cat.tags)
-                        .themedStyle(Theme.TextStyle(font: .subheadline, color: .gray))
-                }
-                
-                
-                Text("Id: \(cat.id)")
-                    .themedStyle(Theme.TextStyle(font: .subheadline, color: .gray))
-                    .accessibilityLabel("Id \(cat.id)")
-                
-                if let createdAt = cat.createdAt {
-                    Text("Created at: \(createdAt)")
-                        .themedStyle(Theme.TextStyle(font: .subheadline, color: .gray))
-                        .accessibilityLabel("Created at \(createdAt)")
-                }
-                
-                if let updatedAt = cat.updatedDate {
-                    Text("Last updated: \(updatedAt)")
-                        .themedStyle(Theme.TextStyle(font: .subheadline, color: .gray))
-                        .accessibilityLabel("Last updated at \(updatedAt)")
-                }
-                if let size = cat.size {
-                    Text("Size: \(size)")
-                        .themedStyle(Theme.TextStyle(font: .subheadline, color: .gray))
-                        .accessibilityLabel("Size \(size)")
-                }
-                
-                if let mimetype = cat.mimetype {
-                    Text("MimeType: \(mimetype)")
-                        .themedStyle(Theme.TextStyle(font: .subheadline, color: .gray))
-                        .accessibilityLabel("MimeType \(mimetype)")
-                }
-                
+                    .clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/)
+                    .padding(.bottom, 10)
+                    .padding(.trailing, 10)
             }
-            .onAppear {
-                
-                    print(UIScreen.main.bounds.width - 30)
+            
+            
+            if !cat.tags.isEmpty {
+                Text("Tags:")
+                    .themedStyle(Theme.TextStyle(font: .caption, color: .gray))
+                    .accessibilityLabel("Tags")
+                TagsView(tags: cat.tags)
+                    .themedStyle(Theme.TextStyle(font: .subheadline, color: .gray))
             }
+            
+            Text("Make it yours")
+                .themedStyle(Theme.TextStyle(font: .headline, color: .gray))
+                .accessibilityLabel("Make it yours")
+                .accessibility(identifier: "searchTextField")
+            HStack {
+                TextField("Add text to image", text: $userInputText)
+                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                    .submitLabel(.done) // Optional: Sets the return key to a "Done" label
+                    .onSubmit {
+                        applyTextAndDismissKeyboard()
+                    }
+                
+                Button("Apply") {
+                    applyTextAndDismissKeyboard()
+                }
+            }
+            .padding(.bottom)
+            Text("Details")
+                .themedStyle(Theme.TextStyle(font: .headline, color: .gray))
+                .accessibilityLabel("Details")
+            
+            
+            Text("Id: \(cat.id)")
+                .themedStyle(Theme.TextStyle(font: .body, color: .gray))
+                .accessibilityLabel("Id \(cat.id)")
+            
+            if let createdAt = cat.createdAt {
+                Text("Created at: \(createdAt)")
+                    .themedStyle(Theme.TextStyle(font: .body, color: .gray))
+                    .accessibilityLabel("Created at \(createdAt)")
+            }
+            
+            if let updatedAt = cat.updatedDate {
+                Text("Last updated: \(updatedAt)")
+                    .themedStyle(Theme.TextStyle(font: .body, color: .gray))
+                    .accessibilityLabel("Last updated at \(updatedAt)")
+            }
+            if let size = cat.size {
+                Text("Size: \(size)")
+                    .themedStyle(Theme.TextStyle(font: .body, color: .gray))
+                    .accessibilityLabel("Size \(size)")
+            }
+            
+            if let mimetype = cat.mimetype {
+                Text("MimeType: \(mimetype)")
+                    .themedStyle(Theme.TextStyle(font: .body, color: .gray))
+                    .accessibilityLabel("MimeType \(mimetype)")
+            }
+            
+        }
     }
     
     private func applyTextAndDismissKeyboard() {

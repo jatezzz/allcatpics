@@ -24,7 +24,6 @@ struct TagsView: View {
                         .accessibilityLabel("\(tags[index]) tag")
                 }
             }
-            .padding(.horizontal)
         }
     }
 }

@@ -27,7 +27,7 @@ class ListPageViewModel: ObservableObject {
         
         Task {
             do {
-                var newCats = try await repository.getList(page: currentPage)
+                let newCats = try await repository.getList(page: currentPage)
                 self.cats.append(contentsOf: newCats)
                 self.isLoading = false
                 self.currentPage += 1
