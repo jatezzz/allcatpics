@@ -9,18 +9,6 @@ import Foundation
 import Kingfisher
 import UIKit
 
-protocol KingfisherManagerProtocol {
-    @discardableResult
-    func retrieveImage(
-        with resource: Resource,
-        options: KingfisherOptionsInfo? ,
-        progressBlock: DownloadProgressBlock? ,
-        downloadTaskUpdated: DownloadTaskUpdatedBlock? ,
-        completionHandler: ((Result<RetrieveImageResult, KingfisherError>) -> Void)?) -> DownloadTask?
-}
-
-extension KingfisherManager: KingfisherManagerProtocol {
-}
 @MainActor
 class DetailPageViewModel: ObservableObject {
     @Published var cat: Cat?
