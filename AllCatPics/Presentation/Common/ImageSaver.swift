@@ -8,7 +8,11 @@
 import Foundation
 import UIKit
 
-class ImageSaver: NSObject {
+protocol ImageSaverProtocol {
+    func saveImage(_ image: UIImage)
+}
+
+class ImageSaver: NSObject, ImageSaverProtocol {
     let onFailure: (Error)->Void
     let onSuccess: ()->Void
     init(onFailure: @escaping (Error) -> Void, onSuccess: @escaping ()->Void) {

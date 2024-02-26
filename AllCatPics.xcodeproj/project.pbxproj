@@ -21,6 +21,7 @@
 		692379352B89B9DB00167287 /* TagsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 692379342B89B9DB00167287 /* TagsView.swift */; };
 		695032852B89528A00A6CB56 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 695032842B89528A00A6CB56 /* Kingfisher */; };
 		69AF5F772B8CDFA6003C4E41 /* ListPageViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69AF5F762B8CDFA6003C4E41 /* ListPageViewModelTests.swift */; };
+		69AF5F792B8CE557003C4E41 /* DetailPageViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69AF5F782B8CE557003C4E41 /* DetailPageViewModelTests.swift */; };
 		69D777CE2B8AF8C500E8E7DA /* ImageSaver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69D777CD2B8AF8C500E8E7DA /* ImageSaver.swift */; };
 		69D777D42B8AFC1600E8E7DA /* Binding+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69D777D32B8AFC1600E8E7DA /* Binding+Extension.swift */; };
 		69D777D62B8BCB9300E8E7DA /* CatDetailContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69D777D52B8BCB9300E8E7DA /* CatDetailContent.swift */; };
@@ -82,6 +83,7 @@
 		692379322B89ACCD00167287 /* NameGeneratorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameGeneratorTests.swift; sourceTree = "<group>"; };
 		692379342B89B9DB00167287 /* TagsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagsView.swift; sourceTree = "<group>"; };
 		69AF5F762B8CDFA6003C4E41 /* ListPageViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPageViewModelTests.swift; sourceTree = "<group>"; };
+		69AF5F782B8CE557003C4E41 /* DetailPageViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPageViewModelTests.swift; sourceTree = "<group>"; };
 		69D777CD2B8AF8C500E8E7DA /* ImageSaver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSaver.swift; sourceTree = "<group>"; };
 		69D777D32B8AFC1600E8E7DA /* Binding+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Binding+Extension.swift"; sourceTree = "<group>"; };
 		69D777D52B8BCB9300E8E7DA /* CatDetailContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatDetailContent.swift; sourceTree = "<group>"; };
@@ -246,6 +248,7 @@
 				692379322B89ACCD00167287 /* NameGeneratorTests.swift */,
 				69D777E52B8CAD1000E8E7DA /* StringExtensionTests.swift */,
 				69AF5F762B8CDFA6003C4E41 /* ListPageViewModelTests.swift */,
+				69AF5F782B8CE557003C4E41 /* DetailPageViewModelTests.swift */,
 			);
 			path = AllCatPicsTests;
 			sourceTree = "<group>";
@@ -493,6 +496,7 @@
 				6923791E2B898FF000167287 /* MockCatRepository.swift in Sources */,
 				692379292B899ED600167287 /* MockCatAPI.swift in Sources */,
 				692379222B89976E00167287 /* CatAPITests.swift in Sources */,
+				69AF5F792B8CE557003C4E41 /* DetailPageViewModelTests.swift in Sources */,
 				69E1FD1B2B88DBB3003FC8F9 /* CatRepositoryTests.swift in Sources */,
 				692379242B89978200167287 /* MockURLSession.swift in Sources */,
 				692379332B89ACCD00167287 /* NameGeneratorTests.swift in Sources */,

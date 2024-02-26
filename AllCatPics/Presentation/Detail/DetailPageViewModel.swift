@@ -9,6 +9,18 @@ import Foundation
 import Kingfisher
 import UIKit
 
+protocol KingfisherManagerProtocol {
+    @discardableResult
+    func retrieveImage(
+        with resource: Resource,
+        options: KingfisherOptionsInfo? ,
+        progressBlock: DownloadProgressBlock? ,
+        downloadTaskUpdated: DownloadTaskUpdatedBlock? ,
+        completionHandler: ((Result<RetrieveImageResult, KingfisherError>) -> Void)?) -> DownloadTask?
+}
+
+extension KingfisherManager: KingfisherManagerProtocol {
+}
 @MainActor
 class DetailPageViewModel: ObservableObject {
     @Published var cat: Cat?
@@ -29,18 +41,20 @@ class DetailPageViewModel: ObservableObject {
     @Published var alertItem: AlertItem?
     
     private let repository: CatRepositoryProtocol
-    private var catId: String?
-    private var imageSaver : ImageSaver?
+    var catId: String?
+    var imageSaver : ImageSaverProtocol?
+    var kingfisherManager : KingfisherManagerProtocol
     
-    private let successTitle = "Success"
-    private let successMessage = "Image saved."
+    let successTitle = "Success"
+    let successMessage = "Image saved."
     private let wrongTextTitle = "Wrong text"
     private let wrongTextMessage = "Please insert a valid text"
     
-    init(repository: CatRepositoryProtocol) {
+    init(repository: CatRepositoryProtocol, kingfisherManager: KingfisherManagerProtocol = KingfisherManager.shared) {
         self.repository = repository
+        self.kingfisherManager = kingfisherManager
         
-        self.imageSaver = ImageSaver( onFailure: {  [weak self] error in
+        self.imageSaver = ImageSaver(onFailure: {  [weak self] error in
             self?.error = error
         }, onSuccess: { [weak self] in
             guard let self else { return }
@@ -80,7 +94,10 @@ class DetailPageViewModel: ObservableObject {
         isLoading = true
         isSaving = true
         error = nil
-        KingfisherManager.shared.retrieveImage(with: url) { [weak self] result in
+        kingfisherManager.retrieveImage(with: url,
+                                        options: nil,
+                                            progressBlock: nil,
+                                            downloadTaskUpdated: nil) { [weak self] result in
             guard let self else { return }
             switch result {
             case .success(let value):
