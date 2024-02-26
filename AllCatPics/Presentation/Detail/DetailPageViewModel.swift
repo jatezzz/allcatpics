@@ -15,7 +15,12 @@ class DetailPageViewModel: ObservableObject {
     @Published var isLoading = false
     @Published var error: Error? {
         didSet{
-            self.alertItem = (error != nil) ? AlertItem() : nil
+            guard let error else {
+                self.alertItem =  nil
+                return
+            }
+            print(error)
+            self.alertItem = AlertItem()
         }
     }
     @Published var screenTitle: String = ""
@@ -27,14 +32,20 @@ class DetailPageViewModel: ObservableObject {
     private var catId: String?
     private var imageSaver : ImageSaver?
     
+    private let successTitle = "Success"
+    private let successMessage = "Image saved."
+    private let wrongTextTitle = "Wrong text"
+    private let wrongTextMessage = "Please insert a valid text"
+    
     init(repository: CatRepositoryProtocol) {
         self.repository = repository
         
-        self.imageSaver = ImageSaver { error in
-            self.error = error
-            self.isSaving = false
-            self.isLoading = false
-        }
+        self.imageSaver = ImageSaver( onFailure: {  [weak self] error in
+            self?.error = error
+        }, onSuccess: { [weak self] in
+            guard let self else { return }
+            self.alertItem = AlertItem(title: self.successTitle, message: self.successMessage)
+        })
     }
     
     func fetchItemDetail(for catId: String) {
@@ -42,7 +53,7 @@ class DetailPageViewModel: ObservableObject {
         self.imageURL = CatAPIEndpoints.catImageURL(id: catId)
         self.screenTitle = catId.generateName()
         isLoading = true
-        error = nil // Reset error state
+        error = nil
         Task {
             do {
                 let newCat = try await repository.getDetail(id: catId)
@@ -57,7 +68,7 @@ class DetailPageViewModel: ObservableObject {
     
     func applyTextToImage(_ text: String) {
         guard !text.isEmpty, let catId else {
-            alertItem = AlertItem(title: "Wrong text", message: "Plese insert a valid text")
+            alertItem = AlertItem(title: wrongTextTitle, message: wrongTextMessage)
             return
         }
         alertItem = nil

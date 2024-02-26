@@ -10,8 +10,10 @@ import UIKit
 
 class ImageSaver: NSObject {
     let onFailure: (Error)->Void
-    init(onFailure: @escaping (Error) -> Void) {
+    let onSuccess: ()->Void
+    init(onFailure: @escaping (Error) -> Void, onSuccess: @escaping ()->Void) {
         self.onFailure = onFailure
+        self.onSuccess = onSuccess
     }
 
     func saveImage(_ image: UIImage) {
@@ -19,10 +21,12 @@ class ImageSaver: NSObject {
     }
 
     @objc func savedImage(_ im: UIImage, error: Error?, context: UnsafeMutableRawPointer?) {
-        if let err = error {
-            print("Error saving image: \(err)")
+        if let error {
+            print("Error saving image: \(error)")
+            onFailure(error)
             return
         }
         print("Image saved successfully.")
+        onSuccess()
     }
 }
