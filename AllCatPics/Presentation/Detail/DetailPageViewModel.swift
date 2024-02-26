@@ -22,6 +22,7 @@ class DetailPageViewModel: ObservableObject {
     private var imageSaver : ImageSaver?
 
     init(repository: CatRepositoryProtocol, catId: String) {
+        print("ViewModel Init")
         self.repository = repository
         self.catId = catId
         self.screenTitle = catId.generateName()

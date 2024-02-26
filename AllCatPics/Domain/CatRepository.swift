@@ -25,8 +25,7 @@ class CatRepository: CatRepositoryProtocol {
     func getList(page: Int = 0) async throws -> [Cat] {
         let result = await api.fetchCatList(limit: itemsPerPage, skip: page * itemsPerPage)
         switch result {
-        case .success(var cats):
-            // Apply name generation to each cat
+        case .success(let cats):
             let cats = cats.map { cat in
                 var modifiableCat = cat
                 modifiableCat.displayName = cat.id.generateName()

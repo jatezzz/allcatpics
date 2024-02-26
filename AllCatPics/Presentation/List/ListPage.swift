@@ -6,11 +6,9 @@
 //
 
 import SwiftUI
-import Kingfisher
 
 struct ListPage: View {
-    @StateObject var appViewModel = AppViewModel()
-    @ObservedObject var viewModel: ListPageViewModel
+    @StateObject var viewModel: ListPageViewModel = DIContainer.shared.resolveListPageViewModel()
     
     var columns: [GridItem] = Array(repeating: .init(.flexible()), count: 2)
     
@@ -19,10 +17,9 @@ struct ListPage: View {
             ScrollView {
                 LazyVGrid(columns: columns, spacing: 20) {
                     ForEach(viewModel.cats, id: \.id) { cat in
-                        Card(cat: cat)
-                            .accessibility(identifier: "catCard_\(cat.id)")
-                        .onTapGesture {
-                            NavigationController(appViewModel: appViewModel).navigateToDetail(catId: cat.id)
+                        NavigationLink(destination: LazyView(DetailPage(viewModel: DIContainer.shared.resolveDetailPageViewModel(catId: cat.id)))) {
+                            Card(cat: cat)
+                                .accessibility(identifier: "catCard_\(cat.id)")
                         }
                         .onAppear {
                             if viewModel.shouldLoadMoreData(currentItem: cat) {
@@ -38,7 +35,6 @@ struct ListPage: View {
                         .padding()
                 }
             }
-            .background(NavigationLink("", destination: DetailPage(viewModel: DetailPageViewModel(repository: viewModel.repository, catId: appViewModel.selectedCatId ?? "")), isActive: $appViewModel.isShowingDetailView))
             .navigationTitle("Cats")
             .alert(
                 "Oops! Something went wrong...",
@@ -54,5 +50,5 @@ struct ListPage: View {
 }
 
 #Preview {
-    ListPage(viewModel: ListPageViewModel(repository: CatRepository(api: CatAPI(), localStorage: CatLocalStorage())))
+    ListPage()
 }
