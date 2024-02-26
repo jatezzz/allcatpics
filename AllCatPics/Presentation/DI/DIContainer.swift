@@ -22,7 +22,8 @@ class DIContainer: DIContainerProtocol {
     @MainActor func resolveListPageViewModel() -> ListPageViewModel {
         return ListPageViewModel(repository: resolveCatRepository())
     }
-    func resolveDetailPageViewModel() -> DetailPageViewModel {
+    
+    @MainActor func resolveDetailPageViewModel() -> DetailPageViewModel {
         return DetailPageViewModel(repository: resolveCatRepository())
     }
 }

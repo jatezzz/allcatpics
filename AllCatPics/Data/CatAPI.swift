@@ -18,16 +18,6 @@ protocol URLSessionProtocol {
 
 extension URLSession: URLSessionProtocol {}
 
-struct CatAPIEndpoints {
-    static let base = "https://cataas.com"
-    static func catList(limit: Int, skip: Int) -> String {
-        "\(base)/api/cats?limit=\(limit)&skip=\(skip)"
-    }
-    static func catDetail(id: String) -> String {
-        "\(base)/cat/\(id)?json=true"
-    }
-}
-
 class CatAPI: CatAPIProtocol {
     
     private let session: URLSessionProtocol
