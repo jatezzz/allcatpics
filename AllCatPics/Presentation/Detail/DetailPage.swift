@@ -25,7 +25,6 @@ struct DetailPage: View {
                     }, saveImageToGallery: {
                         viewModel.saveImageToGallery()
                     })
-                    
                     .padding()
                 }
             } else {

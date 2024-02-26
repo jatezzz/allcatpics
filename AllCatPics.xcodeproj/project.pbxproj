@@ -28,6 +28,7 @@
 		69D777DF2B8CA21000E8E7DA /* DIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69D777DE2B8CA21000E8E7DA /* DIContainer.swift */; };
 		69D777E22B8CA7DF00E8E7DA /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69D777E12B8CA7DF00E8E7DA /* Alert.swift */; };
 		69D777E42B8CA8B200E8E7DA /* CatAPIEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69D777E32B8CA8B200E8E7DA /* CatAPIEndpoints.swift */; };
+		69D777E62B8CAD1000E8E7DA /* StringExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69D777E52B8CAD1000E8E7DA /* StringExtensionTests.swift */; };
 		69DB400E2B8A44370010E9AB /* ListPageUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69DB400D2B8A44370010E9AB /* ListPageUITests.swift */; };
 		69DB40102B8A47720010E9AB /* ListPageScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69DB400F2B8A47720010E9AB /* ListPageScreen.swift */; };
 		69DB401D2B8A9C3E0010E9AB /* SBTUITestTunnelClient in Frameworks */ = {isa = PBXBuildFile; productRef = 69DB401C2B8A9C3E0010E9AB /* SBTUITestTunnelClient */; };
@@ -87,6 +88,7 @@
 		69D777DE2B8CA21000E8E7DA /* DIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DIContainer.swift; sourceTree = "<group>"; };
 		69D777E12B8CA7DF00E8E7DA /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		69D777E32B8CA8B200E8E7DA /* CatAPIEndpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatAPIEndpoints.swift; sourceTree = "<group>"; };
+		69D777E52B8CAD1000E8E7DA /* StringExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensionTests.swift; sourceTree = "<group>"; };
 		69DB400D2B8A44370010E9AB /* ListPageUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPageUITests.swift; sourceTree = "<group>"; };
 		69DB400F2B8A47720010E9AB /* ListPageScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPageScreen.swift; sourceTree = "<group>"; };
 		69DB40212B8AE41F0010E9AB /* list.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = list.json; sourceTree = "<group>"; };
@@ -227,6 +229,7 @@
 				692379212B89976E00167287 /* CatAPITests.swift */,
 				692379252B899DCB00167287 /* CatLocalStorageTests.swift */,
 				692379322B89ACCD00167287 /* NameGeneratorTests.swift */,
+				69D777E52B8CAD1000E8E7DA /* StringExtensionTests.swift */,
 			);
 			path = AllCatPicsTests;
 			sourceTree = "<group>";
@@ -483,6 +486,7 @@
 				692379242B89978200167287 /* MockURLSession.swift in Sources */,
 				692379332B89ACCD00167287 /* NameGeneratorTests.swift in Sources */,
 				6923792B2B899EF200167287 /* MockCatLocalStorage.swift in Sources */,
+				69D777E62B8CAD1000E8E7DA /* StringExtensionTests.swift in Sources */,
 				692379202B89900F00167287 /* Cat+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

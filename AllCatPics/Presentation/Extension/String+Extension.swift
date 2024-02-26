@@ -51,4 +51,18 @@ extension String {
         return result.capitalized
     }
     
+    func formatDateString(fromFormat: String = "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'", toFormat: String = "MMM d, yyyy") -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = fromFormat
+        dateFormatter.locale = Locale(identifier: "en_US_POSIX")
+        dateFormatter.timeZone = TimeZone(secondsFromGMT: 0)
+        
+        if let date = dateFormatter.date(from: self) {
+            dateFormatter.dateFormat = toFormat
+            return dateFormatter.string(from: date)
+        } else {
+            return ""
+        }
+    }
+    
 }

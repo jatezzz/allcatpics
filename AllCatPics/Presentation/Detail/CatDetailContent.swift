@@ -16,6 +16,7 @@ struct CatDetailContent: View {
     let saveImageToGallery: ()->Void
     
     @State private var userInputText: String = ""
+    
     var body: some View{
         VStack(alignment: .leading, spacing: 10) {
             ZStack(alignment: .bottomTrailing){
@@ -27,12 +28,16 @@ struct CatDetailContent: View {
                     Image(systemName: "arrow.down.to.line.circle.fill")
                         .resizable()
                         .background(Color.white.opacity(0.9))
-                        .tint(Color.black.opacity(0.9))
+                        .tint(Color.blue.opacity(0.9))
                         .frame(width: 50, height: 50)
-                }.disabled(isSaving)
-                    .clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/)
-                    .padding(.bottom, 10)
-                    .padding(.trailing, 10)
+                }
+                .disabled(isSaving)
+                .clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/)
+                .padding(.bottom, 10)
+                .padding(.trailing, 10)
+                .accessibilityLabel("Download button")
+                .accessibilityHint("Taps to download this image.")
+                .accessibility(addTraits: .isButton)
             }
             
             
@@ -47,18 +52,23 @@ struct CatDetailContent: View {
             Text("Make it yours")
                 .themedStyle(Theme.TextStyle(font: .headline, color: .gray))
                 .accessibilityLabel("Make it yours")
-                .accessibility(identifier: "searchTextField")
+                .accessibility(identifier: "makeItYours")
             HStack {
                 TextField("Add text to image", text: $userInputText)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
-                    .submitLabel(.done) // Optional: Sets the return key to a "Done" label
+                    .submitLabel(.done)
                     .onSubmit {
                         applyTextAndDismissKeyboard()
                     }
+                    .accessibilityLabel("Add text to image")
+                    .accessibilityHint("Taps to enter a text for the image")
                 
                 Button("Apply") {
                     applyTextAndDismissKeyboard()
                 }
+                .accessibilityLabel("Apply text button")
+                .accessibilityHint("Taps to aply a the text to the image.")
+                .accessibility(addTraits: .isButton)
             }
             .padding(.bottom)
             Text("Details")
@@ -70,13 +80,14 @@ struct CatDetailContent: View {
                 .themedStyle(Theme.TextStyle(font: .body, color: .gray))
                 .accessibilityLabel("Id \(cat.id)")
             
-            if let createdAt = cat.createdAt {
+            
+            if let createdAt = cat.createdAt?.formatDateString(), !createdAt.isEmpty {
                 Text("Created at: \(createdAt)")
                     .themedStyle(Theme.TextStyle(font: .body, color: .gray))
                     .accessibilityLabel("Created at \(createdAt)")
             }
             
-            if let updatedAt = cat.updatedDate {
+            if let updatedAt = cat.updatedDate?.formatDateString(), !updatedAt.isEmpty {
                 Text("Last updated: \(updatedAt)")
                     .themedStyle(Theme.TextStyle(font: .body, color: .gray))
                     .accessibilityLabel("Last updated at \(updatedAt)")
@@ -100,6 +111,8 @@ struct CatDetailContent: View {
         handler(userInputText)
         dismissKeyboard()
     }
+    
+
 }
 
 #Preview {
