@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="us-ascii" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" contentStyleType="text/css"
+     height="758px" preserveAspectRatio="none" style="width:512px;height:758px;background:#FFFFFF;" version="1.1"
+     viewBox="0 0 512 758" width="512px" zoomAndPan="magnify">
+    <defs/>
+    <g><!--cluster Presentation Layer-->
+        <g id="cluster_Presentation Layer">
+            <path d="M44.5,6 L199.5,6 A3.75,3.75 0 0 1 202,8.5 L209,28.2969 L502.5,28.2969 A2.5,2.5 0 0 1 505,30.7969 L505,259.5 A2.5,2.5 0 0 1 502.5,262 L44.5,262 A2.5,2.5 0 0 1 42,259.5 L42,8.5 A2.5,2.5 0 0 1 44.5,6 "
+                  fill="none" style="stroke:#000000;stroke-width:1.5;"/>
+            <line style="stroke:#000000;stroke-width:1.5;" x1="42" x2="209" y1="28.2969" y2="28.2969"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing"
+                  textLength="154" x="46" y="20.9951">Presentation Layer
+            </text>
+        </g><!--cluster Domain Layer-->
+        <g id="cluster_Domain Layer">
+            <path d="M116.5,311 L227.5,311 A3.75,3.75 0 0 1 230,313.5 L237,333.2969 L313.5,333.2969 A2.5,2.5 0 0 1 316,335.7969 L316,440.5 A2.5,2.5 0 0 1 313.5,443 L116.5,443 A2.5,2.5 0 0 1 114,440.5 L114,313.5 A2.5,2.5 0 0 1 116.5,311 "
+                  fill="none" style="stroke:#000000;stroke-width:1.5;"/>
+            <line style="stroke:#000000;stroke-width:1.5;" x1="114" x2="237" y1="333.2969" y2="333.2969"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing"
+                  textLength="110" x="118" y="325.9951">Domain Layer
+            </text>
+        </g><!--cluster Data Layer-->
+        <g id="cluster_Data Layer">
+            <path d="M8.5,492 L97.5,492 A3.75,3.75 0 0 1 100,494.5 L107,514.2969 L463.5,514.2969 A2.5,2.5 0 0 1 466,516.7969 L466,637.5 A2.5,2.5 0 0 1 463.5,640 L8.5,640 A2.5,2.5 0 0 1 6,637.5 L6,494.5 A2.5,2.5 0 0 1 8.5,492 "
+                  fill="none" style="stroke:#000000;stroke-width:1.5;"/>
+            <line style="stroke:#000000;stroke-width:1.5;" x1="6" x2="107" y1="514.2969" y2="514.2969"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing"
+                  textLength="88" x="10" y="506.9951">Data Layer
+            </text>
+        </g><!--class List Page-->
+        <g id="elem_List Page">
+            <rect codeLine="2" fill="#F1F1F1" height="64.2969" id="List Page" rx="2.5" ry="2.5"
+                  style="stroke:#181818;stroke-width:0.5;" width="127" x="83.5" y="41"/>
+            <ellipse cx="112" cy="57" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/>
+            <path d="M114.3438,52.6719 C113.4063,52.2344 112.8125,52.0938 111.9375,52.0938 C109.3125,52.0938 107.3125,54.1719 107.3125,56.8906 L107.3125,58.0156 C107.3125,60.5938 109.4219,62.4844 112.3125,62.4844 C113.5313,62.4844 114.6875,62.1875 115.4375,61.6406 C116.0156,61.2344 116.3438,60.7813 116.3438,60.3906 C116.3438,59.9375 115.9531,59.5469 115.4844,59.5469 C115.2656,59.5469 115.0625,59.625 114.875,59.8125 C114.4219,60.2969 114.4219,60.2969 114.2344,60.3906 C113.8125,60.6563 113.125,60.7813 112.3594,60.7813 C110.3125,60.7813 109.0156,59.6875 109.0156,57.9844 L109.0156,56.8906 C109.0156,55.1094 110.2656,53.7969 112,53.7969 C112.5781,53.7969 113.1875,53.9531 113.6563,54.2031 C114.1406,54.4844 114.3125,54.7031 114.4063,55.1094 C114.4688,55.5156 114.5,55.6406 114.6406,55.7656 C114.7813,55.9063 115.0156,56.0156 115.2344,56.0156 C115.5,56.0156 115.7656,55.875 115.9375,55.6563 C116.0469,55.5 116.0781,55.3125 116.0781,54.8906 L116.0781,53.4688 C116.0781,53.0313 116.0625,52.9063 115.9688,52.75 C115.8125,52.4844 115.5313,52.3438 115.2344,52.3438 C114.9375,52.3438 114.7344,52.4375 114.5156,52.75 L114.3438,52.6719 Z "
+                  fill="#000000"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="65" x="129"
+                  y="61.8467">List Page
+            </text>
+            <line style="stroke:#181818;stroke-width:0.5;" x1="84.5" x2="209.5" y1="73" y2="73"/>
+            <line style="stroke:#181818;stroke-width:0.5;" x1="84.5" x2="209.5" y1="81" y2="81"/>
+            <ellipse cx="94.5" cy="94.6484" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="101"
+                  x="103.5" y="97.9951">displayItems()
+            </text>
+        </g><!--class List Page ViewModel-->
+        <g id="elem_List Page ViewModel">
+            <rect codeLine="5" fill="#F1F1F1" height="64.2969" id="List Page ViewModel" rx="2.5" ry="2.5"
+                  style="stroke:#181818;stroke-width:0.5;" width="178" x="58" y="182"/>
+            <ellipse cx="73" cy="198" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/>
+            <path d="M75.3438,193.6719 C74.4063,193.2344 73.8125,193.0938 72.9375,193.0938 C70.3125,193.0938 68.3125,195.1719 68.3125,197.8906 L68.3125,199.0156 C68.3125,201.5938 70.4219,203.4844 73.3125,203.4844 C74.5313,203.4844 75.6875,203.1875 76.4375,202.6406 C77.0156,202.2344 77.3438,201.7813 77.3438,201.3906 C77.3438,200.9375 76.9531,200.5469 76.4844,200.5469 C76.2656,200.5469 76.0625,200.625 75.875,200.8125 C75.4219,201.2969 75.4219,201.2969 75.2344,201.3906 C74.8125,201.6563 74.125,201.7813 73.3594,201.7813 C71.3125,201.7813 70.0156,200.6875 70.0156,198.9844 L70.0156,197.8906 C70.0156,196.1094 71.2656,194.7969 73,194.7969 C73.5781,194.7969 74.1875,194.9531 74.6563,195.2031 C75.1406,195.4844 75.3125,195.7031 75.4063,196.1094 C75.4688,196.5156 75.5,196.6406 75.6406,196.7656 C75.7813,196.9063 76.0156,197.0156 76.2344,197.0156 C76.5,197.0156 76.7656,196.875 76.9375,196.6563 C77.0469,196.5 77.0781,196.3125 77.0781,195.8906 L77.0781,194.4688 C77.0781,194.0313 77.0625,193.9063 76.9688,193.75 C76.8125,193.4844 76.5313,193.3438 76.2344,193.3438 C75.9375,193.3438 75.7344,193.4375 75.5156,193.75 L75.3438,193.6719 Z "
+                  fill="#000000"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="146" x="87"
+                  y="202.8467">List Page ViewModel
+            </text>
+            <line style="stroke:#181818;stroke-width:0.5;" x1="59" x2="235" y1="214" y2="214"/>
+            <line style="stroke:#181818;stroke-width:0.5;" x1="59" x2="235" y1="222" y2="222"/>
+            <ellipse cx="69" cy="235.6484" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="90" x="78"
+                  y="238.9951">fetchItems()
+            </text>
+        </g><!--class Detail Page-->
+        <g id="elem_Detail Page">
+            <rect codeLine="8" fill="#F1F1F1" height="64.2969" id="Detail Page" rx="2.5" ry="2.5"
+                  style="stroke:#181818;stroke-width:0.5;" width="163" x="298.5" y="41"/>
+            <ellipse cx="335.55" cy="57" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/>
+            <path d="M337.8938,52.6719 C336.9563,52.2344 336.3625,52.0938 335.4875,52.0938 C332.8625,52.0938 330.8625,54.1719 330.8625,56.8906 L330.8625,58.0156 C330.8625,60.5938 332.9719,62.4844 335.8625,62.4844 C337.0813,62.4844 338.2375,62.1875 338.9875,61.6406 C339.5656,61.2344 339.8938,60.7813 339.8938,60.3906 C339.8938,59.9375 339.5031,59.5469 339.0344,59.5469 C338.8156,59.5469 338.6125,59.625 338.425,59.8125 C337.9719,60.2969 337.9719,60.2969 337.7844,60.3906 C337.3625,60.6563 336.675,60.7813 335.9094,60.7813 C333.8625,60.7813 332.5656,59.6875 332.5656,57.9844 L332.5656,56.8906 C332.5656,55.1094 333.8156,53.7969 335.55,53.7969 C336.1281,53.7969 336.7375,53.9531 337.2063,54.2031 C337.6906,54.4844 337.8625,54.7031 337.9563,55.1094 C338.0188,55.5156 338.05,55.6406 338.1906,55.7656 C338.3313,55.9063 338.5656,56.0156 338.7844,56.0156 C339.05,56.0156 339.3156,55.875 339.4875,55.6563 C339.5969,55.5 339.6281,55.3125 339.6281,54.8906 L339.6281,53.4688 C339.6281,53.0313 339.6125,52.9063 339.5188,52.75 C339.3625,52.4844 339.0813,52.3438 338.7844,52.3438 C338.4875,52.3438 338.2844,52.4375 338.0656,52.75 L337.8938,52.6719 Z "
+                  fill="#000000"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="82"
+                  x="354.45" y="61.8467">Detail Page
+            </text>
+            <line style="stroke:#181818;stroke-width:0.5;" x1="299.5" x2="460.5" y1="73" y2="73"/>
+            <line style="stroke:#181818;stroke-width:0.5;" x1="299.5" x2="460.5" y1="81" y2="81"/>
+            <ellipse cx="309.5" cy="94.6484" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="137"
+                  x="318.5" y="97.9951">displayItemDetail()
+            </text>
+        </g><!--class Detail Page ViewModel-->
+        <g id="elem_Detail Page ViewModel">
+            <rect codeLine="11" fill="#F1F1F1" height="64.2969" id="Detail Page ViewModel" rx="2.5" ry="2.5"
+                  style="stroke:#181818;stroke-width:0.5;" width="218" x="271" y="182"/>
+            <ellipse cx="296.35" cy="198" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/>
+            <path d="M298.6938,193.6719 C297.7563,193.2344 297.1625,193.0938 296.2875,193.0938 C293.6625,193.0938 291.6625,195.1719 291.6625,197.8906 L291.6625,199.0156 C291.6625,201.5938 293.7719,203.4844 296.6625,203.4844 C297.8813,203.4844 299.0375,203.1875 299.7875,202.6406 C300.3656,202.2344 300.6938,201.7813 300.6938,201.3906 C300.6938,200.9375 300.3031,200.5469 299.8344,200.5469 C299.6156,200.5469 299.4125,200.625 299.225,200.8125 C298.7719,201.2969 298.7719,201.2969 298.5844,201.3906 C298.1625,201.6563 297.475,201.7813 296.7094,201.7813 C294.6625,201.7813 293.3656,200.6875 293.3656,198.9844 L293.3656,197.8906 C293.3656,196.1094 294.6156,194.7969 296.35,194.7969 C296.9281,194.7969 297.5375,194.9531 298.0063,195.2031 C298.4906,195.4844 298.6625,195.7031 298.7563,196.1094 C298.8188,196.5156 298.85,196.6406 298.9906,196.7656 C299.1313,196.9063 299.3656,197.0156 299.5844,197.0156 C299.85,197.0156 300.1156,196.875 300.2875,196.6563 C300.3969,196.5 300.4281,196.3125 300.4281,195.8906 L300.4281,194.4688 C300.4281,194.0313 300.4125,193.9063 300.3188,193.75 C300.1625,193.4844 299.8813,193.3438 299.5844,193.3438 C299.2875,193.3438 299.0844,193.4375 298.8656,193.75 L298.6938,193.6719 Z "
+                  fill="#000000"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="163"
+                  x="312.65" y="202.8467">Detail Page ViewModel
+            </text>
+            <line style="stroke:#181818;stroke-width:0.5;" x1="272" x2="488" y1="214" y2="214"/>
+            <line style="stroke:#181818;stroke-width:0.5;" x1="272" x2="488" y1="222" y2="222"/>
+            <ellipse cx="282" cy="235.6484" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="192" x="291"
+                  y="238.9951">fetchItemDetail(id: String)
+            </text>
+        </g><!--class CatRepository-->
+        <g id="elem_CatRepository">
+            <rect codeLine="17" fill="#F1F1F1" height="80.5938" id="CatRepository" rx="2.5" ry="2.5"
+                  style="stroke:#181818;stroke-width:0.5;" width="170" x="130" y="346"/>
+            <ellipse cx="160.3" cy="362" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/>
+            <path d="M162.6438,357.6719 C161.7063,357.2344 161.1125,357.0938 160.2375,357.0938 C157.6125,357.0938 155.6125,359.1719 155.6125,361.8906 L155.6125,363.0156 C155.6125,365.5938 157.7219,367.4844 160.6125,367.4844 C161.8313,367.4844 162.9875,367.1875 163.7375,366.6406 C164.3156,366.2344 164.6438,365.7813 164.6438,365.3906 C164.6438,364.9375 164.2531,364.5469 163.7844,364.5469 C163.5656,364.5469 163.3625,364.625 163.175,364.8125 C162.7219,365.2969 162.7219,365.2969 162.5344,365.3906 C162.1125,365.6563 161.425,365.7813 160.6594,365.7813 C158.6125,365.7813 157.3156,364.6875 157.3156,362.9844 L157.3156,361.8906 C157.3156,360.1094 158.5656,358.7969 160.3,358.7969 C160.8781,358.7969 161.4875,358.9531 161.9563,359.2031 C162.4406,359.4844 162.6125,359.7031 162.7063,360.1094 C162.7688,360.5156 162.8,360.6406 162.9406,360.7656 C163.0813,360.9063 163.3156,361.0156 163.5344,361.0156 C163.8,361.0156 164.0656,360.875 164.2375,360.6563 C164.3469,360.5 164.3781,360.3125 164.3781,359.8906 L164.3781,358.4688 C164.3781,358.0313 164.3625,357.9063 164.2688,357.75 C164.1125,357.4844 163.8313,357.3438 163.5344,357.3438 C163.2375,357.3438 163.0344,357.4375 162.8156,357.75 L162.6438,357.6719 Z "
+                  fill="#000000"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="104"
+                  x="177.7" y="366.8467">CatRepository
+            </text>
+            <line style="stroke:#181818;stroke-width:0.5;" x1="131" x2="299" y1="378" y2="378"/>
+            <line style="stroke:#181818;stroke-width:0.5;" x1="131" x2="299" y1="386" y2="386"/>
+            <ellipse cx="141" cy="399.6484" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="61" x="150"
+                  y="402.9951">getList()
+            </text>
+            <ellipse cx="141" cy="415.9453" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="144" x="150"
+                  y="419.292">getDetail(id: String)
+            </text>
+        </g><!--class Cat API-->
+        <g id="elem_Cat API">
+            <rect codeLine="24" fill="#F1F1F1" height="80.5938" id="Cat API" rx="2.5" ry="2.5"
+                  style="stroke:#181818;stroke-width:0.5;" width="209" x="22.5" y="535"/>
+            <ellipse cx="96.75" cy="551" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/>
+            <path d="M99.0938,546.6719 C98.1563,546.2344 97.5625,546.0938 96.6875,546.0938 C94.0625,546.0938 92.0625,548.1719 92.0625,550.8906 L92.0625,552.0156 C92.0625,554.5938 94.1719,556.4844 97.0625,556.4844 C98.2813,556.4844 99.4375,556.1875 100.1875,555.6406 C100.7656,555.2344 101.0938,554.7813 101.0938,554.3906 C101.0938,553.9375 100.7031,553.5469 100.2344,553.5469 C100.0156,553.5469 99.8125,553.625 99.625,553.8125 C99.1719,554.2969 99.1719,554.2969 98.9844,554.3906 C98.5625,554.6563 97.875,554.7813 97.1094,554.7813 C95.0625,554.7813 93.7656,553.6875 93.7656,551.9844 L93.7656,550.8906 C93.7656,549.1094 95.0156,547.7969 96.75,547.7969 C97.3281,547.7969 97.9375,547.9531 98.4063,548.2031 C98.8906,548.4844 99.0625,548.7031 99.1563,549.1094 C99.2188,549.5156 99.25,549.6406 99.3906,549.7656 C99.5313,549.9063 99.7656,550.0156 99.9844,550.0156 C100.25,550.0156 100.5156,549.875 100.6875,549.6563 C100.7969,549.5 100.8281,549.3125 100.8281,548.8906 L100.8281,547.4688 C100.8281,547.0313 100.8125,546.9063 100.7188,546.75 C100.5625,546.4844 100.2813,546.3438 99.9844,546.3438 C99.6875,546.3438 99.4844,546.4375 99.2656,546.75 L99.0938,546.6719 Z "
+                  fill="#000000"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="52"
+                  x="117.25" y="555.8467">Cat API
+            </text>
+            <line style="stroke:#181818;stroke-width:0.5;" x1="23.5" x2="230.5" y1="567" y2="567"/>
+            <line style="stroke:#181818;stroke-width:0.5;" x1="23.5" x2="230.5" y1="575" y2="575"/>
+            <ellipse cx="33.5" cy="588.6484" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="100"
+                  x="42.5" y="591.9951">fetchCatList()
+            </text>
+            <ellipse cx="33.5" cy="604.9453" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="183"
+                  x="42.5" y="608.292">fetchCatDetail(id: String)
+            </text>
+        </g><!--class Cat Local Storage-->
+        <g id="elem_Cat Local Storage">
+            <rect codeLine="28" fill="#F1F1F1" height="96.8906" id="Cat Local Storage" rx="2.5" ry="2.5"
+                  style="stroke:#181818;stroke-width:0.5;" width="183" x="266.5" y="527"/>
+            <ellipse cx="292.3" cy="543" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/>
+            <path d="M294.6438,538.6719 C293.7063,538.2344 293.1125,538.0938 292.2375,538.0938 C289.6125,538.0938 287.6125,540.1719 287.6125,542.8906 L287.6125,544.0156 C287.6125,546.5938 289.7219,548.4844 292.6125,548.4844 C293.8313,548.4844 294.9875,548.1875 295.7375,547.6406 C296.3156,547.2344 296.6438,546.7813 296.6438,546.3906 C296.6438,545.9375 296.2531,545.5469 295.7844,545.5469 C295.5656,545.5469 295.3625,545.625 295.175,545.8125 C294.7219,546.2969 294.7219,546.2969 294.5344,546.3906 C294.1125,546.6563 293.425,546.7813 292.6594,546.7813 C290.6125,546.7813 289.3156,545.6875 289.3156,543.9844 L289.3156,542.8906 C289.3156,541.1094 290.5656,539.7969 292.3,539.7969 C292.8781,539.7969 293.4875,539.9531 293.9563,540.2031 C294.4406,540.4844 294.6125,540.7031 294.7063,541.1094 C294.7688,541.5156 294.8,541.6406 294.9406,541.7656 C295.0813,541.9063 295.3156,542.0156 295.5344,542.0156 C295.8,542.0156 296.0656,541.875 296.2375,541.6563 C296.3469,541.5 296.3781,541.3125 296.3781,540.8906 L296.3781,539.4688 C296.3781,539.0313 296.3625,538.9063 296.2688,538.75 C296.1125,538.4844 295.8313,538.3438 295.5344,538.3438 C295.2375,538.3438 295.0344,538.4375 294.8156,538.75 L294.6438,538.6719 Z "
+                  fill="#000000"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="127"
+                  x="308.7" y="547.8467">Cat Local Storage
+            </text>
+            <line style="stroke:#181818;stroke-width:0.5;" x1="267.5" x2="448.5" y1="559" y2="559"/>
+            <line style="stroke:#181818;stroke-width:0.5;" x1="267.5" x2="448.5" y1="567" y2="567"/>
+            <ellipse cx="277.5" cy="580.6484" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="74"
+                  x="286.5" y="583.9951">saveCats()
+            </text>
+            <ellipse cx="277.5" cy="596.9453" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="67"
+                  x="286.5" y="600.292">getCats()
+            </text>
+            <ellipse cx="277.5" cy="613.2422" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="157"
+                  x="286.5" y="616.5889">getCatById(id: String)
+            </text>
+        </g><!--class Cat-->
+        <g id="elem_Cat">
+            <rect fill="#F1F1F1" height="48" id="Cat" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;"
+                  width="57" x="231.5" y="703"/>
+            <ellipse cx="246.5" cy="719" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/>
+            <path d="M248.8438,714.6719 C247.9063,714.2344 247.3125,714.0938 246.4375,714.0938 C243.8125,714.0938 241.8125,716.1719 241.8125,718.8906 L241.8125,720.0156 C241.8125,722.5938 243.9219,724.4844 246.8125,724.4844 C248.0313,724.4844 249.1875,724.1875 249.9375,723.6406 C250.5156,723.2344 250.8438,722.7813 250.8438,722.3906 C250.8438,721.9375 250.4531,721.5469 249.9844,721.5469 C249.7656,721.5469 249.5625,721.625 249.375,721.8125 C248.9219,722.2969 248.9219,722.2969 248.7344,722.3906 C248.3125,722.6563 247.625,722.7813 246.8594,722.7813 C244.8125,722.7813 243.5156,721.6875 243.5156,719.9844 L243.5156,718.8906 C243.5156,717.1094 244.7656,715.7969 246.5,715.7969 C247.0781,715.7969 247.6875,715.9531 248.1563,716.2031 C248.6406,716.4844 248.8125,716.7031 248.9063,717.1094 C248.9688,717.5156 249,717.6406 249.1406,717.7656 C249.2813,717.9063 249.5156,718.0156 249.7344,718.0156 C250,718.0156 250.2656,717.875 250.4375,717.6563 C250.5469,717.5 250.5781,717.3125 250.5781,716.8906 L250.5781,715.4688 C250.5781,715.0313 250.5625,714.9063 250.4688,714.75 C250.3125,714.4844 250.0313,714.3438 249.7344,714.3438 C249.4375,714.3438 249.2344,714.4375 249.0156,714.75 L248.8438,714.6719 Z "
+                  fill="#000000"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="25"
+                  x="260.5" y="723.8467">Cat
+            </text>
+            <line style="stroke:#181818;stroke-width:0.5;" x1="232.5" x2="287.5" y1="735" y2="735"/>
+            <line style="stroke:#181818;stroke-width:0.5;" x1="232.5" x2="287.5" y1="743" y2="743"/>
+        </g><!--link List Page to List Page ViewModel-->
+        <g id="link_List Page_List Page ViewModel">
+            <path codeLine="35" d="M147,105.194 C147,128.087 147,153.042 147,175.91 " fill="none"
+                  id="List Page-to-List Page ViewModel" style="stroke:#181818;stroke-width:1.0;"/>
+            <polygon fill="#181818" points="147,181.91,151,172.91,147,176.91,143,172.91,147,181.91"
+                     style="stroke:#181818;stroke-width:1.0;"/>
+            <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="30" x="148"
+                  y="148.0669">uses
+            </text>
+        </g><!--link List Page ViewModel to CatRepository-->
+        <g id="link_List Page ViewModel_CatRepository">
+            <path codeLine="36" d="M159.472,246.272 C170.63,274.248 184.8193,309.8249 196.9083,340.1369 " fill="none"
+                  id="List Page ViewModel-to-CatRepository" style="stroke:#181818;stroke-width:1.0;"/>
+            <polygon fill="#181818"
+                     points="199.131,345.71,199.5124,335.8685,197.2788,341.0657,192.0816,338.8321,199.131,345.71"
+                     style="stroke:#181818;stroke-width:1.0;"/>
+            <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="125" x="178"
+                  y="291.0669">retrieves data from
+            </text>
+        </g><!--link Detail Page to Detail Page ViewModel-->
+        <g id="link_Detail Page_Detail Page ViewModel">
+            <path codeLine="37" d="M380,105.194 C380,128.087 380,153.042 380,175.91 " fill="none"
+                  id="Detail Page-to-Detail Page ViewModel" style="stroke:#181818;stroke-width:1.0;"/>
+            <polygon fill="#181818" points="380,181.91,384,172.91,380,176.91,376,172.91,380,181.91"
+                     style="stroke:#181818;stroke-width:1.0;"/>
+            <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="30" x="381"
+                  y="148.0669">uses
+            </text>
+        </g><!--link Detail Page ViewModel to CatRepository-->
+        <g id="link_Detail Page ViewModel_CatRepository">
+            <path codeLine="38"
+                  d="M354.973,246.116 C342.462,261.23 326.854,279.443 312,295 C295.459,312.324 280.7681,326.4505 263.9061,341.9365 "
+                  fill="none" id="Detail Page ViewModel-to-CatRepository" style="stroke:#181818;stroke-width:1.0;"/>
+            <polygon fill="#181818"
+                     points="259.487,345.995,268.8213,342.8533,263.1696,342.6129,263.41,336.9612,259.487,345.995"
+                     style="stroke:#181818;stroke-width:1.0;"/>
+            <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="125" x="328"
+                  y="291.0669">retrieves data from
+            </text>
+        </g><!--link CatRepository to Cat API-->
+        <g id="link_CatRepository_Cat API">
+            <path codeLine="39" d="M196.337,427.158 C181.404,458.892 163.1167,497.751 148.1907,529.47 " fill="none"
+                  id="CatRepository-to-Cat API" style="stroke:#181818;stroke-width:1.0;"/>
+            <polygon fill="#181818"
+                     points="145.636,534.899,153.0874,528.4587,147.7649,530.3749,145.8487,525.0524,145.636,534.899"
+                     style="stroke:#181818;stroke-width:1.0;"/>
+            <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="83" x="180"
+                  y="472.0669">fetches from
+            </text>
+        </g><!--link CatRepository to Cat Local Storage-->
+        <g id="link_CatRepository_Cat Local Storage">
+            <path codeLine="40"
+                  d="M246.892,427.027 C255.138,437.378 263.958,448.563 272,459 C289.014,481.08 303.9535,501.0135 319.4255,521.9265 "
+                  fill="none" id="CatRepository-to-Cat Local Storage" style="stroke:#181818;stroke-width:1.0;"/>
+            <polygon fill="#181818"
+                     points="322.994,526.75,320.8569,517.1358,320.0202,522.7305,314.4256,521.8938,322.994,526.75"
+                     style="stroke:#181818;stroke-width:1.0;"/>
+            <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="148" x="285"
+                  y="472.0669">saves &amp; retrieves from
+            </text>
+        </g><!--link Cat API to Cat-->
+        <g id="link_Cat API_Cat">
+            <path codeLine="41" d="M162.292,616.171 C186.919,643.852 214.9409,675.351 235.4859,698.4446 " fill="none"
+                  id="Cat API-to-Cat" style="stroke:#181818;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/>
+            <polygon fill="#181818"
+                     points="239.474,702.9274,236.4804,693.5445,236.1506,699.1917,230.5034,698.8619,239.474,702.9274"
+                     style="stroke:#181818;stroke-width:1.0;"/>
+            <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="46" x="211"
+                  y="669.0669">returns
+            </text>
+        </g><!--link Cat Local Storage to Cat-->
+        <g id="link_Cat Local Storage_Cat">
+            <path codeLine="42" d="M326.723,624.214 C309.47,650.533 292.1185,677.0035 278.4085,697.9172 " fill="none"
+                  id="Cat Local Storage-to-Cat" style="stroke:#181818;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/>
+            <polygon fill="#181818"
+                     points="275.119,702.9351,283.3985,697.6012,277.8602,698.7535,276.708,693.2153,275.119,702.9351"
+                     style="stroke:#181818;stroke-width:1.0;"/>
+            <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="104" x="305"
+                  y="669.0669">stores &amp; returns
+            </text>
+        </g><!--SRC=[bLBDQeGm4BxdAGOFfQNiFe27Gjkz21QaXTu7dRMXQYIJtI9btxtHh19jbFQOcUzdvfkqc7zYIH1bcfWQWqQg1bBiI4VmBG3o2faXIYKRo2pILG7k2ybjXLrYgERRErkx1D3mBkdhHHLKJRmZcVmZo3gGGLcjkhZs1cdBx4gMHGnlHikcT38N8TenWOEgKOPsVqRpIgrYQPJk9kcIJB_cC8zx_iK33OOTu35BvcFRecymrbPSPbgfoh6oRQNzB1dFPBliZVpx-TGbHMW5_mViTWyhDuxXnCGYt1neYp1Zq6IDw4mCHH_EKQjQpB_2m5kvysYuqlw7vG8rCjrTOXZYjunjy2Bu6FhC6Muyoqd0AU_tZdgTwwGR5Y4f7yUsEAhsX1y0]-->
+    </g>
+</svg>
