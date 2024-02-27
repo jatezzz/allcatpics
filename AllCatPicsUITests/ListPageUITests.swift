@@ -17,7 +17,10 @@ class ListPageTests: XCTestCase {
 
     func testCatSelection() {
         app.launchTunnel(withOptions: [SBTUITunneledApplicationLaunchOptionResetFilesystem, SBTUITunneledApplicationLaunchOptionDisableUITextFieldAutocomplete, "Testing"]) {
-            self.app.stubRequests(matching: SBTRequestMatch(url: "cataas.com/api/cats.*"), response: SBTStubResponse(fileNamed: "list.json"))
+            self.app.stubRequests(
+                matching: SBTRequestMatch(url: "cataas.com/api/cats.*"),
+                response: SBTStubResponse(fileNamed: "list.json")
+            )
         }
         let listPage = ListPageScreen(app: app)
         XCTAssertTrue(listPage.isDisplaying, "List Page is not displayed")
@@ -27,7 +30,10 @@ class ListPageTests: XCTestCase {
 
     func testCatSelectionError() {
         app.launchTunnel(withOptions: [SBTUITunneledApplicationLaunchOptionResetFilesystem, SBTUITunneledApplicationLaunchOptionDisableUITextFieldAutocomplete, "Testing"]) {
-            self.app.stubRequests(matching: SBTRequestMatch(url: "cataas.com/api/cats.*"), response: SBTStubResponse(response: [:], returnCode: 404))
+            self.app.stubRequests(
+                matching: SBTRequestMatch(url: "cataas.com/api/cats.*"),
+                response: SBTStubResponse(response: [:], returnCode: 404)
+            )
         }
         let listPage = ListPageScreen(app: app)
         XCTAssertTrue(listPage.isDisplaying, "List Page is not displayed")

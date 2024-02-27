@@ -40,7 +40,13 @@ class DetailPageViewModelTests: XCTestCase {
     func testViewModel_fetchesItemDetailSuccessfully() {
         let expectation = XCTestExpectation(description: "Successfully loaded cat by id")
 
-        let cat = Cat(tags: ["cute"], createdAt: "2022-01-01", updatedAt: "2022-01-02", mimetype: "image/jpeg", size: nil, id: "123", editedAt: nil)
+        let cat = Cat(tags: ["cute"],
+                      createdAt: "2022-01-01",
+                      updatedAt: "2022-01-02",
+                      mimetype: "image/jpeg",
+                      size: nil,
+                      id: "123",
+                      editedAt: nil)
         mockRepository.catToReturn = cat
 
         viewModel.fetchItemDetail(for: "123")

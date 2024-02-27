@@ -19,23 +19,40 @@ struct CatDetailContent: View {
 
     @State private var userInputText: String = ""
 
+    struct CatDetailContentStrings {
+        static let tags = LocalizedStringKey("tags")
+        static let tagAccessibilityLabel = LocalizedStringKey("tagAccessibilityLabel")
+        static let makeItYours = LocalizedStringKey("makeItYours")
+        static let details = LocalizedStringKey("details")
+        static let applyButton = LocalizedStringKey("detail.applyButton")
+        static let applyButtonAccesibilityLabel = LocalizedStringKey("detail.applyButton.accesibilityLabel")
+        static let applyButtonAccesibilityHint = LocalizedStringKey("detail.applyButton.accesibilityHint")
+    }
+
     var body: some View {
         VStack(alignment: .leading, spacing: 10) {
             ZStack(alignment: .bottomTrailing) {
-                KingfisherImageView(url: imageURL, width: nil, height: 400, cornerRadius: 4, onSuccess: onSuccess, onFailure: onFailure)
-                    .frame(maxWidth: .infinity)
+                KingfisherImageView(
+                    url: imageURL,
+                    width: nil,
+                    height: 400,
+                    cornerRadius: 4,
+                    onSuccess: onSuccess,
+                    onFailure: onFailure
+                )
+                .frame(maxWidth: .infinity)
                 Button(action: {
                     saveImageToGallery()
-                }) {
+                }, label: {
                     Image(systemName: "arrow.down.to.line")
                         .resizable()
                         .padding(12)
                         .background(Color.blue)
                         .tint(Color.white)
                         .frame(width: 50, height: 50)
-                }
+                })
                 .disabled(isSaving)
-                .clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/)
+                .clipShape(Circle())
                 .shadow(radius: 2)
                 .padding(.bottom, 20)
                 .padding(.trailing, 10)
@@ -45,47 +62,23 @@ struct CatDetailContent: View {
             }
 
             if !cat.tags.isEmpty {
-                Text("Tags:")
+                Text(CatDetailContentStrings.tags)
                     .themedStyle(Theme.TextStyle(font: .caption, color: .secondary))
-                    .accessibilityLabel("Tags")
+                    .accessibilityLabel(CatDetailContentStrings.tagAccessibilityLabel)
                 TagsView(tags: cat.validTags)
                     .themedStyle(Theme.TextStyle(font: .subheadline, color: .secondary))
             }
 
-            Text("Make it yours")
+            Text(CatDetailContentStrings.makeItYours)
                 .themedStyle(Theme.TextStyle(font: .headline, color: .secondary))
-                .accessibilityLabel("Make it yours")
+                .accessibilityLabel(CatDetailContentStrings.makeItYours)
                 .accessibility(identifier: "makeItYours")
             applyTextBar
-            Text("Details")
-                .accessibilityLabel("Details")
+            Text(CatDetailContentStrings.details)
+                .accessibilityLabel(CatDetailContentStrings.details)
                 .themedStyle(Theme.TextStyle(font: .headline, color: .secondary))
-
-            VStack(alignment: .leading) {
-                Text("Id: \(cat.id)")
-                    .accessibilityLabel("Id \(cat.id)")
-
-                if let createdAt = cat.createdAt?.formatDateString(), !createdAt.isEmpty {
-                    Text("Created at: \(createdAt)")
-                        .accessibilityLabel("Created at \(createdAt)")
-                }
-
-                if let updatedAt = cat.updatedDate?.formatDateString(), !updatedAt.isEmpty {
-                    Text("Last updated: \(updatedAt)")
-                        .accessibilityLabel("Last updated at \(updatedAt)")
-                }
-                if let size = cat.size {
-                    Text("Size: \(size)")
-                        .accessibilityLabel("Size \(size)")
-                }
-
-                if let mimetype = cat.mimetype {
-                    Text("MimeType: \(mimetype)")
-                        .accessibilityLabel("MimeType \(mimetype)")
-                }
-            }
-            .themedStyle(Theme.TextStyle(font: .body, color: .secondary))
-            .frame(maxWidth: .infinity, alignment: .topLeading)
+            detailContent
+                .frame(maxWidth: .infinity, alignment: .topLeading)
         }
     }
 
@@ -94,7 +87,7 @@ struct CatDetailContent: View {
         dismissKeyboard()
     }
 
-    let characterLimit = 40 // Set your desired limit here
+    let characterLimit = 40
 
     var applyTextBar: some View {
         HStack {
@@ -112,14 +105,41 @@ struct CatDetailContent: View {
                 .accessibilityLabel("Add text to image")
                 .accessibilityHint("Taps to enter a text for the image")
 
-            Button("Apply") {
+            Button(CatDetailContentStrings.applyButton) {
                 applyTextAndDismissKeyboard()
             }
-            .accessibilityLabel("Apply text button")
-            .accessibilityHint("Taps to aply a the text to the image.")
+            .accessibilityLabel(CatDetailContentStrings.applyButtonAccesibilityLabel)
+            .accessibilityHint(CatDetailContentStrings.applyButtonAccesibilityHint)
             .accessibility(addTraits: .isButton)
         }
         .padding(.bottom)
+    }
+
+    var detailContent: some View {
+        VStack(alignment: .leading) {
+            Text("Id: \(cat.id)")
+                .accessibilityLabel("Id \(cat.id)")
+
+            if let createdAt = cat.createdAt?.formatDateString(), !createdAt.isEmpty {
+                Text("Created at: \(createdAt)")
+                    .accessibilityLabel("Created at \(createdAt)")
+            }
+
+            if let updatedAt = cat.updatedDate?.formatDateString(), !updatedAt.isEmpty {
+                Text("Last updated: \(updatedAt)")
+                    .accessibilityLabel("Last updated at \(updatedAt)")
+            }
+            if let size = cat.size {
+                Text("Size: \(size)")
+                    .accessibilityLabel("Size \(size)")
+            }
+
+            if let mimetype = cat.mimetype {
+                Text("MimeType: \(mimetype)")
+                    .accessibilityLabel("MimeType \(mimetype)")
+            }
+        }
+        .themedStyle(Theme.TextStyle(font: .body, color: .secondary))
     }
 
 }

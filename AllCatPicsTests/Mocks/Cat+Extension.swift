@@ -16,6 +16,14 @@ extension Cat {
                      id: String = "123",
                      editedAt: String = "") -> Cat {
 
-        return Cat(tags: tags, createdAt: createdAt, updatedAt: updatedAt, mimetype: mimetype, size: size, id: id, editedAt: editedAt)
+        return Cat(
+            tags: tags,
+            createdAt: createdAt,
+            updatedAt: updatedAt,
+            mimetype: mimetype,
+            size: size,
+            id: id,
+            editedAt: editedAt
+        )
     }
 }

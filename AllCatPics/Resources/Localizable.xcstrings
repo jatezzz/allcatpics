@@ -17,26 +17,6 @@
         }
       }
     },
-    "Apply" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Aplicar"
-          }
-        }
-      }
-    },
-    "Apply text button" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Botón de aplicar texto"
-          }
-        }
-      }
-    },
     "Cat image" : {
       "localizations" : {
         "es" : {
@@ -74,9 +54,65 @@
 
     },
     "Creator: John Trujillo" : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Creador: John Trujillo"
+          }
+        }
+      }
     },
-    "detaikPageScreenDescription" : {
+    "detail.applyButton" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apply"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aplicar"
+          }
+        }
+      }
+    },
+    "detail.applyButton.accesibilityHint" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apply text button"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Botón para aplicar texto"
+          }
+        }
+      }
+    },
+    "detail.applyButton.accesibilityLabel" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Taps to apply a the text to the image."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Selecciona para aplicar un texto a la imagen."
+          }
+        }
+      }
+    },
+    "detailPageScreenDescription" : {
+      "comment" : "Este es el detalle para la descripción de la página de Detalle",
       "extractionState" : "manual",
       "localizations" : {
         "en" : {
@@ -93,8 +129,15 @@
         }
       }
     },
-    "Details" : {
-
+    "details" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Details"
+          }
+        }
+      }
     },
     "Download button" : {
 
@@ -148,8 +191,15 @@
         }
       }
     },
-    "Make it yours" : {
-
+    "makeItYours" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Make it yours"
+          }
+        }
+      }
     },
     "MimeType %@" : {
 
@@ -186,14 +236,25 @@
     "Size: %lld" : {
 
     },
-    "Tags" : {
-
+    "tagAccessibilityLabel" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tags:"
+          }
+        }
+      }
     },
-    "Tags:" : {
-
-    },
-    "Taps to aply a the text to the image." : {
-
+    "tags" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tags"
+          }
+        }
+      }
     },
     "Taps to download this image." : {
 

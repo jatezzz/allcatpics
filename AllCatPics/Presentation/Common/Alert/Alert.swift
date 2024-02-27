@@ -18,7 +18,11 @@ struct AlertItem: Identifiable {
 extension View {
     func customAlert(item: Binding<AlertItem?>) -> some View {
         self.alert(item: item) { alertItem in
-            Alert(title: Text(alertItem.title), message: Text(alertItem.message), dismissButton: .default(Text(alertItem.dismissButtonText)))
+            Alert(
+                title: Text(alertItem.title),
+                message: Text(alertItem.message),
+                dismissButton: .default(Text(alertItem.dismissButtonText))
+            )
         }
     }
 }

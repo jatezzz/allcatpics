@@ -51,7 +51,10 @@ extension String {
         return result.capitalized
     }
 
-    func formatDateString(fromFormat: String = "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'", toFormat: String = "MMM d, yyyy") -> String {
+    func formatDateString(
+        fromFormat: String = "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'",
+        toFormat: String = "MMM d, yyyy"
+    ) -> String {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = fromFormat
         dateFormatter.locale = Locale(identifier: "en_US_POSIX")

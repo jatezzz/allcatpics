@@ -40,7 +40,11 @@ struct KingfisherImageView: View {
         let extractedExpr: ImageProcessor
         // Initialize the processor state
         if let cornerRadius {
-            extractedExpr = DownsamplingImageProcessor(size: CGSize(width: width ?? 400, height: height ?? 400)) |> RoundCornerImageProcessor(cornerRadius: cornerRadius)
+            extractedExpr = DownsamplingImageProcessor(
+                size: CGSize(width: width ?? 400, height: height ?? 400)
+            ) |> RoundCornerImageProcessor(
+                cornerRadius: cornerRadius
+            )
         } else {
             extractedExpr = DownsamplingImageProcessor(size: CGSize(width: width ?? 400, height: height ?? 400))
         }
@@ -78,7 +82,6 @@ struct KingfisherImageView: View {
             DispatchQueue.main.asyncAfter(deadline: .now() + retryDelay) {
                 self.attemptCount += 1
                 // Trigger a view update by modifying a @State property
-                // This could be a no-op change if you don't have a meaningful way to modify the processor or another relevant state
                 self.processor = self.processor // Adjust as needed to trigger reload
             }
         } else {

@@ -21,19 +21,23 @@ struct DetailPage: View {
                 Text("Error: \(error.localizedDescription)")
             } else if let cat = viewModel.cat {
                 ScrollView {
-                    Text(LocalizedStringKey("detaikPageScreenDescription"))
+                    Text(LocalizedStringKey("detailPageScreenDescription"))
                         .themedStyle(Theme.TextStyle(font: .footnote, color: .gray))
                         .padding(.leading)
                         .padding(.trailing)
-                    CatDetailContent(cat: cat, imageURL: viewModel.imageURL, isSaving: viewModel.isSaving, applyTextToImage: { userInputText in
-                        viewModel.applyTextToImage(userInputText)
-                    }, saveImageToGallery: {
-                        viewModel.saveImageToGallery()
-                    }, onSuccess: {
+                    CatDetailContent(
+                        cat: cat,
+                        imageURL: viewModel.imageURL,
+                        isSaving: viewModel.isSaving,
+                        applyTextToImage: { userInputText in
+                            viewModel.applyTextToImage(userInputText)
+                        }, saveImageToGallery: {
+                            viewModel.saveImageToGallery()
+                        }, onSuccess: {
 
-                    }, onFailure: { _ in
-                        viewModel.onImageFeailure()
-                    })
+                        }, onFailure: { _ in
+                            viewModel.onImageFeailure()
+                        })
                     .padding()
                 }
             } else {

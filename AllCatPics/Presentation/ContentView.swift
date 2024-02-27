@@ -31,11 +31,11 @@ struct ContentView: View {
     }
 
     private var aboutButton: some View {
-        Button(action: { coordinator.navigate(to: .about) }) {
+        Button(action: { coordinator.navigate(to: .about) }, label: {
             if coordinator.navigationStack.count == 1 {
                 Image(systemName: "info.circle")
             }
-        }
+        })
     }
 
     // MARK: - Dynamic Navigation Links

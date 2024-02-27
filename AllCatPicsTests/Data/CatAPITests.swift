@@ -28,7 +28,12 @@ final class CatAPITests: XCTestCase {
          }]
         """.data(using: .utf8)!
         mockSession.mockData = testData
-        mockSession.mockResponse = HTTPURLResponse(url: URL(string: "https://mock.com")!, statusCode: 200, httpVersion: nil, headerFields: nil)
+        mockSession.mockResponse = HTTPURLResponse(
+            url: URL(string: "https://mock.com")!,
+            statusCode: 200,
+            httpVersion: nil,
+            headerFields: nil
+        )
 
         let api = CatAPI(session: mockSession)
         let result = await api.fetchCatList()

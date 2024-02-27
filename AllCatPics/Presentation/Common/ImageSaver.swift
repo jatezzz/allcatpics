@@ -24,7 +24,7 @@ class ImageSaver: NSObject, ImageSaverProtocol {
         UIImageWriteToSavedPhotosAlbum(image, self, #selector(savedImage(_:error:context:)), nil)
     }
 
-    @objc func savedImage(_ im: UIImage, error: Error?, context: UnsafeMutableRawPointer?) {
+    @objc func savedImage(_ image: UIImage, error: Error?, context: UnsafeMutableRawPointer?) {
         if let error {
             print("Error saving image: \(error)")
             onFailure(error)
