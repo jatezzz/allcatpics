@@ -75,6 +75,11 @@ The project commenced with a specific objective and key pages in mind, detailed 
     - **Detail Page**: Upon selecting an item from the List Page, the app should navigate to a Detail Page. This page
       will fetch and display detailed information about the selected item from an external public API.
 
+### UI Scaffold
+
+Initial definition of List and detail page.
+![UI Scaffold.png](UI%20Scaffold.png)
+
 ### Base Model Identified
 
 For handling the data effectively, a base model `Cat` was identified and structured as follows:
