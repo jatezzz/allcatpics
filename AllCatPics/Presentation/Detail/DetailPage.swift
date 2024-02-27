@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct DetailPage: View {
+    var coordinator: NavigationCoordinator
     @StateObject var viewModel: DetailPageViewModel = DIContainer.shared.resolveDetailPageViewModel()
     let catId: String
     
@@ -47,6 +48,6 @@ struct DetailPage: View {
     }
 }
 
-#Preview {
-    DetailPage(catId: "abc")
-}
+//#Preview {
+//    DetailPage(catId: "abc")
+//}

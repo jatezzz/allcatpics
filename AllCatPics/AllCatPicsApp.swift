@@ -24,7 +24,7 @@ struct AllCatPicsApp: App {
     }
     var body: some Scene {
         WindowGroup {
-            ListPage()
+            ContentView()
         }
     }
 }
