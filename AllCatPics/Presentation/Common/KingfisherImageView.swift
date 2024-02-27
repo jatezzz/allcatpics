@@ -4,64 +4,82 @@
 //
 //  Created by John Trujillo on 25/2/24.
 //
-
+import SwiftUI
+import Kingfisher
 import SwiftUI
 import Kingfisher
 
 struct KingfisherImageView: View {
     let url: String
-    var processor: ImageProcessor
     var width: CGFloat?
     var height: CGFloat?
     var contentMode: SwiftUI.ContentMode
     var cornerRadius: CGFloat?
     var onSuccess: ()->Void
     var onFailure: ((Error)->Void)?
-    
+
+    // State for managing retries
+    @State private var attemptCount: Int = 0
+    let maxRetryCount: Int = 3
+    let retryDelay: TimeInterval = 3.0
+
+    @State private var processor: ImageProcessor
+
     init(url: String, width: CGFloat? = nil, height: CGFloat? = nil, cornerRadius: CGFloat? = nil, contentMode: SwiftUI.ContentMode = .fit, onSuccess: @escaping ()->Void = {}, onFailure: ((Error)->Void)? = nil) {
         self.url = url
         self.width = width
         self.height = height
-        self.cornerRadius = cornerRadius
         self.contentMode = contentMode
         self.onSuccess = onSuccess
         self.onFailure = onFailure
         
+        let extractedExpr: ImageProcessor
+        // Initialize the processor state
         if let cornerRadius {
-            self.processor =  DownsamplingImageProcessor(size: CGSize(width: width ?? 400, height: height ?? 400)) |> RoundCornerImageProcessor(cornerRadius: cornerRadius)
+             extractedExpr = DownsamplingImageProcessor(size: CGSize(width: width ?? 400, height: height ?? 400)) |> RoundCornerImageProcessor(cornerRadius: cornerRadius)
         } else {
-            self.processor =  DownsamplingImageProcessor(size: CGSize(width: width ?? 400, height: height ?? 400))
+             extractedExpr = DownsamplingImageProcessor(size: CGSize(width: width ?? 400, height: height ?? 400))
         }
+        _processor = State(initialValue: extractedExpr)
     }
     
     var body: some View {
         KFImage(URL(string: url))
             .placeholder {
-                Image(systemName: "cat")
+                Image(systemName: "photo")
                     .frame(maxWidth: .infinity, maxHeight: .infinity)
                     .background(Color.gray.opacity(0.1))
-                    .clipped()
-                    .cornerRadius(cornerRadius ?? 0)
             }
             .setProcessor(processor)
             .resizable()
             .cacheMemoryOnly()
             .fade(duration: 0.25)
-            .onProgress { _, _ in }
-            .onFailure { error in
-                print(error)
-                onFailure?(error)
-            }
-            .onSuccess{_ in
+            .onSuccess { _ in
                 onSuccess()
+            }
+            .onFailure { error in
+                handleFailure(error: error)
             }
             .aspectRatio(contentMode: contentMode)
             .frame(width: width, height: height)
-            .clipped()
             .cornerRadius(cornerRadius ?? 0)
             .accessibilityLabel("Cat image")
     }
+    
+    private func handleFailure(error: KingfisherError) {
+        if attemptCount < maxRetryCount {
+            DispatchQueue.main.asyncAfter(deadline: .now() + retryDelay) {
+                self.attemptCount += 1
+                // Trigger a view update by modifying a @State property
+                // This could be a no-op change if you don't have a meaningful way to modify the processor or another relevant state
+                self.processor = self.processor // Adjust as needed to trigger reload
+            }
+        } else {
+            onFailure?(error)
+        }
+    }
 }
+
 
 
 #Preview {
