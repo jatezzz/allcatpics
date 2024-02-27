@@ -34,7 +34,6 @@ struct CatDetailContent: View {
                 }
                 .disabled(isSaving)
                 .clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/)
-                .opacity(0.8)
                 .shadow(radius: 2)
                 .padding(.bottom, 20)
                 .padding(.trailing, 10)
@@ -49,11 +48,11 @@ struct CatDetailContent: View {
                     .themedStyle(Theme.TextStyle(font: .caption, color: .gray))
                     .accessibilityLabel("Tags")
                 TagsView(tags: cat.tags)
-                    .themedStyle(Theme.TextStyle(font: .subheadline, color: .gray))
+                    .themedStyle(Theme.TextStyle(font: .subheadline, color: .black))
             }
             
             Text("Make it yours")
-                .themedStyle(Theme.TextStyle(font: .headline, color: .gray))
+                .themedStyle(Theme.TextStyle(font: .headline, color: .black))
                 .accessibilityLabel("Make it yours")
                 .accessibility(identifier: "makeItYours")
             HStack {
@@ -75,37 +74,41 @@ struct CatDetailContent: View {
             }
             .padding(.bottom)
             Text("Details")
-                .themedStyle(Theme.TextStyle(font: .headline, color: .gray))
                 .accessibilityLabel("Details")
+                .themedStyle(Theme.TextStyle(font: .headline, color: .black))
             
+            VStack(alignment: .leading) {
+                Text("Id: \(cat.id)")
+                    .accessibilityLabel("Id \(cat.id)")
             
-            Text("Id: \(cat.id)")
-                .themedStyle(Theme.TextStyle(font: .body, color: .gray))
-                .accessibilityLabel("Id \(cat.id)")
-            
-            
-            if let createdAt = cat.createdAt?.formatDateString(), !createdAt.isEmpty {
-                Text("Created at: \(createdAt)")
-                    .themedStyle(Theme.TextStyle(font: .body, color: .gray))
-                    .accessibilityLabel("Created at \(createdAt)")
+                if let createdAt = cat.createdAt?.formatDateString(), !createdAt.isEmpty {
+                    Text("Created at: \(createdAt)")
+                        .accessibilityLabel("Created at \(createdAt)")
+                }
+                
+                if let updatedAt = cat.updatedDate?.formatDateString(), !updatedAt.isEmpty {
+                    Text("Last updated: \(updatedAt)")
+                        .accessibilityLabel("Last updated at \(updatedAt)")
+                }
+                if let size = cat.size {
+                    Text("Size: \(size)")
+                        .accessibilityLabel("Size \(size)")
+                }
+                
+                if let mimetype = cat.mimetype {
+                    Text("MimeType: \(mimetype)")
+                        .accessibilityLabel("MimeType \(mimetype)")
+                }
             }
+            .themedStyle(Theme.TextStyle(font: .body, color: .secondary))
+            .frame(maxWidth:.infinity, alignment:.topLeading)
+          
             
-            if let updatedAt = cat.updatedDate?.formatDateString(), !updatedAt.isEmpty {
-                Text("Last updated: \(updatedAt)")
-                    .themedStyle(Theme.TextStyle(font: .body, color: .gray))
-                    .accessibilityLabel("Last updated at \(updatedAt)")
-            }
-            if let size = cat.size {
-                Text("Size: \(size)")
-                    .themedStyle(Theme.TextStyle(font: .body, color: .gray))
-                    .accessibilityLabel("Size \(size)")
-            }
             
-            if let mimetype = cat.mimetype {
-                Text("MimeType: \(mimetype)")
-                    .themedStyle(Theme.TextStyle(font: .body, color: .gray))
-                    .accessibilityLabel("MimeType \(mimetype)")
-            }
+          
+            
+            
+         
             
         }
     }
@@ -119,6 +122,6 @@ struct CatDetailContent: View {
 }
 
 #Preview {
-    CatDetailContent(cat: Cat(tags: ["tag1"], createdAt: nil, updatedAt: nil, mimetype: nil, size: nil, id: "1234", editedAt: nil), imageURL: "imageURL", isSaving: false, handler: { _ in
+    CatDetailContent(cat: Cat(tags: ["tag1"], createdAt: nil, updatedAt: nil, mimetype: "mimetype", size: 1234, id: "1234", editedAt: nil), imageURL: "imageURL", isSaving: false, handler: { _ in
     }, saveImageToGallery: {    })
 }

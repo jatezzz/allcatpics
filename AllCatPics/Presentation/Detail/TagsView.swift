@@ -18,8 +18,8 @@ struct TagsView: View {
                     Text(tags[index])
                         .padding(.vertical, 8)
                         .padding(.horizontal, 14)
+                        .colorInvert()
                         .background(colors[index % colors.count])
-                        .foregroundColor(.white)
                         .clipShape(Capsule())
                         .accessibilityLabel("\(tags[index]) tag")
                 }
