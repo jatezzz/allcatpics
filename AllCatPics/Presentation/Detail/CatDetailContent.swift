@@ -25,15 +25,18 @@ struct CatDetailContent: View {
                 Button(action: {
                     saveImageToGallery()
                 }) {
-                    Image(systemName: "arrow.down.to.line.circle.fill")
+                    Image(systemName: "arrow.down.to.line")
                         .resizable()
-                        .background(Color.white.opacity(0.9))
-                        .tint(Color.blue.opacity(0.9))
+                        .padding(12)
+                        .background(Color.blue)
+                        .tint(Color.white)
                         .frame(width: 50, height: 50)
                 }
                 .disabled(isSaving)
                 .clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/)
-                .padding(.bottom, 10)
+                .opacity(0.8)
+                .shadow(radius: 2)
+                .padding(.bottom, 20)
                 .padding(.trailing, 10)
                 .accessibilityLabel("Download button")
                 .accessibilityHint("Taps to download this image.")
