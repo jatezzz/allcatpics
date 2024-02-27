@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct DetailPage: View {
-    var coordinator: NavigationCoordinator
+    @StateObject var coordinator = DIContainer.shared.coordinator
     @StateObject var viewModel: DetailPageViewModel = DIContainer.shared.resolveDetailPageViewModel()
     let catId: String
     

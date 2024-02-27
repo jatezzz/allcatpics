@@ -9,7 +9,7 @@ import Foundation
 import SwiftUI
 
 struct AboutView: View {
-    @StateObject var coordinator = NavigationCoordinator()
+    @StateObject var coordinator = DIContainer.shared.coordinator
     var body: some View {
         VStack(alignment: .center){
                 Text("Creator: John Trujillo")

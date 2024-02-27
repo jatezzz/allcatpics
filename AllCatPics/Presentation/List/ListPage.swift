@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ListPage: View {
-    var coordinator: NavigationCoordinator
+    @StateObject var coordinator = DIContainer.shared.coordinator
     
     @StateObject var viewModel: ListPageViewModel = DIContainer.shared.resolveListPageViewModel()
     

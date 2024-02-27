@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 struct ContentView: View {
-    @StateObject var coordinator = NavigationCoordinator()
+    @StateObject var coordinator = DIContainer.shared.coordinator
 
     var body: some View {
         NavigationView {
@@ -22,11 +22,11 @@ struct ContentView: View {
     private var currentView: some View {
         switch coordinator.navigationStack.last {
         case .root:
-            ListPage(coordinator: coordinator)
+            ListPage()
         case .detail(let cat):
-            DetailPage(coordinator: coordinator, catId: cat.id)
+            DetailPage(catId: cat.id)
         case .about:
-            AboutView(coordinator: coordinator)
+            AboutView()
         default:
             Text("Not Implemented")
         }

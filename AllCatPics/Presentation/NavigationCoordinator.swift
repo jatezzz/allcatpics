@@ -10,7 +10,6 @@ import Foundation
 enum NavigationPage {
     case root
     case detail(cat: Cat)
-    case filteredList(filter: String)
     case about
 }
 
