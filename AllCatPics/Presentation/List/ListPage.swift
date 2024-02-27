@@ -15,6 +15,9 @@ struct ListPage: View {
     var body: some View {
         NavigationView {
             ScrollView {
+                Text("This is a list of out loved cats. Make them yours! Note: The names are auto generated based on the data from the server.")
+                    .themedStyle(Theme.TextStyle(font: .footnote, color: .gray))
+                    .padding()
                 LazyVGrid(columns: columns, spacing: 20) {
                     ForEach(viewModel.cats, id: \.id) { cat in
                         NavigationLink(destination: LazyView(DetailPage(catId: cat.id))) {
