@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="us-ascii" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" contentStyleType="text/css"
+     height="708px" preserveAspectRatio="none" style="width:1414px;height:708px;background:#FFFFFF;" version="1.1"
+     viewBox="0 0 1414 708" width="1414px" zoomAndPan="magnify">
+    <defs/>
+    <g><!--cluster Presentation-->
+        <g id="cluster_Presentation">
+            <path d="M13.5,11 L119.5,11 A3.75,3.75 0 0 1 122,13.5 L129,33.2969 L951.5,33.2969 A2.5,2.5 0 0 1 954,35.7969 L954,514 A2.5,2.5 0 0 1 951.5,516.5 L13.5,516.5 A2.5,2.5 0 0 1 11,514 L11,13.5 A2.5,2.5 0 0 1 13.5,11 "
+                  fill="#FFFFFF" style="stroke:#000000;stroke-width:1.0;"/>
+            <line style="stroke:#000000;stroke-width:1.0;" x1="11" x2="129" y1="33.2969" y2="33.2969"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" font-weight="bold" lengthAdjust="spacing"
+                  textLength="105" x="15" y="25.9951">Presentation
+            </text>
+        </g><!--cluster Domain-->
+        <g id="cluster_Domain">
+            <path d="M980.5,332 L1042.5,332 A3.75,3.75 0 0 1 1045,334.5 L1052,354.2969 L1404.5,354.2969 A2.5,2.5 0 0 1 1407,356.7969 L1407,538.5 A2.5,2.5 0 0 1 1404.5,541 L980.5,541 A2.5,2.5 0 0 1 978,538.5 L978,334.5 A2.5,2.5 0 0 1 980.5,332 "
+                  fill="#FFFFFF" style="stroke:#000000;stroke-width:1.0;"/>
+            <line style="stroke:#000000;stroke-width:1.0;" x1="978" x2="1052" y1="354.2969" y2="354.2969"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" font-weight="bold" lengthAdjust="spacing"
+                  textLength="61" x="982" y="346.9951">Domain
+            </text>
+        </g><!--cluster Data-->
+        <g id="cluster_Data">
+            <path d="M989.5,590 L1029.5,590 A3.75,3.75 0 0 1 1032,592.5 L1039,612.2969 L1200.5,612.2969 A2.5,2.5 0 0 1 1203,614.7969 L1203,698.5 A2.5,2.5 0 0 1 1200.5,701 L989.5,701 A2.5,2.5 0 0 1 987,698.5 L987,592.5 A2.5,2.5 0 0 1 989.5,590 "
+                  fill="#FFFFFF" style="stroke:#000000;stroke-width:1.0;"/>
+            <line style="stroke:#000000;stroke-width:1.0;" x1="987" x2="1039" y1="612.2969" y2="612.2969"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" font-weight="bold" lengthAdjust="spacing"
+                  textLength="39" x="991" y="604.9951">Data
+            </text>
+        </g><!--class ListPage-->
+        <g id="elem_ListPage">
+            <rect codeLine="4" fill="#FFFFFF" height="44" id="ListPage" rx="2.5" ry="2.5"
+                  style="stroke:#000000;stroke-width:1.0;" width="89" x="27.5" y="135.5"/>
+            <ellipse cx="40.5" cy="149.5" fill="#FFFFFF" rx="9" ry="9" style="stroke:#000000;stroke-width:1.0;"/>
+            <path d="M42.8438,145.1719 C41.9063,144.7344 41.3125,144.5938 40.4375,144.5938 C37.8125,144.5938 35.8125,146.6719 35.8125,149.3906 L35.8125,150.5156 C35.8125,153.0938 37.9219,154.9844 40.8125,154.9844 C42.0313,154.9844 43.1875,154.6875 43.9375,154.1406 C44.5156,153.7344 44.8438,153.2813 44.8438,152.8906 C44.8438,152.4375 44.4531,152.0469 43.9844,152.0469 C43.7656,152.0469 43.5625,152.125 43.375,152.3125 C42.9219,152.7969 42.9219,152.7969 42.7344,152.8906 C42.3125,153.1563 41.625,153.2813 40.8594,153.2813 C38.8125,153.2813 37.5156,152.1875 37.5156,150.4844 L37.5156,149.3906 C37.5156,147.6094 38.7656,146.2969 40.5,146.2969 C41.0781,146.2969 41.6875,146.4531 42.1563,146.7031 C42.6406,146.9844 42.8125,147.2031 42.9063,147.6094 C42.9688,148.0156 43,148.1406 43.1406,148.2656 C43.2813,148.4063 43.5156,148.5156 43.7344,148.5156 C44,148.5156 44.2656,148.375 44.4375,148.1563 C44.5469,148 44.5781,147.8125 44.5781,147.3906 L44.5781,145.9688 C44.5781,145.5313 44.5625,145.4063 44.4688,145.25 C44.3125,144.9844 44.0313,144.8438 43.7344,144.8438 C43.4375,144.8438 43.2344,144.9375 43.0156,145.25 L42.8438,145.1719 Z "
+                  fill="#000000"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="61" x="52.5"
+                  y="154.3467">ListPage
+            </text>
+            <line style="stroke:#000000;stroke-width:1.0;" x1="28.5" x2="115.5" y1="163.5" y2="163.5"/>
+            <line style="stroke:#000000;stroke-width:1.0;" x1="28.5" x2="115.5" y1="171.5" y2="171.5"/>
+        </g><!--class DetailPage-->
+        <g id="elem_DetailPage">
+            <rect codeLine="5" fill="#FFFFFF" height="44" id="DetailPage" rx="2.5" ry="2.5"
+                  style="stroke:#000000;stroke-width:1.0;" width="106" x="832" y="135.5"/>
+            <ellipse cx="845" cy="149.5" fill="#FFFFFF" rx="9" ry="9" style="stroke:#000000;stroke-width:1.0;"/>
+            <path d="M847.3438,145.1719 C846.4063,144.7344 845.8125,144.5938 844.9375,144.5938 C842.3125,144.5938 840.3125,146.6719 840.3125,149.3906 L840.3125,150.5156 C840.3125,153.0938 842.4219,154.9844 845.3125,154.9844 C846.5313,154.9844 847.6875,154.6875 848.4375,154.1406 C849.0156,153.7344 849.3438,153.2813 849.3438,152.8906 C849.3438,152.4375 848.9531,152.0469 848.4844,152.0469 C848.2656,152.0469 848.0625,152.125 847.875,152.3125 C847.4219,152.7969 847.4219,152.7969 847.2344,152.8906 C846.8125,153.1563 846.125,153.2813 845.3594,153.2813 C843.3125,153.2813 842.0156,152.1875 842.0156,150.4844 L842.0156,149.3906 C842.0156,147.6094 843.2656,146.2969 845,146.2969 C845.5781,146.2969 846.1875,146.4531 846.6563,146.7031 C847.1406,146.9844 847.3125,147.2031 847.4063,147.6094 C847.4688,148.0156 847.5,148.1406 847.6406,148.2656 C847.7813,148.4063 848.0156,148.5156 848.2344,148.5156 C848.5,148.5156 848.7656,148.375 848.9375,148.1563 C849.0469,148 849.0781,147.8125 849.0781,147.3906 L849.0781,145.9688 C849.0781,145.5313 849.0625,145.4063 848.9688,145.25 C848.8125,144.9844 848.5313,144.8438 848.2344,144.8438 C847.9375,144.8438 847.7344,144.9375 847.5156,145.25 L847.3438,145.1719 Z "
+                  fill="#000000"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="78" x="857"
+                  y="154.3467">DetailPage
+            </text>
+            <line style="stroke:#000000;stroke-width:1.0;" x1="833" x2="937" y1="163.5" y2="163.5"/>
+            <line style="stroke:#000000;stroke-width:1.0;" x1="833" x2="937" y1="171.5" y2="171.5"/>
+        </g><!--class ListPageViewModel-->
+        <g id="elem_ListPageViewModel">
+            <rect codeLine="6" fill="#FFFFFF" height="141.7813" id="ListPageViewModel" rx="2.5" ry="2.5"
+                  style="stroke:#000000;stroke-width:1.0;" width="346" x="152" y="86.5"/>
+            <ellipse cx="252.25" cy="100.5" fill="#FFFFFF" rx="9" ry="9" style="stroke:#000000;stroke-width:1.0;"/>
+            <path d="M254.5938,96.1719 C253.6563,95.7344 253.0625,95.5938 252.1875,95.5938 C249.5625,95.5938 247.5625,97.6719 247.5625,100.3906 L247.5625,101.5156 C247.5625,104.0938 249.6719,105.9844 252.5625,105.9844 C253.7813,105.9844 254.9375,105.6875 255.6875,105.1406 C256.2656,104.7344 256.5938,104.2813 256.5938,103.8906 C256.5938,103.4375 256.2031,103.0469 255.7344,103.0469 C255.5156,103.0469 255.3125,103.125 255.125,103.3125 C254.6719,103.7969 254.6719,103.7969 254.4844,103.8906 C254.0625,104.1563 253.375,104.2813 252.6094,104.2813 C250.5625,104.2813 249.2656,103.1875 249.2656,101.4844 L249.2656,100.3906 C249.2656,98.6094 250.5156,97.2969 252.25,97.2969 C252.8281,97.2969 253.4375,97.4531 253.9063,97.7031 C254.3906,97.9844 254.5625,98.2031 254.6563,98.6094 C254.7188,99.0156 254.75,99.1406 254.8906,99.2656 C255.0313,99.4063 255.2656,99.5156 255.4844,99.5156 C255.75,99.5156 256.0156,99.375 256.1875,99.1563 C256.2969,99 256.3281,98.8125 256.3281,98.3906 L256.3281,96.9688 C256.3281,96.5313 256.3125,96.4063 256.2188,96.25 C256.0625,95.9844 255.7813,95.8438 255.4844,95.8438 C255.1875,95.8438 254.9844,95.9375 254.7656,96.25 L254.5938,96.1719 Z "
+                  fill="#000000"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="138" x="269.75"
+                  y="105.3467">ListPageViewModel
+            </text>
+            <line style="stroke:#000000;stroke-width:1.0;" x1="153" x2="497" y1="114.5" y2="114.5"/>
+            <rect fill="none" height="6" style="stroke:#000000;stroke-width:1.0;" width="6" x="160" y="125.1484"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="74" x="170"
+                  y="131.4951">cats: [Cat]
+            </text>
+            <rect fill="none" height="6" style="stroke:#000000;stroke-width:1.0;" width="6" x="160" y="141.4453"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="108" x="170"
+                  y="147.792">isLoading: Bool
+            </text>
+            <rect fill="none" height="6" style="stroke:#000000;stroke-width:1.0;" width="6" x="160" y="157.7422"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="88" x="170"
+                  y="164.0889">error: Error?
+            </text>
+            <rect fill="none" height="6" style="stroke:#000000;stroke-width:1.0;" width="6" x="160" y="174.0391"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="154" x="170"
+                  y="180.3857">alertItem: AlertItem?
+            </text>
+            <line style="stroke:#000000;stroke-width:1.0;" x1="153" x2="497" y1="187.6875" y2="187.6875"/>
+            <ellipse cx="163" cy="201.3359" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="109" x="170"
+                  y="204.6826">loadNextPage()
+            </text>
+            <ellipse cx="163" cy="217.6328" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="322" x="170"
+                  y="220.9795">shouldLoadMoreData(currentItem: Cat): Bool
+            </text>
+        </g><!--class DetailPageViewModel-->
+        <g id="elem_DetailPageViewModel">
+            <rect codeLine="14" fill="#FFFFFF" height="223.2656" id="DetailPageViewModel" rx="2.5" ry="2.5"
+                  style="stroke:#000000;stroke-width:1.0;" width="264" x="533" y="46"/>
+            <ellipse cx="583.75" cy="60" fill="#FFFFFF" rx="9" ry="9" style="stroke:#000000;stroke-width:1.0;"/>
+            <path d="M586.0938,55.6719 C585.1563,55.2344 584.5625,55.0938 583.6875,55.0938 C581.0625,55.0938 579.0625,57.1719 579.0625,59.8906 L579.0625,61.0156 C579.0625,63.5938 581.1719,65.4844 584.0625,65.4844 C585.2813,65.4844 586.4375,65.1875 587.1875,64.6406 C587.7656,64.2344 588.0938,63.7813 588.0938,63.3906 C588.0938,62.9375 587.7031,62.5469 587.2344,62.5469 C587.0156,62.5469 586.8125,62.625 586.625,62.8125 C586.1719,63.2969 586.1719,63.2969 585.9844,63.3906 C585.5625,63.6563 584.875,63.7813 584.1094,63.7813 C582.0625,63.7813 580.7656,62.6875 580.7656,60.9844 L580.7656,59.8906 C580.7656,58.1094 582.0156,56.7969 583.75,56.7969 C584.3281,56.7969 584.9375,56.9531 585.4063,57.2031 C585.8906,57.4844 586.0625,57.7031 586.1563,58.1094 C586.2188,58.5156 586.25,58.6406 586.3906,58.7656 C586.5313,58.9063 586.7656,59.0156 586.9844,59.0156 C587.25,59.0156 587.5156,58.875 587.6875,58.6563 C587.7969,58.5 587.8281,58.3125 587.8281,57.8906 L587.8281,56.4688 C587.8281,56.0313 587.8125,55.9063 587.7188,55.75 C587.5625,55.4844 587.2813,55.3438 586.9844,55.3438 C586.6875,55.3438 586.4844,55.4375 586.2656,55.75 L586.0938,55.6719 Z "
+                  fill="#000000"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="155" x="601.25"
+                  y="64.8467">DetailPageViewModel
+            </text>
+            <line style="stroke:#000000;stroke-width:1.0;" x1="534" x2="796" y1="74" y2="74"/>
+            <rect fill="none" height="6" style="stroke:#000000;stroke-width:1.0;" width="6" x="541" y="84.6484"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="64" x="551"
+                  y="90.9951">cat: Cat?
+            </text>
+            <rect fill="none" height="6" style="stroke:#000000;stroke-width:1.0;" width="6" x="541" y="100.9453"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="108" x="551"
+                  y="107.292">isLoading: Bool
+            </text>
+            <rect fill="none" height="6" style="stroke:#000000;stroke-width:1.0;" width="6" x="541" y="117.2422"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="88" x="551"
+                  y="123.5889">error: Error?
+            </text>
+            <rect fill="none" height="6" style="stroke:#000000;stroke-width:1.0;" width="6" x="541" y="133.5391"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="134" x="551"
+                  y="139.8857">screenTitle: String
+            </text>
+            <rect fill="none" height="6" style="stroke:#000000;stroke-width:1.0;" width="6" x="541" y="149.8359"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="124" x="551"
+                  y="156.1826">imageURL: String
+            </text>
+            <rect fill="none" height="6" style="stroke:#000000;stroke-width:1.0;" width="6" x="541" y="166.1328"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="99" x="551"
+                  y="172.4795">isSaving: Bool
+            </text>
+            <rect fill="none" height="6" style="stroke:#000000;stroke-width:1.0;" width="6" x="541" y="182.4297"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="154" x="551"
+                  y="188.7764">alertItem: AlertItem?
+            </text>
+            <line style="stroke:#000000;stroke-width:1.0;" x1="534" x2="796" y1="196.0781" y2="196.0781"/>
+            <ellipse cx="544" cy="209.7266" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="240" x="551"
+                  y="213.0732">fetchItemDetail(for catId: String)
+            </text>
+            <ellipse cx="544" cy="226.0234" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="240" x="551"
+                  y="229.3701">applyTextToImage(_ text: String)
+            </text>
+            <ellipse cx="544" cy="242.3203" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="154" x="551"
+                  y="245.667">saveImageToGallery()
+            </text>
+            <ellipse cx="544" cy="258.6172" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="128" x="551"
+                  y="261.9639">onImageFeailure()
+            </text>
+        </g><!--class NavigationCoordinator-->
+        <g id="elem_NavigationCoordinator">
+            <rect codeLine="27" fill="#FFFFFF" height="109.1875" id="NavigationCoordinator" rx="2.5" ry="2.5"
+                  style="stroke:#000000;stroke-width:1.0;" width="272" x="27" y="391.5"/>
+            <ellipse cx="78.25" cy="405.5" fill="#FFFFFF" rx="9" ry="9" style="stroke:#000000;stroke-width:1.0;"/>
+            <path d="M80.5938,401.1719 C79.6563,400.7344 79.0625,400.5938 78.1875,400.5938 C75.5625,400.5938 73.5625,402.6719 73.5625,405.3906 L73.5625,406.5156 C73.5625,409.0938 75.6719,410.9844 78.5625,410.9844 C79.7813,410.9844 80.9375,410.6875 81.6875,410.1406 C82.2656,409.7344 82.5938,409.2813 82.5938,408.8906 C82.5938,408.4375 82.2031,408.0469 81.7344,408.0469 C81.5156,408.0469 81.3125,408.125 81.125,408.3125 C80.6719,408.7969 80.6719,408.7969 80.4844,408.8906 C80.0625,409.1563 79.375,409.2813 78.6094,409.2813 C76.5625,409.2813 75.2656,408.1875 75.2656,406.4844 L75.2656,405.3906 C75.2656,403.6094 76.5156,402.2969 78.25,402.2969 C78.8281,402.2969 79.4375,402.4531 79.9063,402.7031 C80.3906,402.9844 80.5625,403.2031 80.6563,403.6094 C80.7188,404.0156 80.75,404.1406 80.8906,404.2656 C81.0313,404.4063 81.2656,404.5156 81.4844,404.5156 C81.75,404.5156 82.0156,404.375 82.1875,404.1563 C82.2969,404 82.3281,403.8125 82.3281,403.3906 L82.3281,401.9688 C82.3281,401.5313 82.3125,401.4063 82.2188,401.25 C82.0625,400.9844 81.7813,400.8438 81.4844,400.8438 C81.1875,400.8438 80.9844,400.9375 80.7656,401.25 L80.5938,401.1719 Z "
+                  fill="#000000"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="162" x="95.75"
+                  y="410.3467">NavigationCoordinator
+            </text>
+            <line style="stroke:#000000;stroke-width:1.0;" x1="28" x2="298" y1="419.5" y2="419.5"/>
+            <rect fill="none" height="6" style="stroke:#000000;stroke-width:1.0;" width="6" x="35" y="430.1484"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="246" x="45"
+                  y="436.4951">navigationStack: [NavigationPage]
+            </text>
+            <line style="stroke:#000000;stroke-width:1.0;" x1="28" x2="298" y1="443.7969" y2="443.7969"/>
+            <ellipse cx="38" cy="457.4453" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="248" x="45"
+                  y="460.792">navigate(to page: NavigationPage)
+            </text>
+            <ellipse cx="38" cy="473.7422" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="117" x="45"
+                  y="477.0889">popToPrevious()
+            </text>
+            <ellipse cx="38" cy="490.0391" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="92" x="45"
+                  y="493.3857">popToRoot()
+            </text>
+        </g><!--class Cat-->
+        <g id="elem_Cat">
+            <rect codeLine="36" fill="#FFFFFF" height="158.0781" id="Cat" rx="2.5" ry="2.5"
+                  style="stroke:#000000;stroke-width:1.0;" width="159" x="1231.5" y="367"/>
+            <ellipse cx="1294.75" cy="381" fill="#FFFFFF" rx="9" ry="9" style="stroke:#000000;stroke-width:1.0;"/>
+            <path d="M1297.0938,376.6719 C1296.1563,376.2344 1295.5625,376.0938 1294.6875,376.0938 C1292.0625,376.0938 1290.0625,378.1719 1290.0625,380.8906 L1290.0625,382.0156 C1290.0625,384.5938 1292.1719,386.4844 1295.0625,386.4844 C1296.2813,386.4844 1297.4375,386.1875 1298.1875,385.6406 C1298.7656,385.2344 1299.0938,384.7813 1299.0938,384.3906 C1299.0938,383.9375 1298.7031,383.5469 1298.2344,383.5469 C1298.0156,383.5469 1297.8125,383.625 1297.625,383.8125 C1297.1719,384.2969 1297.1719,384.2969 1296.9844,384.3906 C1296.5625,384.6563 1295.875,384.7813 1295.1094,384.7813 C1293.0625,384.7813 1291.7656,383.6875 1291.7656,381.9844 L1291.7656,380.8906 C1291.7656,379.1094 1293.0156,377.7969 1294.75,377.7969 C1295.3281,377.7969 1295.9375,377.9531 1296.4063,378.2031 C1296.8906,378.4844 1297.0625,378.7031 1297.1563,379.1094 C1297.2188,379.5156 1297.25,379.6406 1297.3906,379.7656 C1297.5313,379.9063 1297.7656,380.0156 1297.9844,380.0156 C1298.25,380.0156 1298.5156,379.875 1298.6875,379.6563 C1298.7969,379.5 1298.8281,379.3125 1298.8281,378.8906 L1298.8281,377.4688 C1298.8281,377.0313 1298.8125,376.9063 1298.7188,376.75 C1298.5625,376.4844 1298.2813,376.3438 1297.9844,376.3438 C1297.6875,376.3438 1297.4844,376.4375 1297.2656,376.75 L1297.0938,376.6719 Z "
+                  fill="#000000"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="25" x="1312.25"
+                  y="385.8467">Cat
+            </text>
+            <line style="stroke:#000000;stroke-width:1.0;" x1="1232.5" x2="1389.5" y1="395" y2="395"/>
+            <rect fill="none" height="6" style="stroke:#000000;stroke-width:1.0;" width="6" x="1239.5" y="405.6484"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="94" x="1249.5"
+                  y="411.9951">tags: [String]
+            </text>
+            <rect fill="none" height="6" style="stroke:#000000;stroke-width:1.0;" width="6" x="1239.5" y="421.9453"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="124" x="1249.5"
+                  y="428.292">createdAt: Date?
+            </text>
+            <rect fill="none" height="6" style="stroke:#000000;stroke-width:1.0;" width="6" x="1239.5" y="438.2422"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="128" x="1249.5"
+                  y="444.5889">updatedAt: Date?
+            </text>
+            <rect fill="none" height="6" style="stroke:#000000;stroke-width:1.0;" width="6" x="1239.5" y="454.5391"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="135" x="1249.5"
+                  y="460.8857">mimetype: String?
+            </text>
+            <rect fill="none" height="6" style="stroke:#000000;stroke-width:1.0;" width="6" x="1239.5" y="470.8359"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="64" x="1249.5"
+                  y="477.1826">size: Int?
+            </text>
+            <rect fill="none" height="6" style="stroke:#000000;stroke-width:1.0;" width="6" x="1239.5" y="487.1328"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="66" x="1249.5"
+                  y="493.4795">id: String
+            </text>
+            <rect fill="none" height="6" style="stroke:#000000;stroke-width:1.0;" width="6" x="1239.5" y="503.4297"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="115" x="1249.5"
+                  y="509.7764">editedAt: Date?
+            </text>
+            <line style="stroke:#000000;stroke-width:1.0;" x1="1232.5" x2="1389.5" y1="517.0781" y2="517.0781"/>
+        </g><!--class CatRepositoryProtocol-->
+        <g id="elem_CatRepositoryProtocol">
+            <rect codeLine="45" fill="#FFFFFF" height="76.5938" id="CatRepositoryProtocol" rx="2.5" ry="2.5"
+                  style="stroke:#000000;stroke-width:1.0;" width="202" x="994" y="407.5"/>
+            <ellipse cx="1014.2" cy="421.5" fill="#FFFFFF" rx="9" ry="9" style="stroke:#000000;stroke-width:1.0;"/>
+            <path d="M1015.1531,418.2813 L1016.8719,418.2813 C1017.2625,418.2813 1017.45,418.25 1017.575,418.1719 C1017.8406,418.0156 1017.9813,417.7344 1017.9813,417.4375 C1017.9813,417.1719 1017.8719,416.9063 1017.6375,416.7344 C1017.4656,416.625 1017.325,416.5938 1016.8719,416.5938 L1011.7313,416.5938 C1011.2938,416.5938 1011.1688,416.6094 1011.0125,416.7031 C1010.7625,416.8594 1010.6063,417.1563 1010.6063,417.4375 C1010.6063,417.7188 1010.7469,417.9688 1010.9656,418.1406 C1011.1219,418.25 1011.3094,418.2813 1011.7313,418.2813 L1013.45,418.2813 L1013.45,424.7969 L1011.7313,424.7969 C1011.2938,424.7969 1011.1688,424.8125 1011.0125,424.9219 C1010.7625,425.0781 1010.6063,425.3594 1010.6063,425.6563 C1010.6063,425.9063 1010.7469,426.1719 1010.9656,426.3281 C1011.1219,426.4531 1011.325,426.5 1011.7313,426.5 L1016.8719,426.5 C1017.6219,426.5 1017.9813,426.2188 1017.9813,425.6563 C1017.9813,425.375 1017.8719,425.125 1017.6375,424.9531 C1017.4656,424.8281 1017.325,424.7969 1016.8719,424.7969 L1015.1531,424.7969 L1015.1531,418.2813 Z "
+                  fill="#000000"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" font-style="italic" lengthAdjust="spacing"
+                  textLength="158" x="1027.8" y="426.3467">CatRepositoryProtocol
+            </text>
+            <line style="stroke:#000000;stroke-width:1.0;" x1="995" x2="1195" y1="435.5" y2="435.5"/>
+            <line style="stroke:#000000;stroke-width:1.0;" x1="995" x2="1195" y1="443.5" y2="443.5"/>
+            <ellipse cx="1005" cy="457.1484" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="178" x="1012"
+                  y="460.4951">getDetail(id: String): Cat
+            </text>
+            <ellipse cx="1005" cy="473.4453" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="170" x="1012"
+                  y="476.792">getList(page: Int): [Cat]
+            </text>
+        </g><!--class CatRepository-->
+        <g id="elem_CatRepository">
+            <rect codeLine="52" fill="#FFFFFF" height="60.2969" id="CatRepository" rx="2.5" ry="2.5"
+                  style="stroke:#000000;stroke-width:1.0;" width="184" x="1003" y="625"/>
+            <ellipse cx="1039.4" cy="639" fill="#FFFFFF" rx="9" ry="9" style="stroke:#000000;stroke-width:1.0;"/>
+            <path d="M1041.7438,634.6719 C1040.8063,634.2344 1040.2125,634.0938 1039.3375,634.0938 C1036.7125,634.0938 1034.7125,636.1719 1034.7125,638.8906 L1034.7125,640.0156 C1034.7125,642.5938 1036.8219,644.4844 1039.7125,644.4844 C1040.9313,644.4844 1042.0875,644.1875 1042.8375,643.6406 C1043.4156,643.2344 1043.7438,642.7813 1043.7438,642.3906 C1043.7438,641.9375 1043.3531,641.5469 1042.8844,641.5469 C1042.6656,641.5469 1042.4625,641.625 1042.275,641.8125 C1041.8219,642.2969 1041.8219,642.2969 1041.6344,642.3906 C1041.2125,642.6563 1040.525,642.7813 1039.7594,642.7813 C1037.7125,642.7813 1036.4156,641.6875 1036.4156,639.9844 L1036.4156,638.8906 C1036.4156,637.1094 1037.6656,635.7969 1039.4,635.7969 C1039.9781,635.7969 1040.5875,635.9531 1041.0563,636.2031 C1041.5406,636.4844 1041.7125,636.7031 1041.8063,637.1094 C1041.8688,637.5156 1041.9,637.6406 1042.0406,637.7656 C1042.1813,637.9063 1042.4156,638.0156 1042.6344,638.0156 C1042.9,638.0156 1043.1656,637.875 1043.3375,637.6563 C1043.4469,637.5 1043.4781,637.3125 1043.4781,636.8906 L1043.4781,635.4688 C1043.4781,635.0313 1043.4625,634.9063 1043.3688,634.75 C1043.2125,634.4844 1042.9313,634.3438 1042.6344,634.3438 C1042.3375,634.3438 1042.1344,634.4375 1041.9156,634.75 L1041.7438,634.6719 Z "
+                  fill="#000000"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="104" x="1056.6"
+                  y="643.8467">CatRepository
+            </text>
+            <line style="stroke:#000000;stroke-width:1.0;" x1="1004" x2="1186" y1="653" y2="653"/>
+            <rect fill="none" height="6" style="stroke:#000000;stroke-width:1.0;" width="6" x="1011" y="663.6484"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="160" x="1021"
+                  y="669.9951">apiService: APIService
+            </text>
+            <line style="stroke:#000000;stroke-width:1.0;" x1="1004" x2="1186" y1="677.2969" y2="677.2969"/>
+        </g><!--reverse link CatRepositoryProtocol to CatRepository-->
+        <g id="link_CatRepositoryProtocol_CatRepository">
+            <path codeLine="57" d="M1095,502.967 C1095,543.351 1095,588.348 1095,624.9518 " fill="none"
+                  id="CatRepositoryProtocol-backto-CatRepository"
+                  style="stroke:#000000;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/>
+            <polygon fill="none" points="1095,484.967,1089,502.967,1101,502.967,1095,484.967"
+                     style="stroke:#000000;stroke-width:1.0;"/>
+            <text fill="#000000" font-family="Verdana" font-size="13" lengthAdjust="spacing" textLength="76" x="1096"
+                  y="570.0669">implements
+            </text>
+        </g><!--link ListPageViewModel to CatRepositoryProtocol-->
+        <g id="link_ListPageViewModel_CatRepositoryProtocol">
+            <path codeLine="58"
+                  d="M429.34,228.543 C456.569,244.07 486.561,258.892 516,269 C660.697,318.68 704.93,299.262 857,316 C878.499,318.366 934.043,315.662 954,324 C997.46,342.155 1033.1379,374.5514 1059.2679,402.8274 "
+                  fill="none" id="ListPageViewModel-to-CatRepositoryProtocol"
+                  style="stroke:#000000;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/>
+            <polygon fill="#000000"
+                     points="1063.34,407.234,1060.1695,397.9094,1059.9466,403.5619,1054.2941,403.3389,1063.34,407.234"
+                     style="stroke:#000000;stroke-width:1.0;"/>
+            <text fill="#000000" font-family="Verdana" font-size="13" lengthAdjust="spacing" textLength="30" x="858"
+                  y="312.0669">uses
+            </text>
+        </g><!--link DetailPageViewModel to CatRepositoryProtocol-->
+        <g id="link_DetailPageViewModel_CatRepositoryProtocol">
+            <path codeLine="59"
+                  d="M797.117,258.571 C803.082,262.214 809.058,265.709 815,269 C873.118,301.192 897.118,289.671 954,324 C992.664,347.334 1026.8906,377.1695 1053.8806,403.1915 "
+                  fill="none" id="DetailPageViewModel-to-CatRepositoryProtocol"
+                  style="stroke:#000000;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/>
+            <polygon fill="#000000"
+                     points="1058.2,407.356,1054.4972,398.2297,1054.6005,403.8856,1048.9446,403.9889,1058.2,407.356"
+                     style="stroke:#000000;stroke-width:1.0;"/>
+            <text fill="#000000" font-family="Verdana" font-size="13" lengthAdjust="spacing" textLength="30" x="938"
+                  y="312.0669">uses
+            </text>
+        </g><!--SRC=[dLJ1Rjim3BtxAxIRWs3v06DOaJLhOI0jWiJRPHWAmMOSOR8fI7IsREk_ZxQJI4uS59WkbacAV7nwr3lQGGN2QAdgA38o_o5B42iB3cgIfB0MVoB1AzVIER5KZbOS4PWMG5Bf2-Cfxgk2dqzOW3vcQTVxN99BnBTxIT-zKRaboaBLPI8-8Mhl06lH9k9p-xdpPgd1KafG9M9-sdhtL7EoP_ZLWOWdtkvssEYYBVM45XQIP9mtrdApVIu6DGaGl8usUgkhxlZT__VaSWjGPueq9693bay6oIgk_6Mz7F6uZToFL7c3eYrGlcjjVMFn5gtW9jBYL26WJHgZ3ndpcM7QueXV1F7VIAIJU-X2CdoKciiUGlgnxdmFm0KRUxgPaELdRgNiX7UFQ9ayIOmhuBa-1so8vSf2yaVQo_6QcXv38IOKXbs968O6m0oQ35dsUuMDYoyTQqGwOttrSxB0YkTcC26iW10joRBLUazJ87U-QGPMp9b25Y448cXCSSDJgGheOCxQ29MZVhCvhGVgAwwb0eMwojsphse2kvKvj1simQ1JJFnXPP4mnr3fqnBeA1bVOj9fVn3JlW5nJpi3cuGJFoIHX_2IGWyW95CQjG6xLpcddA_Iuzvd74V-uUziTf4p4QeocX- -cbnq_LRDPXzli928ne6Bnfw2jmxz0m00]-->
+    </g>
+</svg>

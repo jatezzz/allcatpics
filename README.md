@@ -159,9 +159,13 @@ the app is accessible to a broader audience, including those with visual impairm
 To support the processing needs of the app, various **support views** were crafted. These views are designed to handle
 specific tasks or display certain types of content, contributing to a clean and organized codebase.
 
-Below is a visual representation of the final architecture:
+Below is a visual representation of the initial proposed architecture:
 
 ![architecure.svg](architecure.svg)
+
+And finally the current one:
+
+![Current_Architecture.svg](Current_Architecture.svg)
 
 This architecture not only adheres to best practices in software development but also caters to the specific needs of
 the project. By combining the structured approach of Clean Architecture with the role-specific focus of VIPER, and
