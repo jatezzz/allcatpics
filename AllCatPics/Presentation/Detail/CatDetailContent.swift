@@ -12,15 +12,17 @@ struct CatDetailContent: View {
     let cat: Cat
     let imageURL: String
     let isSaving: Bool
-    let handler: (String)->Void
+    let applyTextToImage: (String)->Void
     let saveImageToGallery: ()->Void
+    var onSuccess: ()->Void
+    var onFailure: ((Error)->Void)?
     
     @State private var userInputText: String = ""
     
     var body: some View{
         VStack(alignment: .leading, spacing: 10) {
             ZStack(alignment: .bottomTrailing){
-                KingfisherImageView(url: imageURL, width: nil, height: 400, cornerRadius: 4)
+                KingfisherImageView(url: imageURL, width: nil, height: 400, cornerRadius: 4, onSuccess: onSuccess, onFailure: onFailure)
                     .frame(maxWidth: .infinity)
                 Button(action: {
                     saveImageToGallery()
@@ -55,24 +57,7 @@ struct CatDetailContent: View {
                 .themedStyle(Theme.TextStyle(font: .headline, color: .black))
                 .accessibilityLabel("Make it yours")
                 .accessibility(identifier: "makeItYours")
-            HStack {
-                TextField("Add text to image", text: $userInputText)
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
-                    .submitLabel(.done)
-                    .onSubmit {
-                        applyTextAndDismissKeyboard()
-                    }
-                    .accessibilityLabel("Add text to image")
-                    .accessibilityHint("Taps to enter a text for the image")
-                
-                Button("Apply") {
-                    applyTextAndDismissKeyboard()
-                }
-                .accessibilityLabel("Apply text button")
-                .accessibilityHint("Taps to aply a the text to the image.")
-                .accessibility(addTraits: .isButton)
-            }
-            .padding(.bottom)
+            ApplyTextBar
             Text("Details")
                 .accessibilityLabel("Details")
                 .themedStyle(Theme.TextStyle(font: .headline, color: .black))
@@ -80,7 +65,7 @@ struct CatDetailContent: View {
             VStack(alignment: .leading) {
                 Text("Id: \(cat.id)")
                     .accessibilityLabel("Id \(cat.id)")
-            
+                
                 if let createdAt = cat.createdAt?.formatDateString(), !createdAt.isEmpty {
                     Text("Created at: \(createdAt)")
                         .accessibilityLabel("Created at \(createdAt)")
@@ -102,26 +87,45 @@ struct CatDetailContent: View {
             }
             .themedStyle(Theme.TextStyle(font: .body, color: .secondary))
             .frame(maxWidth:.infinity, alignment:.topLeading)
-          
-            
-            
-          
-            
-            
-         
-            
         }
     }
     
     private func applyTextAndDismissKeyboard() {
-        handler(userInputText)
+        applyTextToImage(userInputText)
         dismissKeyboard()
     }
     
-
+    let characterLimit = 40 // Set your desired limit here
+    
+    var ApplyTextBar: some View {
+        HStack {
+            TextField("Add text to image", text: $userInputText)
+                .textFieldStyle(RoundedBorderTextFieldStyle())
+                .submitLabel(.done)
+                .onSubmit {
+                    applyTextAndDismissKeyboard()
+                }
+                .onChange(of: userInputText) { newValue in
+                    if newValue.count > characterLimit {
+                        userInputText = String(newValue.prefix(characterLimit))
+                    }
+                }
+                .accessibilityLabel("Add text to image")
+                .accessibilityHint("Taps to enter a text for the image")
+            
+            Button("Apply") {
+                applyTextAndDismissKeyboard()
+            }
+            .accessibilityLabel("Apply text button")
+            .accessibilityHint("Taps to aply a the text to the image.")
+            .accessibility(addTraits: .isButton)
+        }
+        .padding(.bottom)
+    }
+    
 }
 
 #Preview {
-    CatDetailContent(cat: Cat(tags: ["tag1"], createdAt: nil, updatedAt: nil, mimetype: "mimetype", size: 1234, id: "1234", editedAt: nil), imageURL: "imageURL", isSaving: false, handler: { _ in
-    }, saveImageToGallery: {    })
+    CatDetailContent(cat: Cat(tags: ["tag1"], createdAt: nil, updatedAt: nil, mimetype: "mimetype", size: 1234, id: "1234", editedAt: nil), imageURL: "imageURL", isSaving: false, applyTextToImage: { _ in
+    }, saveImageToGallery: {    }, onSuccess: {})
 }

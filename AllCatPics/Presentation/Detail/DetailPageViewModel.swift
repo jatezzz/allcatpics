@@ -99,4 +99,8 @@ class DetailPageViewModel: ObservableObject {
             }
         }
     }
+    
+    func onImageFeailure(){
+        alertItem = AlertItem(title: "Image loading error", message: "Is there a problem loading the image.")
+    }
 }

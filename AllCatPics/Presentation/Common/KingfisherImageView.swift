@@ -15,13 +15,17 @@ struct KingfisherImageView: View {
     var height: CGFloat?
     var contentMode: SwiftUI.ContentMode
     var cornerRadius: CGFloat?
+    var onSuccess: ()->Void
+    var onFailure: ((Error)->Void)?
     
-    init(url: String, width: CGFloat? = nil, height: CGFloat? = nil, cornerRadius: CGFloat? = nil, contentMode: SwiftUI.ContentMode = .fit) {
+    init(url: String, width: CGFloat? = nil, height: CGFloat? = nil, cornerRadius: CGFloat? = nil, contentMode: SwiftUI.ContentMode = .fit, onSuccess: @escaping ()->Void = {}, onFailure: ((Error)->Void)? = nil) {
         self.url = url
         self.width = width
         self.height = height
         self.cornerRadius = cornerRadius
         self.contentMode = contentMode
+        self.onSuccess = onSuccess
+        self.onFailure = onFailure
         
         if let cornerRadius {
             self.processor =  DownsamplingImageProcessor(size: CGSize(width: width ?? 400, height: height ?? 400)) |> RoundCornerImageProcessor(cornerRadius: cornerRadius)
@@ -44,7 +48,13 @@ struct KingfisherImageView: View {
             .cacheMemoryOnly()
             .fade(duration: 0.25)
             .onProgress { _, _ in }
-            .onFailure { error in print(error) }
+            .onFailure { error in
+                print(error)
+                onFailure?(error)
+            }
+            .onSuccess{_ in
+                onSuccess()
+            }
             .aspectRatio(contentMode: contentMode)
             .frame(width: width, height: height)
             .clipped()

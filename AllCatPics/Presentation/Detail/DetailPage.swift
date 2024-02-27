@@ -20,10 +20,16 @@ struct DetailPage: View {
                 Text("Error: \(error.localizedDescription)")
             } else if let cat = viewModel.cat {
                 ScrollView {
-                    CatDetailContent(cat: cat, imageURL: viewModel.imageURL, isSaving: viewModel.isSaving, handler: { userInputText in
+                    CatDetailContent(cat: cat, imageURL: viewModel.imageURL, isSaving: viewModel.isSaving, applyTextToImage: { userInputText in
                         viewModel.applyTextToImage(userInputText)
                     }, saveImageToGallery: {
                         viewModel.saveImageToGallery()
+                    }, onSuccess: {
+                        
+                    },
+                                     onFailure: { error in
+                        
+                        viewModel.onImageFeailure()
                     })
                     .padding()
                 }
