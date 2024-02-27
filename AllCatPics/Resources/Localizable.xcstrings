@@ -1,0 +1,197 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "%@ tag" : {
+
+    },
+    "Add text to image" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Agrega un texto a la imagen"
+          }
+        }
+      }
+    },
+    "Apply" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aplicar"
+          }
+        }
+      }
+    },
+    "Apply text button" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Botón de aplicar texto"
+          }
+        }
+      }
+    },
+    "Cat image" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Imagen de un gato"
+          }
+        }
+      }
+    },
+    "Cat named %@" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gato con nombre %@"
+          }
+        }
+      }
+    },
+    "Created at %@" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Creado en %@"
+          }
+        }
+      }
+    },
+    "Created at: %@" : {
+
+    },
+    "detaikPageScreenDescription" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Here is the love of your live. Make them yours! Apply a text to the image, save it and, spread te love."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aquí está el amor de tu vida. ¡Hazlos tuyos! Aplica un texto a la imagen, guárdalo y difunde el amor."
+          }
+        }
+      }
+    },
+    "Details" : {
+
+    },
+    "Download button" : {
+
+    },
+    "Error: %@" : {
+
+    },
+    "Id %@" : {
+
+    },
+    "Id: %@" : {
+
+    },
+    "Last updated at %@" : {
+
+    },
+    "Last updated: %@" : {
+
+    },
+    "listPageDescription" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "This is a list of our loved cats. Make them yours! Note: The names are auto-generated based on the data from the server."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Esta es una lista de nuestros queridos gatos. ¡Hazlos tuyos! Nota: Los nombres se generan automáticamente basados en los datos del servidor."
+          }
+        }
+      }
+    },
+    "listPageScreenTitle" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cats"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gatos"
+          }
+        }
+      }
+    },
+    "Make it yours" : {
+
+    },
+    "MimeType %@" : {
+
+    },
+    "MimeType: %@" : {
+
+    },
+    "navigationTitleCats" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cats"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gatos"
+          }
+        }
+      }
+    },
+    "No details available." : {
+
+    },
+    "Size %lld" : {
+
+    },
+    "Size: %lld" : {
+
+    },
+    "Tags" : {
+
+    },
+    "Tags:" : {
+
+    },
+    "Taps to aply a the text to the image." : {
+
+    },
+    "Taps to download this image." : {
+
+    },
+    "Taps to enter a text for the image" : {
+
+    },
+    "Taps to view more details about this cat." : {
+
+    }
+  },
+  "version" : "1.0"
+}

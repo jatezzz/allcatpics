@@ -20,7 +20,7 @@ struct DetailPage: View {
                 Text("Error: \(error.localizedDescription)")
             } else if let cat = viewModel.cat {
                 ScrollView {
-                    Text("Here is the love of your live. Make them yours! Apply a text to the image, save it and, spread te love.")
+                    Text(LocalizedStringKey("detaikPageScreenDescription"))
                         .themedStyle(Theme.TextStyle(font: .footnote, color: .gray))
                         .padding(.leading)
                         .padding(.trailing)
