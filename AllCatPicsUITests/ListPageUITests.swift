@@ -22,7 +22,7 @@ class ListPageTests: XCTestCase {
         }
         let listPage = ListPageScreen(app: app)
         XCTAssertTrue(listPage.isDisplaying, "List Page is not displayed")
-        let catID = "fewECg3UpBnPjxNr" // Use a known cat ID
+        let catID = "fewECg3UpBnPjxNr"
         listPage.selectCat(withID: catID)
     }
     
