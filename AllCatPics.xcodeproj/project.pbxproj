@@ -21,6 +21,7 @@
 		692379352B89B9DB00167287 /* TagsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 692379342B89B9DB00167287 /* TagsView.swift */; };
 		695032852B89528A00A6CB56 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 695032842B89528A00A6CB56 /* Kingfisher */; };
 		69A0A8452B8DAA69002613D7 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 69A0A8442B8DAA68002613D7 /* Localizable.xcstrings */; };
+		69A0A8472B8DB0AD002613D7 /* LazyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69A0A8462B8DB0AD002613D7 /* LazyView.swift */; };
 		69AF5F772B8CDFA6003C4E41 /* ListPageViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69AF5F762B8CDFA6003C4E41 /* ListPageViewModelTests.swift */; };
 		69AF5F792B8CE557003C4E41 /* DetailPageViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69AF5F782B8CE557003C4E41 /* DetailPageViewModelTests.swift */; };
 		69AF5F7B2B8CF5C8003C4E41 /* MockKingfisherManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69AF5F7A2B8CF5C8003C4E41 /* MockKingfisherManager.swift */; };
@@ -86,6 +87,7 @@
 		692379322B89ACCD00167287 /* NameGeneratorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameGeneratorTests.swift; sourceTree = "<group>"; };
 		692379342B89B9DB00167287 /* TagsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagsView.swift; sourceTree = "<group>"; };
 		69A0A8442B8DAA68002613D7 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
+		69A0A8462B8DB0AD002613D7 /* LazyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyView.swift; sourceTree = "<group>"; };
 		69AF5F762B8CDFA6003C4E41 /* ListPageViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPageViewModelTests.swift; sourceTree = "<group>"; };
 		69AF5F782B8CE557003C4E41 /* DetailPageViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPageViewModelTests.swift; sourceTree = "<group>"; };
 		69AF5F7A2B8CF5C8003C4E41 /* MockKingfisherManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockKingfisherManager.swift; sourceTree = "<group>"; };
@@ -243,6 +245,7 @@
 				6923792C2B89A1DF00167287 /* Theme.swift */,
 				69D777DB2B8C2C0000E8E7DA /* KingfisherImageView.swift */,
 				69D777CD2B8AF8C500E8E7DA /* ImageSaver.swift */,
+				69A0A8462B8DB0AD002613D7 /* LazyView.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -517,6 +520,7 @@
 			files = (
 				69E1FD472B88E089003FC8F9 /* ListPage.swift in Sources */,
 				69E1FD452B88E06F003FC8F9 /* DetailPageViewModel.swift in Sources */,
+				69A0A8472B8DB0AD002613D7 /* LazyView.swift in Sources */,
 				69D777D82B8BCD3A00E8E7DA /* View+Extension.swift in Sources */,
 				69AF5F7F2B8CF667003C4E41 /* KingfisherManager+Extension.swift in Sources */,
 				69E1FD422B88E053003FC8F9 /* ListPageViewModel.swift in Sources */,
