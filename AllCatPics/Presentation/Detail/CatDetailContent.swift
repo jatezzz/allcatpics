@@ -49,7 +49,7 @@ struct CatDetailContent: View {
                 Text("Tags:")
                     .themedStyle(Theme.TextStyle(font: .caption, color: .gray))
                     .accessibilityLabel("Tags")
-                TagsView(tags: cat.tags)
+                TagsView(tags: cat.validTags)
                     .themedStyle(Theme.TextStyle(font: .subheadline, color: .black))
             }
             

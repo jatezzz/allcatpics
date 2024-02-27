@@ -24,4 +24,8 @@ struct Cat: Identifiable, Decodable, Hashable {
     var updatedDate : String? {
         updatedAt ?? editedAt
     }
+    
+    var validTags : [String] {
+        tags.filter{!$0.isEmpty}
+    }
 }
