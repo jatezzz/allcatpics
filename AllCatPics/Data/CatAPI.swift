@@ -36,19 +36,35 @@ class CatAPI: CatAPIProtocol {
     
     private func performRequest<T: Decodable>(to urlString: String) async -> Result<T, Error> {
         guard let url = URL(string: urlString) else {
+            print("Invalid URL: \(urlString)")
             return .failure(URLError(.badURL))
         }
         
+        print("Requesting URL: \(url.absoluteString)")
+        
         do {
             let (data, response) = try await session.data(from: url)
-            guard let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200 else {
+            guard let httpResponse = response as? HTTPURLResponse else {
+                print("Failed to receive HTTPURLResponse")
+                return .failure(URLError(.badServerResponse))
+            }
+            
+            print("Response HTTP Status Code: \(httpResponse.statusCode)")
+            
+            if let responseString = String(data: data, encoding: .utf8) {
+                print("Response Data: \(responseString)\n")
+            }
+            
+            guard httpResponse.statusCode == 200 else {
                 return .failure(URLError(.badServerResponse))
             }
             
             let decodedResponse = try JSONDecoder().decode(T.self, from: data)
             return .success(decodedResponse)
         } catch {
+            print("Request error: \(error.localizedDescription)\n")
             return .failure(error)
         }
     }
+
 }
