@@ -236,6 +236,43 @@ competitive pricing. Bitrise's platform also offers excellent support for downlo
 simplifying the process for QA to test new builds. This combination of features, along with a cost-effective pricing
 structure, makes Bitrise the ideal choice for AllCatPics' CI/CD process.
 
+### Monitoring
+
+In the pursuit of enhancing our app's reliability and monitoring capabilities, the integration of a robust logging and
+crash reporting tool becomes imperative. While the local console has served its initial purpose for development and
+debugging, transitioning to a more sophisticated toolset will provide comprehensive insights and analytics, critical for
+maintaining and optimizing app performance in a production environment.
+
+**Comparison:**
+
+* **Crashlytics:** A powerful and lightweight tool that offers detailed crash reporting, real-time processing, and
+  analytics. It's part of Firebase, providing an integrated suite for analytics, remote configuration, and A/B testing.
+  Crashlytics stands out for its seamless integration with the Firebase platform, allowing developers to correlate crash
+  data with analytics and utilize remote configurations to adjust app behavior without needing a new deployment.
+
+* **New Relic:** Offers extensive application performance monitoring (APM) features, including real-time analytics,
+  crash reporting, and detailed insights into app performance metrics. New Relic is more comprehensive in terms of APM
+  capabilities but may require a more complex setup and integration process compared to Crashlytics. Pricing for New
+  Relic varies based on data usage and features required, potentially making it a costlier option for small to
+  medium-sized projects.
+
+**Decision:**
+
+After careful consideration of both options' features, ease of integration, and cost implications, **Crashlytics** has
+been chosen for the project. Its free tier offers substantial value for crash reporting and analytics, making it an
+attractive choice for startups and independent developers. Moreover, Crashlytics' ability to integrate with Firebase's
+remote configuration and analytics tools adds significant value, enabling a more dynamic and responsive app management
+strategy.
+
+Integrating Crashlytics will not only improve our ability to track and resolve issues more efficiently but also enhance
+our understanding of user interactions and app performance, paving the way for data-driven decisions and updates. This
+move is aligned with our future development goals of ensuring the highest quality user experience and app reliability.
+
+For more information on Crashlytics and its integration into iOS projects, please refer to the official documentation:
+Firebase Crashlytics.
+
+This step towards professional logging and monitoring underscores our commitment to delivering a robust, reliable app
+and is a critical component of our future development strategy.
 ## Acknowledgements
 
 A huge thank you to everyone who has contributed to making AllCatPics a reality. Your creativity, dedication, and
