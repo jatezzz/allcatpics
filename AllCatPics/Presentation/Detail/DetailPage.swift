@@ -32,7 +32,6 @@ struct DetailPage: View {
                     }, onSuccess: {
                         
                     }, onFailure: { error in
-                        
                         viewModel.onImageFeailure()
                     })
                     .padding()
@@ -48,6 +47,6 @@ struct DetailPage: View {
     }
 }
 
-//#Preview {
-//    DetailPage(catId: "abc")
-//}
+#Preview {
+    DetailPage(catId: "abc")
+}

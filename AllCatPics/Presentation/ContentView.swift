@@ -4,42 +4,30 @@
 //
 //  Created by John Trujillo on 27/2/24.
 //
-
 import Foundation
 import SwiftUI
+
 struct ContentView: View {
     @StateObject var coordinator = DIContainer.shared.coordinator
+    // State to manage dynamic navigation
+    @State private var isActive = false
 
     var body: some View {
         NavigationView {
-            currentView
-                .navigationBarTitle("Cats", displayMode: .automatic)
-                .navigationBarItems(leading: backButton, trailing: aboutButton)
-        }
-    }
-
-    @ViewBuilder
-    private var currentView: some View {
-        switch coordinator.navigationStack.last {
-        case .root:
-            ListPage()
-        case .detail(let cat):
-            DetailPage(catId: cat.id)
-        case .about:
-            AboutView()
-        default:
-            Text("Not Implemented")
-        }
-    }
-
-    private var backButton: some View {
-        Button(action: coordinator.popToPrevious) {
-            if coordinator.navigationStack.count > 1 {
-                Image(systemName: "chevron.left")
-                Text("Cats")
+            VStack {
+                rootNavigation
+                switch coordinator.navigationStack.last {
+                case .detail(let cat):
+                    detailNavigation(catId: cat.id)
+                case .about:
+                    aboutNavigation
+                default:
+                    EmptyView()
+                }
             }
+            .navigationBarTitle("Cats", displayMode: .automatic)
+            .navigationBarItems(trailing: aboutButton)
         }
-        .disabled(coordinator.navigationStack.count <= 1)
     }
 
     private var aboutButton: some View {
@@ -49,4 +37,27 @@ struct ContentView: View {
             }
         }
     }
+
+    // MARK: - Dynamic Navigation Links
+
+    private var rootNavigation: some View {
+        ListPage()
+            .onAppear { 
+                self.isActive = false
+                coordinator.popToRoot() // TODO fix for complex hierarchies
+            }
+    }
+
+    private func detailNavigation(catId: String) -> some View {
+        NavigationLink(destination: DetailPage(catId: catId), isActive: $isActive) { Text("nope") }
+            .hidden()
+            .onAppear { self.isActive = true }
+    }
+
+    private var aboutNavigation: some View {
+        NavigationLink(destination: AboutView(), isActive: $isActive) { EmptyView() }
+            .hidden()
+            .onAppear { self.isActive = true }
+    }
+
 }
