@@ -46,20 +46,20 @@ struct CatDetailContent: View {
 
             if !cat.tags.isEmpty {
                 Text("Tags:")
-                    .themedStyle(Theme.TextStyle(font: .caption, color: .gray))
+                    .themedStyle(Theme.TextStyle(font: .caption, color: .secondary))
                     .accessibilityLabel("Tags")
                 TagsView(tags: cat.validTags)
-                    .themedStyle(Theme.TextStyle(font: .subheadline, color: .black))
+                    .themedStyle(Theme.TextStyle(font: .subheadline, color: .secondary))
             }
 
             Text("Make it yours")
-                .themedStyle(Theme.TextStyle(font: .headline, color: .black))
+                .themedStyle(Theme.TextStyle(font: .headline, color: .secondary))
                 .accessibilityLabel("Make it yours")
                 .accessibility(identifier: "makeItYours")
             applyTextBar
             Text("Details")
                 .accessibilityLabel("Details")
-                .themedStyle(Theme.TextStyle(font: .headline, color: .black))
+                .themedStyle(Theme.TextStyle(font: .headline, color: .secondary))
 
             VStack(alignment: .leading) {
                 Text("Id: \(cat.id)")

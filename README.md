@@ -4,6 +4,8 @@ Welcome to AllCatPics, the quintessential application for every cat lover out th
 and mystery that our feline friends bring into our lives. Whether you're looking for inspiration, relaxation, or just a
 daily dose of cuteness, AllCatPics is your go-to source for everything cat-related.
 
+[AllCatPics.mov](AllCatPics.mov)
+
 ## Introduction
 
 In the heart of every cat lover is a world filled with purrs, meows, and countless moments of joy. AllCatPics aims to
