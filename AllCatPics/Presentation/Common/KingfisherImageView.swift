@@ -46,7 +46,10 @@ struct KingfisherImageView: View {
     var body: some View {
         KFImage(URL(string: url))
             .placeholder {
-                Image(systemName: "photo")
+                Image(systemName: "cat")
+                    .resizable()
+                    .tint(Color.white)
+                    .padding(40)
                     .frame(maxWidth: .infinity, maxHeight: .infinity)
                     .background(Color.gray.opacity(0.1))
             }

@@ -18,7 +18,6 @@ struct Card: View {
             VStack {
                 ZStack(alignment: .bottomLeading) {
                     KingfisherImageView(url: CatAPIEndpoints.catImageURL(id: cat.id), width: screenWidth, height: screenWidth, cornerRadius: 10, contentMode: .fill)
-                    
                     .clipped()
                     .cornerRadius(10)
                     Text(cat.displayName)
@@ -29,9 +28,9 @@ struct Card: View {
                         .cornerRadius(5)
                         .padding([.leading, .bottom], 8)
                         .frame(maxWidth: .infinity)
+                        .themedStyle(Theme.TextStyle(font: .headline, color: .black))
                 }
                 .frame(maxWidth: .infinity)
-                .themedStyle(Theme.TextStyle(font: .headline, color: .black))
             }
             .frame(maxWidth: .infinity)
         }
