@@ -11,11 +11,11 @@ import SwiftUI
 struct AboutView: View {
     @StateObject var coordinator = DIContainer.shared.coordinator
     var body: some View {
-        VStack(alignment: .center){
+        VStack(alignment: .center) {
                 Text("Creator: John Trujillo")
             }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
-        
+
         .navigationTitle("About")
     }
 }

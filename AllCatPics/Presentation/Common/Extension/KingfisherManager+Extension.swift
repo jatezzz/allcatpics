@@ -14,9 +14,9 @@ protocol KingfisherManagerProtocol {
     @discardableResult
     func retrieveImage(
         with resource: Resource,
-        options: KingfisherOptionsInfo? ,
-        progressBlock: DownloadProgressBlock? ,
-        downloadTaskUpdated: DownloadTaskUpdatedBlock? ,
+        options: KingfisherOptionsInfo?,
+        progressBlock: DownloadProgressBlock?,
+        downloadTaskUpdated: DownloadTaskUpdatedBlock?,
         completionHandler: ((Result<RetrieveImageResult, KingfisherError>) -> Void)?) -> DownloadTask?
 }
 

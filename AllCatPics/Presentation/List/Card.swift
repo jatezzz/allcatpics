@@ -14,7 +14,7 @@ struct Card: View {
     var body: some View {
         GeometryReader { geometry in
             let screenWidth = geometry.size.width
-            
+
             VStack {
                 ZStack(alignment: .bottomLeading) {
                     KingfisherImageView(url: CatAPIEndpoints.catImageURL(id: cat.id), width: screenWidth, height: screenWidth, cornerRadius: 10, contentMode: .fill)
@@ -37,7 +37,6 @@ struct Card: View {
         .aspectRatio(1, contentMode: .fit)
     }
 }
-
 
 #Preview {
     Card(cat: Cat(tags: ["tag1"], createdAt: nil, updatedAt: nil, mimetype: nil, size: nil, id: "Hola", editedAt: nil))

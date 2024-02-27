@@ -19,12 +19,12 @@ class MockCatAPI: CatAPIProtocol {
         }
         return .success( catsToReturn)
     }
-    
+
     func fetchCatDetail(id: String) async -> Result<AllCatPics.Cat, Error> {
         if let error = errorToThrow {
             return .failure(error)
         }
         return .success( catToReturn)
     }
-    
+
 }

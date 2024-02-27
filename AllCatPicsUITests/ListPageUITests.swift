@@ -14,8 +14,7 @@ class ListPageTests: XCTestCase {
         super.setUp()
         continueAfterFailure = false
     }
-    
-    
+
     func testCatSelection() {
         app.launchTunnel(withOptions: [SBTUITunneledApplicationLaunchOptionResetFilesystem, SBTUITunneledApplicationLaunchOptionDisableUITextFieldAutocomplete, "Testing"]) {
             self.app.stubRequests(matching: SBTRequestMatch(url: "cataas.com/api/cats.*"), response: SBTStubResponse(fileNamed: "list.json"))
@@ -25,7 +24,7 @@ class ListPageTests: XCTestCase {
         let catID = "fewECg3UpBnPjxNr"
         listPage.selectCat(withID: catID)
     }
-    
+
     func testCatSelectionError() {
         app.launchTunnel(withOptions: [SBTUITunneledApplicationLaunchOptionResetFilesystem, SBTUITunneledApplicationLaunchOptionDisableUITextFieldAutocomplete, "Testing"]) {
             self.app.stubRequests(matching: SBTRequestMatch(url: "cataas.com/api/cats.*"), response: SBTStubResponse(response: [:], returnCode: 404))

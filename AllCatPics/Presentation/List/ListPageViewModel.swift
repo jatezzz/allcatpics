@@ -12,24 +12,24 @@ class ListPageViewModel: ObservableObject {
     @Published var cats: [Cat] = []
     @Published var isLoading: Bool = false
     @Published var error: Error? {
-        didSet{
+        didSet {
             self.alertItem = (error != nil) ? AlertItem() : nil
         }
     }
     @Published var alertItem: AlertItem?
     let repository: CatRepositoryProtocol
-    
+
     private var currentPage = 0
-    
+
     init(repository: CatRepositoryProtocol) {
         self.repository = repository
         loadNextPage()
     }
-    
+
     func loadNextPage() {
         guard !isLoading else { return }
         isLoading = true
-        
+
         Task {
             do {
                 let newCats = try await repository.getList(page: currentPage)
@@ -42,8 +42,8 @@ class ListPageViewModel: ObservableObject {
             }
         }
     }
-    
-    func shouldLoadMoreData(currentItem: Cat)-> Bool {
+
+    func shouldLoadMoreData(currentItem: Cat) -> Bool {
         guard let last: Cat = cats.last else { return false }
         return currentItem.id == last.id
     }

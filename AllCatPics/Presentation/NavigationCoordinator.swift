@@ -13,7 +13,6 @@ enum NavigationPage {
     case about
 }
 
-
 class NavigationCoordinator: ObservableObject {
     @Published var navigationStack: [NavigationPage] = [.root]
 

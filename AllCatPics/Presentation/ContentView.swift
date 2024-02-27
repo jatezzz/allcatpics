@@ -42,7 +42,7 @@ struct ContentView: View {
 
     private var rootNavigation: some View {
         ListPage()
-            .onAppear { 
+            .onAppear {
                 self.isActive = false
                 coordinator.popToRoot() // TODO fix for complex hierarchies
             }

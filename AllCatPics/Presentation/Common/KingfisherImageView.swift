@@ -6,8 +6,6 @@
 //
 import SwiftUI
 import Kingfisher
-import SwiftUI
-import Kingfisher
 
 struct KingfisherImageView: View {
     let url: String
@@ -15,8 +13,8 @@ struct KingfisherImageView: View {
     var height: CGFloat?
     var contentMode: SwiftUI.ContentMode
     var cornerRadius: CGFloat?
-    var onSuccess: ()->Void
-    var onFailure: ((Error)->Void)?
+    var onSuccess: () -> Void
+    var onFailure: ((Error) -> Void)?
 
     // State for managing retries
     @State private var attemptCount: Int = 0
@@ -25,24 +23,30 @@ struct KingfisherImageView: View {
 
     @State private var processor: ImageProcessor
 
-    init(url: String, width: CGFloat? = nil, height: CGFloat? = nil, cornerRadius: CGFloat? = nil, contentMode: SwiftUI.ContentMode = .fit, onSuccess: @escaping ()->Void = {}, onFailure: ((Error)->Void)? = nil) {
+    init(url: String,
+         width: CGFloat? = nil,
+         height: CGFloat? = nil,
+         cornerRadius: CGFloat? = nil,
+         contentMode: SwiftUI.ContentMode = .fit,
+         onSuccess: @escaping () -> Void = {},
+         onFailure: ((Error) -> Void)? = nil) {
         self.url = url
         self.width = width
         self.height = height
         self.contentMode = contentMode
         self.onSuccess = onSuccess
         self.onFailure = onFailure
-        
+
         let extractedExpr: ImageProcessor
         // Initialize the processor state
         if let cornerRadius {
-             extractedExpr = DownsamplingImageProcessor(size: CGSize(width: width ?? 400, height: height ?? 400)) |> RoundCornerImageProcessor(cornerRadius: cornerRadius)
+            extractedExpr = DownsamplingImageProcessor(size: CGSize(width: width ?? 400, height: height ?? 400)) |> RoundCornerImageProcessor(cornerRadius: cornerRadius)
         } else {
-             extractedExpr = DownsamplingImageProcessor(size: CGSize(width: width ?? 400, height: height ?? 400))
+            extractedExpr = DownsamplingImageProcessor(size: CGSize(width: width ?? 400, height: height ?? 400))
         }
         _processor = State(initialValue: extractedExpr)
     }
-    
+
     var body: some View {
         KFImage(URL(string: url))
             .placeholder {
@@ -68,7 +72,7 @@ struct KingfisherImageView: View {
             .cornerRadius(cornerRadius ?? 0)
             .accessibilityLabel("Cat image")
     }
-    
+
     private func handleFailure(error: KingfisherError) {
         if attemptCount < maxRetryCount {
             DispatchQueue.main.asyncAfter(deadline: .now() + retryDelay) {
@@ -82,8 +86,6 @@ struct KingfisherImageView: View {
         }
     }
 }
-
-
 
 #Preview {
     KingfisherImageView(url: "https://cataas.com/cat/BX0XdDZffs3PqkV7")

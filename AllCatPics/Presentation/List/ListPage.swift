@@ -9,11 +9,11 @@ import SwiftUI
 
 struct ListPage: View {
     @StateObject var coordinator = DIContainer.shared.coordinator
-    
+
     @StateObject var viewModel: ListPageViewModel = DIContainer.shared.resolveListPageViewModel()
-    
+
     var columns: [GridItem] = Array(repeating: .init(.flexible()), count: 2)
-    
+
     var body: some View {
         ScrollView {
             Text(LocalizedStringKey("listPageDescription"))
@@ -22,7 +22,7 @@ struct ListPage: View {
             LazyVGrid(columns: columns, spacing: 10) {
                 ForEach(viewModel.cats, id: \.id) { cat in
                     Card(cat: cat)
-                        .onTapGesture{
+                        .onTapGesture {
                             coordinator.navigate(to: .detail(cat: cat))
                         }
                         .accessibility(identifier: "catCard_\(cat.id)")
@@ -48,6 +48,6 @@ struct ListPage: View {
     }
 }
 
-//#Preview {
+// #Preview {
 //    ListPage()
-//}
+// }

@@ -19,7 +19,7 @@ class CatLocalStorage: CatLocalStorageProtocol {
     func saveCats(_ cats: [Cat]) {
         cats.forEach({allCats.insert($0)})
     }
-    
+
     func saveCat(_ cat: Cat) {
         allCats.insert(cat)
     }

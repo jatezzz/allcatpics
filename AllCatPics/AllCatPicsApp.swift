@@ -13,7 +13,7 @@ import SBTUITestTunnelServer
 
 @main
 struct AllCatPicsApp: App {
-    
+
     init() {
 #if DEBUG
         let uiTesting = ProcessInfo.processInfo.arguments.contains("Testing")

@@ -16,12 +16,12 @@ class CatRepository: CatRepositoryProtocol {
     private let api: CatAPIProtocol
     private let localStorage: CatLocalStorageProtocol
     private let itemsPerPage = 10
-    
+
     init(api: CatAPIProtocol, localStorage: CatLocalStorageProtocol) {
         self.api = api
         self.localStorage = localStorage
     }
-    
+
     func getList(page: Int = 0) async throws -> [Cat] {
         let result = await api.fetchCatList(limit: itemsPerPage, skip: page * itemsPerPage)
         switch result {
@@ -37,7 +37,7 @@ class CatRepository: CatRepositoryProtocol {
            throw error
         }
     }
-    
+
     func getDetail(id: String) async throws -> Cat {
         if let cachedCat = localStorage.getCatById(id) {
             return cachedCat

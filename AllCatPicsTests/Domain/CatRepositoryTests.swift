@@ -14,26 +14,26 @@ final class CatRepositoryTests: XCTestCase {
         let mockCatAPI = MockCatAPI()
         let mockCatLocalStorage = MockCatLocalStorage()
         mockCatAPI.catsToReturn = [.make()]
-        
+
         let repository = CatRepository(api: mockCatAPI, localStorage: mockCatLocalStorage)
-        
+
         // Perform the action
         let newCats = try? await repository.getList(page: 0)
-        
+
         // Assert the final state
         XCTAssertNotNil(newCats)
         XCTAssertEqual(newCats!.count, 1)
         XCTAssertEqual(newCats!.first?.id, "123")
     }
-    
+
     func testLoadNextPage_WhenFailure_CapturesError() async throws {
         // Arrange
         let mockCatAPI = MockCatAPI()
         let mockCatLocalStorage = MockCatLocalStorage()
         mockCatAPI.errorToThrow = NSError(domain: "TestError", code: 1, userInfo: nil)
-        
+
         let repository = CatRepository(api: mockCatAPI, localStorage: mockCatLocalStorage)
-        
+
         // Act
         var expectedError: Error?
         do {
@@ -41,7 +41,7 @@ final class CatRepositoryTests: XCTestCase {
         } catch {
             expectedError = error
         }
-        
+
         // Assert
         XCTAssertNotNil(expectedError)
         XCTAssertEqual((expectedError as NSError?)?.domain, "TestError")

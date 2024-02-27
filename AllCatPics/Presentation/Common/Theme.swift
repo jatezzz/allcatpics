@@ -17,10 +17,10 @@ struct Theme {
            var font: Font
            var color: Color
        }
-       
+
        var bodyStyle: TextStyle
        var captionStyle: TextStyle
-       
+
        static let defaultTheme = Theme(
            accentColor: .blue,
            primaryTextColor: .primary,
@@ -43,7 +43,7 @@ extension EnvironmentValues {
 }
 
 //// A custom view modifier to apply the theme
-//struct ThemedModifier: ViewModifier {
+// struct ThemedModifier: ViewModifier {
 //    @Environment(\.theme) var theme: Theme
 //    
 //    func body(content: Content) -> some View {
@@ -51,18 +51,17 @@ extension EnvironmentValues {
 //            .foregroundColor(theme.textColor)
 //            .font(theme.fontSize)
 //    }
-//}
+// }
 
 struct ThemedStyleModifier: ViewModifier {
     var style: Theme.TextStyle
-    
+
     func body(content: Content) -> some View {
         content
             .foregroundColor(style.color)
             .font(style.font)
     }
 }
-
 
 extension View {
     func themedStyle(_ style: Theme.TextStyle ) -> some View {

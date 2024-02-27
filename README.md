@@ -46,6 +46,13 @@ To enhance the AllCatPics experience, we utilize the following libraries:
 - **SBTUITestTunnel**: Offers enhanced UI testing capabilities by allowing mocking of JSON responses from the backend.
   This tool is crucial for our testing strategy to ensure the highest quality user
   experience. [SBTUITestTunnel on GitHub](https://github.com/Subito-it/SBTUITestTunnel)
+- **SwiftLint**: To ensure high code quality and maintainability, **SwiftLint** has been added as a requirement for the
+  project. SwiftLint is a tool that enforces Swift style and conventions, helping to keep the codebase clean and
+  consistent. It is a vital addition for any project aimed at achieving professional standards of code quality.
+  Developers contributing to the project are required to install SwiftLint and adhere to the rules defined. This step
+  ensures that all code contributions follow a common set of style guidelines, reducing the potential for code smells
+  and making the code easier to read and maintain. For more information on SwiftLint and how to install and configure
+  it, please visit the official GitHub repository: [SwiftLint GitHub](https://github.com/realm/SwiftLint).
 
 ## Project Plan and Architecture Overview
 

@@ -11,7 +11,7 @@ struct DetailPage: View {
     @StateObject var coordinator = DIContainer.shared.coordinator
     @StateObject var viewModel: DetailPageViewModel = DIContainer.shared.resolveDetailPageViewModel()
     let catId: String
-    
+
     var body: some View {
         Group {
             if viewModel.isLoading {
@@ -30,8 +30,8 @@ struct DetailPage: View {
                     }, saveImageToGallery: {
                         viewModel.saveImageToGallery()
                     }, onSuccess: {
-                        
-                    }, onFailure: { error in
+
+                    }, onFailure: { _ in
                         viewModel.onImageFeailure()
                     })
                     .padding()
@@ -40,7 +40,7 @@ struct DetailPage: View {
                 Text("No details available.")
             }
         }
-        .onAppear{viewModel.fetchItemDetail(for: catId)}
+        .onAppear {viewModel.fetchItemDetail(for: catId)}
         .navigationTitle(viewModel.screenTitle)
         .environment(\.theme, Theme.defaultTheme)
         .customAlert(item: $viewModel.alertItem)

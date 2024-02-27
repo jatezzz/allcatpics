@@ -20,6 +20,6 @@ class MockImageSaver: ImageSaverProtocol {
         } else {
             onFailure?(errorToThrow)
         }
-        
+
     }
 }

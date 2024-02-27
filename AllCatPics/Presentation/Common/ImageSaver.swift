@@ -13,9 +13,9 @@ protocol ImageSaverProtocol {
 }
 
 class ImageSaver: NSObject, ImageSaverProtocol {
-    let onFailure: (Error)->Void
-    let onSuccess: ()->Void
-    init(onFailure: @escaping (Error) -> Void, onSuccess: @escaping ()->Void) {
+    let onFailure: (Error) -> Void
+    let onSuccess: () -> Void
+    init(onFailure: @escaping (Error) -> Void, onSuccess: @escaping () -> Void) {
         self.onFailure = onFailure
         self.onSuccess = onSuccess
     }
