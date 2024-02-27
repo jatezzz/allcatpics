@@ -4,7 +4,10 @@ Welcome to AllCatPics, the quintessential application for every cat lover out th
 and mystery that our feline friends bring into our lives. Whether you're looking for inspiration, relaxation, or just a
 daily dose of cuteness, AllCatPics is your go-to source for everything cat-related.
 
-[AllCatPics.mov](AllCatPics.mov)
+
+https://github.com/jatezzz/allcatpics/assets/34223334/ff9fdd0e-e4bb-4a04-8d7d-714c7cd7446f
+
+
 
 ## Introduction
 
