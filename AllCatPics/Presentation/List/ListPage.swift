@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct ListPage: View {
+    @Environment(\.theme) var theme: Theme
     @StateObject var coordinator = DIContainer.shared.coordinator
-
     @StateObject var viewModel: ListPageViewModel = DIContainer.shared.resolveListPageViewModel()
 
     var columns: [GridItem] = Array(repeating: .init(.flexible()), count: 2)
@@ -17,9 +17,9 @@ struct ListPage: View {
     var body: some View {
         ScrollView {
             Text("list.pageDescription")
-                .themedStyle(Theme.TextStyle(font: .footnote, color: .gray))
+                .themedStyle(theme.footnote)
+                .padding(.bottom)
                 .accessibilityIdentifier("list.page.description")
-                .padding()
             LazyVGrid(columns: columns, spacing: 10) {
                 ForEach(viewModel.cats, id: \.id) { cat in
                     Card(cat: cat)

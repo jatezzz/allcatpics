@@ -10,6 +10,8 @@ import SwiftUI
 struct DetailPage: View {
     @StateObject var coordinator = DIContainer.shared.coordinator
     @StateObject var viewModel: DetailPageViewModel = DIContainer.shared.resolveDetailPageViewModel()
+    @Environment(\.theme) var theme: Theme
+
     let catId: String
 
     var body: some View {
@@ -22,7 +24,7 @@ struct DetailPage: View {
             } else if let cat = viewModel.cat {
                 ScrollView {
                     Text(LocalizedStringKey("detail.page.description"))
-                        .themedStyle(Theme.TextStyle(font: .footnote, color: .gray))
+                        .themedStyle(theme.footnote)
                         .accessibilityIdentifier("detail.page.description")
                         .padding(.leading)
                         .padding(.trailing)
@@ -47,7 +49,6 @@ struct DetailPage: View {
         }
         .onAppear {viewModel.fetchItemDetail(for: catId)}
         .navigationTitle(viewModel.screenTitle)
-        .environment(\.theme, Theme.defaultTheme)
         .customAlert(item: $viewModel.alertItem)
     }
 }

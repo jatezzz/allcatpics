@@ -34,7 +34,7 @@ struct Card: View {
                         .cornerRadius(5)
                         .padding([.leading, .bottom], 8)
                         .frame(maxWidth: .infinity)
-                        .themedStyle(Theme.TextStyle(font: .headline, color: .black))
+                        .themedStyle(theme.headline)
                 }
                 .frame(maxWidth: .infinity)
             }

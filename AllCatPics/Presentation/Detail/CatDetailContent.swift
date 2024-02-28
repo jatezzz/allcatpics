@@ -9,6 +9,9 @@ import SwiftUI
 import Kingfisher
 
 struct CatDetailContent: View {
+    @Environment(\.theme) var theme: Theme
+    @State private var userInputText: String = ""
+
     let cat: Cat
     let imageURL: String
     let isSaving: Bool
@@ -17,7 +20,7 @@ struct CatDetailContent: View {
     var onSuccess: () -> Void
     var onFailure: ((Error) -> Void)?
 
-    @State private var userInputText: String = ""
+    let characterLimit = 40
 
     var body: some View {
         VStack(alignment: .leading, spacing: 10) {
@@ -37,13 +40,12 @@ struct CatDetailContent: View {
                     Image(systemName: "arrow.down.to.line")
                         .resizable()
                         .padding(12)
-                        .background(Color.blue)
-                        .tint(Color.white)
+                        .background(theme.accentColor)
+                        .tint(theme.primaryTextColor)
                         .frame(width: 50, height: 50)
                 })
                 .disabled(isSaving)
                 .clipShape(Circle())
-                .shadow(radius: 2)
                 .padding(.bottom, 20)
                 .padding(.trailing, 10)
                 .accessibilityIdentifier("detail.downloadButton")
@@ -54,20 +56,20 @@ struct CatDetailContent: View {
 
             if !cat.tags.isEmpty {
                 Text("detail.tags")
-                    .themedStyle(Theme.TextStyle(font: .caption, color: .secondary))
+                    .themedStyle(theme.captionStyle)
                     .accessibilityLabel("detail.tag.AccessibilityLabel")
                 TagsView(tags: cat.validTags)
-                    .themedStyle(Theme.TextStyle(font: .subheadline, color: .primary))
+                    .themedStyle(theme.subheadline)
             }
 
             Text("detail.makeItYours")
-                .themedStyle(Theme.TextStyle(font: .headline, color: .secondary))
+                .themedStyle(theme.headline)
                 .accessibilityLabel("detail.makeItYours")
                 .accessibility(identifier: "detail.makeItYours.accessibilityLabel")
             applyTextBar
             Text("details")
+                .themedStyle(theme.subheadline)
                 .accessibilityLabel("details")
-                .themedStyle(Theme.TextStyle(font: .headline, color: .secondary))
             detailContent
                 .frame(maxWidth: .infinity, alignment: .topLeading)
         }
@@ -77,8 +79,6 @@ struct CatDetailContent: View {
         applyTextToImage(userInputText)
         dismissKeyboard()
     }
-
-    let characterLimit = 40
 
     var applyTextBar: some View {
         HStack {
@@ -133,7 +133,7 @@ struct CatDetailContent: View {
                     .accessibilityLabel("detail.mimetype.accessibilityLabel.\(mimetype)")
             }
         }
-        .themedStyle(Theme.TextStyle(font: .body, color: .secondary))
+        .themedStyle(theme.bodyStyle)
     }
 
 }

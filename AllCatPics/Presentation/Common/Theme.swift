@@ -10,29 +10,45 @@ import SwiftUI
 
 struct Theme {
     var accentColor: Color
-       var primaryTextColor: Color
-       var secondaryTextColor: Color // Add a secondary text color for variety
+    var primaryTextColor: Color
+    var secondaryTextColor: Color
 
-       struct TextStyle {
-           var font: Font
-           var color: Color
-       }
+    struct TextStyle {
+        var font: Font
+        var color: Color
+    }
 
-       var bodyStyle: TextStyle
-       var captionStyle: TextStyle
+    var bodyStyle: TextStyle
+    var captionStyle: TextStyle
+    var subheadline: TextStyle
+    var headline: TextStyle
+    var footnote: TextStyle
 
-       static let defaultTheme = Theme(
-           accentColor: .blue,
-           primaryTextColor: .primary,
-           secondaryTextColor: .secondary,
-           bodyStyle: TextStyle(font: .body, color: .primary),
-           captionStyle: TextStyle(font: .caption, color: .secondary)
-       )
+    static let lightTheme = Theme(
+        accentColor: .orange,
+        primaryTextColor: .white,
+        secondaryTextColor: .secondary,
+        bodyStyle: TextStyle(font: .body, color: .gray),
+        captionStyle: TextStyle(font: .caption, color: .gray),
+        subheadline: TextStyle(font: .subheadline.bold(), color: .black),
+        headline: TextStyle(font: .headline.weight(.heavy), color: .black),
+        footnote: TextStyle(font: .footnote, color: .gray)
+    )
+
+    static let darkTheme = Theme(
+        accentColor: .orange,
+        primaryTextColor: .white,
+        secondaryTextColor: .secondary,
+        bodyStyle: TextStyle(font: .body, color: .gray),
+        captionStyle: TextStyle(font: .caption, color: .gray),
+        subheadline: TextStyle(font: .subheadline.bold(), color: .white),
+        headline: TextStyle(font: .headline.weight(.heavy), color: .white),
+        footnote: TextStyle(font: .footnote, color: .gray)
+    )
 }
 
-// Define a custom environment key for the theme
 private struct ThemeKey: EnvironmentKey {
-    static let defaultValue: Theme = .defaultTheme
+    static let defaultValue: Theme = .lightTheme
 }
 
 extension EnvironmentValues {
@@ -41,17 +57,6 @@ extension EnvironmentValues {
         set { self[ThemeKey.self] = newValue }
     }
 }
-
-//// A custom view modifier to apply the theme
-// struct ThemedModifier: ViewModifier {
-//    @Environment(\.theme) var theme: Theme
-//    
-//    func body(content: Content) -> some View {
-//        content
-//            .foregroundColor(theme.textColor)
-//            .font(theme.fontSize)
-//    }
-// }
 
 struct ThemedStyleModifier: ViewModifier {
     var style: Theme.TextStyle

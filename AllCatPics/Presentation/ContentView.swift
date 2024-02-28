@@ -8,11 +8,15 @@ import Foundation
 import SwiftUI
 
 struct ContentView: View {
+
+    @Environment(\.colorScheme) var colorScheme
     @StateObject var coordinator = DIContainer.shared.coordinator
     // State to manage dynamic navigation
     @State private var isActive = false
 
     var body: some View {
+
+        let theme = colorScheme == .dark ? Theme.darkTheme : Theme.lightTheme
         NavigationView {
             VStack {
                 rootNavigation
@@ -28,6 +32,8 @@ struct ContentView: View {
             .navigationBarTitle("main.title", displayMode: .automatic)
             .navigationBarItems(trailing: aboutButton)
         }
+        .environment(\.theme, theme)
+        .accentColor(theme.accentColor)
     }
 
     private var aboutButton: some View {
