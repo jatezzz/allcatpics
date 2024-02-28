@@ -7,10 +7,12 @@ create a community where cat lovers can celebrate the quirks and charms of felin
 let's spread happiness together—one cat picture at a time.
 
 
-https://github.com/jatezzz/allcatpics/assets/34223334/ff9fdd0e-e4bb-4a04-8d7d-714c7cd7446f
+
+https://github.com/jatezzz/allcatpics/assets/34223334/88c176bf-379a-4df0-aa87-72706af787db
+
 
 ![lanscape.jpg](lanscape.jpg)
-![light.jpeg](light.jpeg)
+[<img src="light.jpeg" width="250"/>](light.jpeg)
 
 ## Introduction
 
