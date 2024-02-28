@@ -2,63 +2,145 @@
   "sourceLanguage" : "en",
   "strings" : {
     "%@ tag" : {
-
-    },
-    "About" : {
-
-    },
-    "Add text to image" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Agrega un texto a la imagen"
-          }
-        }
-      }
-    },
-    "Cat image" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Imagen de un gato"
-          }
-        }
-      }
-    },
-    "Cat named %@" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Gato con nombre %@"
-          }
-        }
-      }
-    },
-    "Cats" : {
-
-    },
-    "Created at %@" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Creado en %@"
-          }
-        }
-      }
-    },
-    "Created at: %@" : {
-
-    },
-    "Creator: John Trujillo" : {
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Creador: John Trujillo"
+            "value" : "%@ tag"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ tag"
+          }
+        }
+      }
+    },
+    "about.creator" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Developer: John Trujillo"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Desarrollador: John Trujillo"
+          }
+        }
+      }
+    },
+    "about.title" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "About"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Acerca de"
+          }
+        }
+      }
+    },
+    "alertItem.dismissButtonText" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "OK"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "OK"
+          }
+        }
+      }
+    },
+    "alertItem.message" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "There's been an error"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ha habido un error"
+          }
+        }
+      }
+    },
+    "alertItem.title" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Oops! Something went wrong..."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "¡Ups! Algo salió mal..."
+          }
+        }
+      }
+    },
+    "detail.addTextToImage" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Add text to image"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Agregar texto a la imagen"
+          }
+        }
+      }
+    },
+    "detail.addTextToImage.accessibilityHint" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Select to add text to the image"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Seleccione para agregar texto a la imagen"
+          }
+        }
+      }
+    },
+    "detail.addTextToImage.accessibilityLabel" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Add text to image"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Agregar texto a la imagen"
           }
         }
       }
@@ -111,9 +193,263 @@
         }
       }
     },
-    "detailPageScreenDescription" : {
-      "comment" : "Este es el detalle para la descripción de la página de Detalle",
-      "extractionState" : "manual",
+    "detail.cat.image.accessibilityHint" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "The image of a cute cat."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "La imagen de un lindo gato."
+          }
+        }
+      }
+    },
+    "detail.cat.image.accessibilityLabel" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cat image"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Imagen de gato"
+          }
+        }
+      }
+    },
+    "detail.createdAt.%@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Created at: %@"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Creado en: %@"
+          }
+        }
+      }
+    },
+    "detail.createdAt.accessibilityLabel.%@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Created at %@"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Creado en %@"
+          }
+        }
+      }
+    },
+    "detail.downloadButton.accessibilityHint" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Taps to enter a text for the image"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Taps to enter a text for the image"
+          }
+        }
+      }
+    },
+    "detail.downloadButton.accessibilityLabel" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Download button"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Botón de Descarga"
+          }
+        }
+      }
+    },
+    "detail.id.%@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Id: %@"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Id: %@"
+          }
+        }
+      }
+    },
+    "detail.id.accessibilityLabel%@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Id %@"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Id %@"
+          }
+        }
+      }
+    },
+    "detail.image.failure.message" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "There is a problem loading the image"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Existe un problema al cargar la imagen"
+          }
+        }
+      }
+    },
+    "detail.image.failure.text" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Image loading error"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Error al cargar la imagen"
+          }
+        }
+      }
+    },
+    "detail.lastUpdateAt.%@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Last update at: %@"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Última actualización en: %@"
+          }
+        }
+      }
+    },
+    "detail.lastUpdateAt.accessibilityLabel%@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Last updated at %@"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Última actualización en %@"
+          }
+        }
+      }
+    },
+    "detail.makeItYours" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Make it yours"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hazlo tuyo"
+          }
+        }
+      }
+    },
+    "detail.mimetype.%@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mimetype: %@"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mimetype: %@"
+          }
+        }
+      }
+    },
+    "detail.mimetype.accessibilityLabel.%@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mimetype %@"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mimetype %@"
+          }
+        }
+      }
+    },
+    "detail.no.details" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No cat detail found"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No se encontraron detalles del gato"
+          }
+        }
+      }
+    },
+    "detail.page.description" : {
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -129,6 +465,134 @@
         }
       }
     },
+    "detail.size.%lld" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Size: %@"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tamaño: %@"
+          }
+        }
+      }
+    },
+    "detail.size.accessibilityLabel.%lld" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Size %@"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tamaño %@"
+          }
+        }
+      }
+    },
+    "detail.tag.AccessibilityLabel" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tags"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tags"
+          }
+        }
+      }
+    },
+    "detail.tags" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tags:"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tags:"
+          }
+        }
+      }
+    },
+    "detail.text.apply.failure.message" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Please insert a valid text"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Por favor inserte un texto válido"
+          }
+        }
+      }
+    },
+    "detail.text.apply.failure.title" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wrong text"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Texto inválido"
+          }
+        }
+      }
+    },
+    "detail.text.apply.success.message" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Image saved."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Imagen guardada."
+          }
+        }
+      }
+    },
+    "detail.text.apply.success.title" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Success"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Éxito!"
+          }
+        }
+      }
+    },
     "details" : {
       "localizations" : {
         "en" : {
@@ -136,40 +600,75 @@
             "state" : "translated",
             "value" : "Details"
           }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Detalle"
+          }
         }
       }
     },
-    "Download button" : {
-
-    },
-    "Error: %@" : {
-
-    },
-    "Id %@" : {
-
-    },
-    "Id: %@" : {
-
-    },
-    "Last updated at %@" : {
-
-    },
-    "Last updated: %@" : {
-
-    },
-    "listPageDescription" : {
-      "extractionState" : "manual",
+    "general.error" : {
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "This is a list of our loved cats. Make them yours! Note: The names are auto-generated based on the data from the server."
+            "value" : "Sorry, there is an error. Please try again."
           }
         },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Esta es una lista de nuestros queridos gatos. ¡Hazlos tuyos! Nota: Los nombres se generan automáticamente basados en los datos del servidor."
+            "value" : "Lo sentimos, hay un error. Inténtalo de nuevo."
+          }
+        }
+      }
+    },
+    "list.cat.name.accessibilityHint" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Taps to view more details about this cat."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Toca para ver más detalles sobre este gato."
+          }
+        }
+      }
+    },
+    "list.cat.name.accessibilityLabel.%@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cat named %@"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gato con nombre %@"
+          }
+        }
+      }
+    },
+    "list.pageDescription" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "This is the list of our loved cats. Make them yours! Note: The names are auto-generated based on the data from the server."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Esta es la lista de nuestros amados gatos. ¡Hazlos tuyos! Nota: Los nombres se generan automáticamente en función de los datos del servidor."
           }
         }
       }
@@ -191,79 +690,21 @@
         }
       }
     },
-    "makeItYours" : {
+    "main.title" : {
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Make it yours"
-          }
-        }
-      }
-    },
-    "MimeType %@" : {
-
-    },
-    "MimeType: %@" : {
-
-    },
-    "navigationTitleCats" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Cats"
+            "value" : "AllCatPics"
           }
         },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Gatos"
+            "value" : "AllCatPics"
           }
         }
       }
-    },
-    "No details available." : {
-
-    },
-    "nope" : {
-
-    },
-    "Size %lld" : {
-
-    },
-    "Size: %lld" : {
-
-    },
-    "tagAccessibilityLabel" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Tags:"
-          }
-        }
-      }
-    },
-    "tags" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Tags"
-          }
-        }
-      }
-    },
-    "Taps to download this image." : {
-
-    },
-    "Taps to enter a text for the image" : {
-
-    },
-    "Taps to view more details about this cat." : {
-
     }
   },
   "version" : "1.0"

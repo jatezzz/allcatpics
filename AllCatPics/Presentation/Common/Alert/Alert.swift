@@ -10,9 +10,9 @@ import SwiftUI
 
 struct AlertItem: Identifiable {
     let id = UUID()
-    var title: String = "Oops! Something went wrong..."
-    var message: String  = "There's been an error"
-    let dismissButtonText: String = "OK"
+    var title: LocalizedStringKey = LocalizedStringKey("alertItem.title")
+    var message: LocalizedStringKey  = LocalizedStringKey("alertItem.message")
+    let dismissButtonText: LocalizedStringKey = LocalizedStringKey("alertItem.dismissButtonText")
 }
 
 extension View {

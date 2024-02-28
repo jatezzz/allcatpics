@@ -17,11 +17,11 @@ struct DetailPage: View {
             if viewModel.isLoading {
                 ProgressView()
                     .accessibility(identifier: "loadingIndicator")
-            } else if let error = viewModel.error {
-                Text("Error: \(error.localizedDescription)")
+            } else if viewModel.error != nil {
+                Text("general.error")
             } else if let cat = viewModel.cat {
                 ScrollView {
-                    Text(LocalizedStringKey("detailPageScreenDescription"))
+                    Text(LocalizedStringKey("detail.page.description"))
                         .themedStyle(Theme.TextStyle(font: .footnote, color: .gray))
                         .padding(.leading)
                         .padding(.trailing)
@@ -36,12 +36,12 @@ struct DetailPage: View {
                         }, onSuccess: {
 
                         }, onFailure: { _ in
-                            viewModel.onImageFeailure()
+                            viewModel.onImageFailure()
                         })
                     .padding()
                 }
             } else {
-                Text("No details available.")
+                Text("detail.no.details")
             }
         }
         .onAppear {viewModel.fetchItemDetail(for: catId)}

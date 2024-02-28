@@ -17,7 +17,7 @@ struct Card: View {
 
             VStack {
                 ZStack(alignment: .bottomLeading) {
-                    KingfisherImageView(
+                    CustomCatImageView(
                         url: CatAPIEndpoints.catImageURL(id: cat.id),
                         width: screenWidth,
                         height: screenWidth,

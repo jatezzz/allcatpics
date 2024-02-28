@@ -7,7 +7,7 @@
 import SwiftUI
 import Kingfisher
 
-struct KingfisherImageView: View {
+struct CustomCatImageView: View {
     let url: String
     var width: CGFloat?
     var height: CGFloat?
@@ -74,7 +74,8 @@ struct KingfisherImageView: View {
             .aspectRatio(contentMode: contentMode)
             .frame(width: width, height: height)
             .cornerRadius(cornerRadius ?? 0)
-            .accessibilityLabel("Cat image")
+            .accessibilityLabel("detail.cat.image.accessibilityLabel")
+            .accessibilityHint("detail.cat.image.accessibilityHint")
     }
 
     private func handleFailure(error: KingfisherError) {
@@ -82,7 +83,7 @@ struct KingfisherImageView: View {
             DispatchQueue.main.asyncAfter(deadline: .now() + retryDelay) {
                 self.attemptCount += 1
                 // Trigger a view update by modifying a @State property
-                self.processor = self.processor // Adjust as needed to trigger reload
+                self.processor = self.processor
             }
         } else {
             onFailure?(error)
@@ -91,5 +92,5 @@ struct KingfisherImageView: View {
 }
 
 #Preview {
-    KingfisherImageView(url: "https://cataas.com/cat/BX0XdDZffs3PqkV7")
+    CustomCatImageView(url: "https://cataas.com/cat/BX0XdDZffs3PqkV7")
 }

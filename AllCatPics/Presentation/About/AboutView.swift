@@ -12,10 +12,9 @@ struct AboutView: View {
     @StateObject var coordinator = DIContainer.shared.coordinator
     var body: some View {
         VStack(alignment: .center) {
-                Text("Creator: John Trujillo")
+                Text("about.creator")// "Creator: John Trujillo")
             }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
-
-        .navigationTitle("About")
+        .navigationTitle("about.title")
     }
 }

@@ -8,6 +8,7 @@
 import Foundation
 import Kingfisher
 import UIKit
+import SwiftUI
 
 @MainActor
 class DetailPageViewModel: ObservableObject {
@@ -33,10 +34,10 @@ class DetailPageViewModel: ObservableObject {
     var imageSaver: ImageSaverProtocol?
     var kingfisherManager: KingfisherManagerProtocol
 
-    let successTitle = "Success"
-    let successMessage = "Image saved."
-    private let wrongTextTitle = "Wrong text"
-    private let wrongTextMessage = "Please insert a valid text"
+    let successTitle = LocalizedStringKey("detail.text.apply.success.title")
+    let successMessage = LocalizedStringKey("detail.text.apply.success.message")
+    private let wrongTextTitle = LocalizedStringKey("detail.text.apply.failure.title")
+    private let wrongTextMessage = LocalizedStringKey("detail.text.apply.failure.message")
 
     init(repository: CatRepositoryProtocol, kingfisherManager: KingfisherManagerProtocol = KingfisherManager.shared) {
         self.repository = repository
@@ -100,7 +101,10 @@ class DetailPageViewModel: ObservableObject {
         }
     }
 
-    func onImageFeailure() {
-        alertItem = AlertItem(title: "Image loading error", message: "Is there a problem loading the image.")
+    func onImageFailure() {
+        alertItem = AlertItem(
+            title: LocalizedStringKey("detail.image.failure.text"),
+            message: LocalizedStringKey("detail.image.failure.message")
+        )
     }
 }

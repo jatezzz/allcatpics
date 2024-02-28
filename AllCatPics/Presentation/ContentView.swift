@@ -25,7 +25,7 @@ struct ContentView: View {
                     EmptyView()
                 }
             }
-            .navigationBarTitle("Cats", displayMode: .automatic)
+            .navigationBarTitle("main.title", displayMode: .automatic)
             .navigationBarItems(trailing: aboutButton)
         }
     }
@@ -49,7 +49,7 @@ struct ContentView: View {
     }
 
     private func detailNavigation(catId: String) -> some View {
-        NavigationLink(destination: DetailPage(catId: catId), isActive: $isActive) { Text("nope") }
+        NavigationLink(destination: DetailPage(catId: catId), isActive: $isActive) { }
             .hidden()
             .onAppear { self.isActive = true }
     }

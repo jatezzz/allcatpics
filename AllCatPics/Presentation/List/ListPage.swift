@@ -16,7 +16,7 @@ struct ListPage: View {
 
     var body: some View {
         ScrollView {
-            Text(LocalizedStringKey("listPageDescription"))
+            Text("list.pageDescription")
                 .themedStyle(Theme.TextStyle(font: .footnote, color: .gray))
                 .padding()
             LazyVGrid(columns: columns, spacing: 10) {
@@ -26,8 +26,8 @@ struct ListPage: View {
                             coordinator.navigate(to: .detail(cat: cat))
                         }
                         .accessibility(identifier: "catCard_\(cat.id)")
-                        .accessibilityLabel("Cat named \(cat.displayName)")
-                        .accessibilityHint("Taps to view more details about this cat.")
+                        .accessibilityLabel("list.cat.name.accessibilityLabel.\(cat.displayName)")
+                        .accessibilityHint("list.cat.name.accessibilityHint")
                         .accessibility(addTraits: .isButton)
                         .onAppear {
                             if viewModel.shouldLoadMoreData(currentItem: cat) {
@@ -43,11 +43,16 @@ struct ListPage: View {
                     .padding()
             }
         }
-        .navigationTitle(LocalizedStringKey("listPageScreenTitle"))
+        .navigationTitle("listPageScreenTitle")
         .customAlert(item: $viewModel.alertItem)
     }
 }
 
-// #Preview {
-//    ListPage()
-// }
+ #Preview {
+    ListPage()
+         .environment(\.locale, .init(identifier: "es"))
+ }
+
+ #Preview {
+    ListPage()
+ }

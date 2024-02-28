@@ -19,20 +19,10 @@ struct CatDetailContent: View {
 
     @State private var userInputText: String = ""
 
-    struct CatDetailContentStrings {
-        static let tags = LocalizedStringKey("tags")
-        static let tagAccessibilityLabel = LocalizedStringKey("tagAccessibilityLabel")
-        static let makeItYours = LocalizedStringKey("makeItYours")
-        static let details = LocalizedStringKey("details")
-        static let applyButton = LocalizedStringKey("detail.applyButton")
-        static let applyButtonAccesibilityLabel = LocalizedStringKey("detail.applyButton.accesibilityLabel")
-        static let applyButtonAccesibilityHint = LocalizedStringKey("detail.applyButton.accesibilityHint")
-    }
-
     var body: some View {
         VStack(alignment: .leading, spacing: 10) {
             ZStack(alignment: .bottomTrailing) {
-                KingfisherImageView(
+                CustomCatImageView(
                     url: imageURL,
                     width: nil,
                     height: 400,
@@ -56,26 +46,26 @@ struct CatDetailContent: View {
                 .shadow(radius: 2)
                 .padding(.bottom, 20)
                 .padding(.trailing, 10)
-                .accessibilityLabel("Download button")
-                .accessibilityHint("Taps to download this image.")
+                .accessibilityLabel("detail.downloadButton.accessibilityLabel")
+                .accessibilityHint("detail.downloadButton.accessibilityHint")
                 .accessibility(addTraits: .isButton)
             }
 
             if !cat.tags.isEmpty {
-                Text(CatDetailContentStrings.tags)
+                Text("detail.tags")
                     .themedStyle(Theme.TextStyle(font: .caption, color: .secondary))
-                    .accessibilityLabel(CatDetailContentStrings.tagAccessibilityLabel)
+                    .accessibilityLabel("detail.tag.AccessibilityLabel")
                 TagsView(tags: cat.validTags)
                     .themedStyle(Theme.TextStyle(font: .subheadline, color: .secondary))
             }
 
-            Text(CatDetailContentStrings.makeItYours)
+            Text("detail.makeItYours")
                 .themedStyle(Theme.TextStyle(font: .headline, color: .secondary))
-                .accessibilityLabel(CatDetailContentStrings.makeItYours)
-                .accessibility(identifier: "makeItYours")
+                .accessibilityLabel("detail.makeItYours")
+                .accessibility(identifier: "detail.makeItYours.accessibilityLabel")
             applyTextBar
-            Text(CatDetailContentStrings.details)
-                .accessibilityLabel(CatDetailContentStrings.details)
+            Text("details")
+                .accessibilityLabel("details")
                 .themedStyle(Theme.TextStyle(font: .headline, color: .secondary))
             detailContent
                 .frame(maxWidth: .infinity, alignment: .topLeading)
@@ -91,7 +81,7 @@ struct CatDetailContent: View {
 
     var applyTextBar: some View {
         HStack {
-            TextField("Add text to image", text: $userInputText)
+            TextField("detail.addTextToImage", text: $userInputText)
                 .textFieldStyle(RoundedBorderTextFieldStyle())
                 .submitLabel(.done)
                 .onSubmit {
@@ -102,14 +92,14 @@ struct CatDetailContent: View {
                         userInputText = String(newValue.prefix(characterLimit))
                     }
                 }
-                .accessibilityLabel("Add text to image")
-                .accessibilityHint("Taps to enter a text for the image")
+                .accessibilityLabel("detail.addTextToImage.accessibilityLabel")
+                .accessibilityHint("detail.addTextToImage.accessibilityHint")
 
-            Button(CatDetailContentStrings.applyButton) {
+            Button("detail.applyButton") {
                 applyTextAndDismissKeyboard()
             }
-            .accessibilityLabel(CatDetailContentStrings.applyButtonAccesibilityLabel)
-            .accessibilityHint(CatDetailContentStrings.applyButtonAccesibilityHint)
+            .accessibilityLabel("detail.applyButton.accesibilityLabel")
+            .accessibilityHint("detail.applyButton.accesibilityHint")
             .accessibility(addTraits: .isButton)
         }
         .padding(.bottom)
@@ -117,26 +107,26 @@ struct CatDetailContent: View {
 
     var detailContent: some View {
         VStack(alignment: .leading) {
-            Text("Id: \(cat.id)")
-                .accessibilityLabel("Id \(cat.id)")
+            Text("detail.id.\(cat.id)")
+                .accessibilityLabel("detail.id.accessibilityLabel\(cat.id)")
 
             if let createdAt = cat.createdAt?.formatDateString(), !createdAt.isEmpty {
-                Text("Created at: \(createdAt)")
-                    .accessibilityLabel("Created at \(createdAt)")
+                Text("detail.createdAt.\(createdAt)")
+                    .accessibilityLabel("detail.createdAt.accessibilityLabel.\(createdAt)")
             }
 
             if let updatedAt = cat.updatedDate?.formatDateString(), !updatedAt.isEmpty {
-                Text("Last updated: \(updatedAt)")
-                    .accessibilityLabel("Last updated at \(updatedAt)")
+                Text("detail.lastUpdateAt.\(updatedAt)")
+                    .accessibilityLabel("detail.lastUpdateAt.accessibilityLabel\(updatedAt)")
             }
             if let size = cat.size {
-                Text("Size: \(size)")
-                    .accessibilityLabel("Size \(size)")
+                Text("detail.size.\(size)")
+                    .accessibilityLabel("detail.size.accessibilityLabel.\(size)")
             }
 
             if let mimetype = cat.mimetype {
-                Text("MimeType: \(mimetype)")
-                    .accessibilityLabel("MimeType \(mimetype)")
+                Text("detail.mimetype.\(mimetype)")
+                    .accessibilityLabel("detail.mimetype.accessibilityLabel.\(mimetype)")
             }
         }
         .themedStyle(Theme.TextStyle(font: .body, color: .secondary))
