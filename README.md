@@ -9,7 +9,8 @@ let's spread happiness together—one cat picture at a time.
 
 https://github.com/jatezzz/allcatpics/assets/34223334/ff9fdd0e-e4bb-4a04-8d7d-714c7cd7446f
 
-
+![lanscape.jpg](lanscape.jpg)
+![light.jpeg](light.jpeg)
 
 ## Introduction
 
