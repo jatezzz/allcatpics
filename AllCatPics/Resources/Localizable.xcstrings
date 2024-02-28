@@ -470,13 +470,13 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Size: %@"
+            "value" : "Size: %lld"
           }
         },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Tamaño: %@"
+            "value" : "Tamaño: %lld"
           }
         }
       }
@@ -486,13 +486,13 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Size %@"
+            "value" : "Size %lld"
           }
         },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Tamaño %@"
+            "value" : "Tamaño %lld"
           }
         }
       }
