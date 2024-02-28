@@ -200,6 +200,15 @@ enhances its appeal by allowing users to engage creatively with content. These a
 delivering a versatile and user-centric platform, ensuring AllCatPics stands out as not just a repository of cat
 pictures but a canvas for personal expression.
 
+### iPad and iPhone support
+
+To ensure AllCatPics reaches a broader audience, we've made the strategic decision to support both iOS and iPadOS,
+starting from version 15.0. This expansion not only opens our app to a wider range of devices but also taps into the
+unique advantages of iPadOS, providing users with an enriched experience. By leveraging the larger screen real estate
+and multitasking capabilities of iPads, we're able to offer more immersive and engaging ways to explore and interact
+with our content. This move aligns with our goal to make AllCatPics accessible to as many cat lovers as possible,
+enhancing usability and enjoyment across the diverse Apple ecosystem.
+
 ## Guidelines for Developers
 
 ### Accessibility
