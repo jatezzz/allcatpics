@@ -183,6 +183,23 @@ language. This initiative not only expands our user base but also underscores ou
 diversity. By offering a multilingual interface, we ensure that a broader spectrum of cat enthusiasts can explore and
 enjoy our content without language barriers.
 
+### Supporting Light and Dark Themes: A Focus on Human Design and Eye Safety
+
+In AllCatPics, we've embraced iOS's Human Interface Guidelines by incorporating themes for both light and dark modes,
+enhancing usability and eye safety. This dual-theme approach not only aligns with the aesthetic and functional standards
+set by Apple but also caters to user preferences for reduced eye strain and improved visibility in varied lighting
+conditions. Additionally, dark mode supports energy efficiency on OLED screens, extending battery life. Our commitment
+to these themes reflects our dedication to providing a comfortable, accessible, and enjoyable experience for all users.
+
+### Supporting Download capabilities: Make It Yours
+
+In expanding the functionality of AllCatPics beyond the initial requirements, we've added features that deeply resonate
+with the ethos of "making it yours." By incorporating a function to download cat images and personalize them with text,
+we empower users to customize their experience. This innovation not only elevates the utility of the app but also
+enhances its appeal by allowing users to engage creatively with content. These additions underscore our commitment to
+delivering a versatile and user-centric platform, ensuring AllCatPics stands out as not just a repository of cat
+pictures but a canvas for personal expression.
+
 ## Guidelines for Developers
 
 ### Accessibility

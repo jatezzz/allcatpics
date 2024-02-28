@@ -18,6 +18,8 @@ struct ListPage: View {
         ScrollView {
             Text("list.pageDescription")
                 .themedStyle(theme.footnote)
+                .padding(.leading, 10)
+                .padding(.trailing, 10)
                 .padding(.bottom)
                 .accessibilityIdentifier("list.page.description")
             LazyVGrid(columns: columns, spacing: 10) {
