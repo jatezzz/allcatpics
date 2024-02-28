@@ -657,6 +657,22 @@
         }
       }
     },
+    "list.page.title" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "AllCatPics"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "AllCatPics"
+          }
+        }
+      }
+    },
     "list.pageDescription" : {
       "localizations" : {
         "en" : {
@@ -669,23 +685,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Esta es la lista de nuestros amados gatos. ¡Hazlos tuyos! Nota: Los nombres se generan automáticamente en función de los datos del servidor."
-          }
-        }
-      }
-    },
-    "listPageScreenTitle" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Cats"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Gatos"
           }
         }
       }

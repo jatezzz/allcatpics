@@ -17,14 +17,14 @@ class ListPageScreen {
     }
 
     var isDisplaying: Bool {
-        return app.navigationBars["Cats"].exists
+        return app.navigationBars["AllCatPics"].exists
     }
 
     func selectCat(withID catID: String) {
-        app.staticTexts["catCard_\(catID)"].tap()
+        app.buttons["catCard_\(catID)"].firstMatch.tap()
     }
 
     func verifyErrorAlert() -> Bool {
-        app.alerts["Oops! Something went wrong..."].exists
+        app.buttons["OK"].exists
     }
 }

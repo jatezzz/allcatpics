@@ -23,6 +23,7 @@ struct DetailPage: View {
                 ScrollView {
                     Text(LocalizedStringKey("detail.page.description"))
                         .themedStyle(Theme.TextStyle(font: .footnote, color: .gray))
+                        .accessibilityIdentifier("detail.page.description")
                         .padding(.leading)
                         .padding(.trailing)
                     CatDetailContent(

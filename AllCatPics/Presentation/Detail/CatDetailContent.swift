@@ -46,6 +46,7 @@ struct CatDetailContent: View {
                 .shadow(radius: 2)
                 .padding(.bottom, 20)
                 .padding(.trailing, 10)
+                .accessibilityIdentifier("detail.downloadButton")
                 .accessibilityLabel("detail.downloadButton.accessibilityLabel")
                 .accessibilityHint("detail.downloadButton.accessibilityHint")
                 .accessibility(addTraits: .isButton)
@@ -56,7 +57,7 @@ struct CatDetailContent: View {
                     .themedStyle(Theme.TextStyle(font: .caption, color: .secondary))
                     .accessibilityLabel("detail.tag.AccessibilityLabel")
                 TagsView(tags: cat.validTags)
-                    .themedStyle(Theme.TextStyle(font: .subheadline, color: .secondary))
+                    .themedStyle(Theme.TextStyle(font: .subheadline, color: .primary))
             }
 
             Text("detail.makeItYours")
@@ -94,12 +95,14 @@ struct CatDetailContent: View {
                 }
                 .accessibilityLabel("detail.addTextToImage.accessibilityLabel")
                 .accessibilityHint("detail.addTextToImage.accessibilityHint")
+                .accessibilityIdentifier("detail.addTextToImage")
 
             Button("detail.applyButton") {
                 applyTextAndDismissKeyboard()
             }
             .accessibilityLabel("detail.applyButton.accesibilityLabel")
             .accessibilityHint("detail.applyButton.accesibilityHint")
+            .accessibilityIdentifier("detail.applyButton")
             .accessibility(addTraits: .isButton)
         }
         .padding(.bottom)
@@ -109,6 +112,7 @@ struct CatDetailContent: View {
         VStack(alignment: .leading) {
             Text("detail.id.\(cat.id)")
                 .accessibilityLabel("detail.id.accessibilityLabel\(cat.id)")
+                .accessibilityIdentifier("detail.id")
 
             if let createdAt = cat.createdAt?.formatDateString(), !createdAt.isEmpty {
                 Text("detail.createdAt.\(createdAt)")

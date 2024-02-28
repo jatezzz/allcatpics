@@ -18,6 +18,7 @@ struct ListPage: View {
         ScrollView {
             Text("list.pageDescription")
                 .themedStyle(Theme.TextStyle(font: .footnote, color: .gray))
+                .accessibilityIdentifier("list.page.description")
                 .padding()
             LazyVGrid(columns: columns, spacing: 10) {
                 ForEach(viewModel.cats, id: \.id) { cat in
@@ -43,7 +44,7 @@ struct ListPage: View {
                     .padding()
             }
         }
-        .navigationTitle("listPageScreenTitle")
+        .navigationTitle("list.page.title")
         .customAlert(item: $viewModel.alertItem)
     }
 }
