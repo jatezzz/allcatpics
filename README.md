@@ -1,8 +1,10 @@
 # AllCatPics
 
-Welcome to AllCatPics, the quintessential application for every cat lover out there! 🐱💕 This app is a tribute to the joy
-and mystery that our feline friends bring into our lives. Whether you're looking for inspiration, relaxation, or just a
-daily dose of cuteness, AllCatPics is your go-to source for everything cat-related.
+Welcome to AllCatPics, a masterpiece crafted under the leadership of an experienced iOS Lead Developer dedicated to
+bringing joy and cuteness directly to your screen. 🐱💕 My journey in steering this project from a mere idea to a
+fully-functional app has been both challenging and rewarding. Our mission at AllCatPics is not just to entertain but to
+create a community where cat lovers can celebrate the quirks and charms of feline friends. Dive into our world, and
+let's spread happiness together—one cat picture at a time.
 
 
 https://github.com/jatezzz/allcatpics/assets/34223334/ff9fdd0e-e4bb-4a04-8d7d-714c7cd7446f
@@ -38,6 +40,7 @@ Getting up and running with the AllCatPics project is straightforward. Here's ho
 5. **Run the Simulator**: Select an iOS simulator and run the project to start exploring AllCatPics immediately.
 6. **Physical Device**: For testing on a physical device, ensure your device is connected, and you have the appropriate
    signing configuration set up.
+7. If you want to make code changes please also install `Swiftlint` for code formatting.
 
 By following these steps, you'll be able to start contributing to AllCatPics or simply enjoy the app on your device.
 
@@ -51,17 +54,18 @@ To enhance the AllCatPics experience, we utilize the following libraries:
 - **SBTUITestTunnel**: Offers enhanced UI testing capabilities by allowing mocking of JSON responses from the backend.
   This tool is crucial for our testing strategy to ensure the highest quality user
   experience. [SBTUITestTunnel on GitHub](https://github.com/Subito-it/SBTUITestTunnel)
-- **SwiftLint**: To ensure high code quality and maintainability, **SwiftLint** has been added as a requirement for the
-  project. SwiftLint is a tool that enforces Swift style and conventions, helping to keep the codebase clean and
-  consistent. It is a vital addition for any project aimed at achieving professional standards of code quality.
-  Developers contributing to the project are required to install SwiftLint and adhere to the rules defined. This step
-  ensures that all code contributions follow a common set of style guidelines, reducing the potential for code smells
-  and making the code easier to read and maintain. For more information on SwiftLint and how to install and configure
-  it, please visit the official GitHub repository: [SwiftLint GitHub](https://github.com/realm/SwiftLint).
+- **SwiftLint**: To ensure high code quality and maintainability, please visit the official GitHub
+  repository: [SwiftLint GitHub](https://github.com/realm/SwiftLint).
 
 ## Project Plan and Architecture Overview
 
 ### Requirements Given
+
+The strategic inception of AllCatPics was guided by a clear objective: to craft an intuitive and delightful app for cat
+enthusiasts. As the iOS Lead, I charted our course through meticulous planning and a keen focus on leveraging Swift's
+latest features for a seamless user experience. Our architecture, a hybrid blend of Clean Architecture and VIPER
+principles, was chosen to ensure scalability, maintainability, and testability—pillars I deemed crucial for the app's
+longevity and success.
 
 The project commenced with a specific objective and key pages in mind, detailed as follows:
 
@@ -171,6 +175,13 @@ This architecture not only adheres to best practices in software development but
 the project. By combining the structured approach of Clean Architecture with the role-specific focus of VIPER, and
 embracing SwiftUI for the presentation layer, the project sets a solid foundation for a scalable, maintainable, and
 testable iOS app.
+
+### Multilingual Support: Embracing Spanish
+
+In recognizing the importance of reaching a wider audience, I decided to introduce Spanish as our first translation
+language. This initiative not only expands our user base but also underscores our commitment to inclusivity and cultural
+diversity. By offering a multilingual interface, we ensure that a broader spectrum of cat enthusiasts can explore and
+enjoy our content without language barriers.
 
 ## Guidelines for Developers
 
